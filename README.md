@@ -5,7 +5,7 @@ With inspiration from Mathematical DD card games, the game provides the students
 
 This application was made to fulfill the 4th year Thesis requirements for the University of Rizal System.
 
-<img src="https://github.com/CianDaxGitHub/numrush/blob/main/images/tutorial/1.png" alt ="NumRush Menu" width="280"> <img src="https://github.com/CianDaxGitHub/numrush/blob/main/images/tutorial/5.png" alt ="Main Gameplay" width="280"> <img src="https://github.com/CianDaxGitHub/numrush/blob/main/images/tutorial/6.png" alt ="Card Display" width="280">
+<img src="https://github.com/CianDaxGitHub/numrush/blob/main/images/tutorial/1.png" alt ="NumRush Menu" width="240"> <img src="https://github.com/CianDaxGitHub/numrush/blob/main/images/tutorial/5.png" alt ="Main Gameplay" width="240"> <img src="https://github.com/CianDaxGitHub/numrush/blob/main/images/tutorial/6.png" alt ="Card Display" width="240">
 
 ## Gameplay Features
 * Choose between different Game Modes based on the 4 Math operations, along with an extra Mixed mode to tackle all of them at once! Each mode has three difficulties with 15 levels each.
