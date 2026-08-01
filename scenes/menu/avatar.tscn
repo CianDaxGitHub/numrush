@@ -1,0 +1,808 @@
+[gd_scene load_steps=39 format=3 uid="uid://brlk3l4q24lrf"]
+
+[ext_resource type="Script" uid="uid://bgqglerkcylxx" path="res://addons/SmoothScroll/SmoothScrollContainer.gd" id="1_48ndo"]
+[ext_resource type="Script" uid="uid://ce6lojqx52v0k" path="res://scenes/menu/avatar.gd" id="1_qb8ks"]
+[ext_resource type="Script" uid="uid://b7h0k2h2qwlqv" path="res://addons/SmoothScroll/scroll_damper/expo_scroll_damper.gd" id="2_b51d4"]
+[ext_resource type="PackedScene" uid="uid://qkd4tm4yffxp" path="res://scenes/polyAudio.tscn" id="2_r6hjp"]
+[ext_resource type="Script" uid="uid://b7nng4y5xxvbo" path="res://scripts/soundLibrary.gd" id="3_d5sqe"]
+[ext_resource type="StyleBox" uid="uid://dnnyrj0dbbmnh" path="res://themes/cardbtn2.tres" id="3_fjpgm"]
+[ext_resource type="PackedScene" uid="uid://ds5muai3fwrvk" path="res://scenes/char.tscn" id="3_xnspg"]
+[ext_resource type="Script" uid="uid://c4q74v6jv7ny2" path="res://scripts/buttons/menuButton.gd" id="4_b51d4"]
+[ext_resource type="Script" uid="uid://y7kgv0a3gc3g" path="res://scripts/soundEffect.gd" id="4_wikpb"]
+[ext_resource type="AudioStream" uid="uid://bjyf5oq13lthl" path="res://sounds/clicky button 3.wav" id="5_j1ro6"]
+[ext_resource type="AudioStream" uid="uid://b24ifncas70ex" path="res://sounds/metalswish.wav" id="6_4gdte"]
+[ext_resource type="Texture2D" uid="uid://dborkqqvdj8q8" path="res://images/icons/clothes/men-t-shirts-icon.png" id="6_6ir8t"]
+[ext_resource type="AudioStream" uid="uid://cngsemeil6ybg" path="res://sounds/pop5.wav" id="7_d5sqe"]
+[ext_resource type="Texture2D" uid="uid://ckabipkn5mh5q" path="res://images/icons/clothes/mens-shirts-half-sleeve-icon.png" id="7_qb8ks"]
+[ext_resource type="Texture2D" uid="uid://dplp6qnpe2a30" path="res://images/icons/clothes/hoodie-jacket-icon.png" id="8_lw5kw"]
+[ext_resource type="AudioStream" uid="uid://dk5katpt1vcs8" path="res://sounds/misstep.wav" id="8_wikpb"]
+[ext_resource type="Script" uid="uid://4f21oaokgm8i" path="res://scripts/buttons/sizableButton.gd" id="8_xnspg"]
+[ext_resource type="Texture2D" uid="uid://bjgom5p1h3fp7" path="res://images/icons/clothes/cap-outline-icon.png" id="9_rwql7"]
+[ext_resource type="Texture2D" uid="uid://bwrkwh4ngflhc" path="res://images/icons/clothes/shorts-icon.png" id="10_dym07"]
+[ext_resource type="Texture2D" uid="uid://77y5gxshpg1p" path="res://images/icons/clothes/girl-skirt-icon.png" id="11_xnspg"]
+[ext_resource type="Texture2D" uid="uid://yf6qogbfg5jp" path="res://images/icons/clothes/jeans-pants-icon.png" id="12_7kl3j"]
+[ext_resource type="Texture2D" uid="uid://cx2bx8lupkdyb" path="res://images/icons/clothes/boot-icon.png" id="13_r6hjp"]
+[ext_resource type="FontFile" uid="uid://c1xv8vejetl6c" path="res://fonts/PoetsenOne-Regular.ttf" id="16_lw5kw"]
+
+[sub_resource type="Resource" id="Resource_a8mmg"]
+script = ExtResource("4_wikpb")
+tag = "click"
+stream = ExtResource("5_j1ro6")
+metadata/_custom_type_script = "uid://y7kgv0a3gc3g"
+
+[sub_resource type="Resource" id="Resource_birgb"]
+script = ExtResource("4_wikpb")
+tag = "confirm"
+stream = ExtResource("6_4gdte")
+metadata/_custom_type_script = "uid://y7kgv0a3gc3g"
+
+[sub_resource type="Resource" id="Resource_wikpb"]
+script = ExtResource("4_wikpb")
+tag = "pop"
+stream = ExtResource("7_d5sqe")
+metadata/_custom_type_script = "uid://y7kgv0a3gc3g"
+
+[sub_resource type="Resource" id="Resource_j1ro6"]
+script = ExtResource("4_wikpb")
+tag = "misstep"
+stream = ExtResource("8_wikpb")
+metadata/_custom_type_script = "uid://y7kgv0a3gc3g"
+
+[sub_resource type="Resource" id="Resource_uk8qf"]
+script = ExtResource("3_d5sqe")
+soundFx = Array[ExtResource("4_wikpb")]([SubResource("Resource_a8mmg"), SubResource("Resource_birgb"), SubResource("Resource_wikpb"), SubResource("Resource_j1ro6")])
+metadata/_custom_type_script = "uid://b7nng4y5xxvbo"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dym07"]
+bg_color = Color(0.7956201, 0.4450431, 0.20442593, 1)
+border_width_left = 12
+border_width_top = 12
+border_width_right = 12
+border_width_bottom = 12
+border_color = Color(0.6623649, 0.30131096, 0.17413282, 1)
+corner_radius_top_left = 42
+corner_radius_top_right = 42
+corner_radius_bottom_right = 42
+corner_radius_bottom_left = 42
+shadow_color = Color(0, 0, 0, 0.414)
+shadow_size = 1
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6ot3k"]
+bg_color = Color(0.941176, 0.552941, 0.298039, 1)
+border_width_left = 18
+border_width_top = 18
+border_width_right = 18
+border_width_bottom = 18
+border_color = Color(0.807843, 0.368627, 0.176471, 1)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
+shadow_color = Color(0.351536, 0.155314, 0.0580644, 0.414)
+shadow_size = 1
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="Resource" id="Resource_m3xq0"]
+script = ExtResource("2_b51d4")
+
+[sub_resource type="Resource" id="Resource_cogcn"]
+script = ExtResource("2_b51d4")
+
+[sub_resource type="Resource" id="Resource_48ndo"]
+script = ExtResource("2_b51d4")
+
+[sub_resource type="Resource" id="Resource_b51d4"]
+script = ExtResource("2_b51d4")
+
+[sub_resource type="LabelSettings" id="LabelSettings_rwql7"]
+font = ExtResource("16_lw5kw")
+font_size = 48
+outline_size = 16
+outline_color = Color(0.62832, 0.269837, 0.108442, 1)
+shadow_size = 0
+shadow_color = Color(0, 0, 0, 0.443137)
+shadow_offset = Vector2(4, 6)
+
+[sub_resource type="Animation" id="Animation_lw5kw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(11, 752)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Panel2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(115, 651)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("btnShop:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(27, 34)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("btnHome:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(491, 34)]
+}
+
+[sub_resource type="Animation" id="Animation_qb8ks"]
+resource_name = "scene_enter"
+length = 1.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.49999994, 1.3),
+"transitions": PackedFloat32Array(-3, 1),
+"update": 0,
+"values": [Vector2(11, 1387), Vector2(11, 752)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Panel2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.7, 1.1),
+"transitions": PackedFloat32Array(-2, -2, 1),
+"update": 0,
+"values": [Vector2(115, 1990), Vector2(115, 635), Vector2(115, 651)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("btnShop:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.5, 1, 1.3),
+"transitions": PackedFloat32Array(-2, -2, 1),
+"update": 0,
+"values": [Vector2(27, -157), Vector2(27, 50), Vector2(27, 34)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("btnHome:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.7, 1.3),
+"transitions": PackedFloat32Array(-2, 1),
+"update": 0,
+"values": [Vector2(774, 34), Vector2(491, 34)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rwql7"]
+_data = {
+&"RESET": SubResource("Animation_lw5kw"),
+&"scene_enter": SubResource("Animation_qb8ks")
+}
+
+[node name="Avatar" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qb8ks")
+
+[node name="PolyAudio" parent="." instance=ExtResource("2_r6hjp")]
+bus = &"sfx"
+sfxLib = SubResource("Resource_uk8qf")
+
+[node name="Panel2" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -245.0
+offset_top = 11.0
+offset_right = 245.0
+offset_bottom = 829.9971
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_dym07")
+
+[node name="Char" parent="Panel2" instance=ExtResource("3_xnspg")]
+unique_name_in_owner = true
+position = Vector2(38, -577)
+scale = Vector2(0.6, 0.6)
+
+[node name="Panel" type="Panel" parent="."]
+clip_children = 2
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -349.0
+offset_top = -528.0
+offset_right = 349.0
+offset_bottom = 274.00537
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_6ot3k")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 32.0
+offset_top = -370.0
+offset_right = -32.0
+offset_bottom = 86.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 16
+
+[node name="SmoothScrollContainer" type="ScrollContainer" parent="Panel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 0
+script = ExtResource("1_48ndo")
+speed = 600.0
+wheel_scroll_damper = SubResource("Resource_m3xq0")
+dragging_scroll_damper = SubResource("Resource_cogcn")
+metadata/_custom_type_script = "uid://bgqglerkcylxx"
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/VBoxContainer/SmoothScrollContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_right = 8
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/VBoxContainer/SmoothScrollContainer/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Control" type="Control" parent="Panel/VBoxContainer/SmoothScrollContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+mouse_filter = 1
+
+[node name="btnShirt" type="Button" parent="Panel/VBoxContainer/SmoothScrollContainer/MarginContainer/HBoxContainer/Control"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -50.0
+offset_right = 50.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(50, 50)
+focus_mode = 0
+mouse_filter = 1
+theme_override_styles/normal = ExtResource("3_fjpgm")
+theme_override_styles/pressed = ExtResource("3_fjpgm")
+theme_override_styles/hover = ExtResource("3_fjpgm")
+toggle_mode = true
+script = ExtResource("8_xnspg")
+scaleSize = 1.08
+
+[node name="TextureRect" type="TextureRect" parent="Panel/VBoxContainer/SmoothScrollContainer/MarginContainer/HBoxContainer/Control/btnShirt"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -35.0
+offset_top = -35.0
+offset_right = 35.0
+offset_bottom = 35.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_6ir8t")
+expand_mode = 1
+
+[node name="Control2" type="Control" parent="Panel/VBoxContainer/SmoothScrollContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+mouse_filter = 1
+
+[node name="btnLongSleeve" type="Button" parent="Panel/VBoxContainer/SmoothScrollContainer/MarginContainer/HBoxContainer/Control2"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -50.0
+offset_right = 50.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(50, 50)
+focus_mode = 0
+mouse_filter = 1
+theme_override_styles/normal = ExtResource("3_fjpgm")
+theme_override_styles/pressed = ExtResource("3_fjpgm")
+theme_override_styles/hover = ExtResource("3_fjpgm")
+toggle_mode = true
+script = ExtResource("8_xnspg")
+scaleSize = 1.08
+
+[node name="TextureRect" type="TextureRect" parent="Panel/VBoxContainer/SmoothScrollContainer/MarginContainer/HBoxContainer/Control2/btnLongSleeve"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -35.0
+offset_top = -35.0
+offset_right = 35.0
+offset_bottom = 35.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_qb8ks")
+expand_mode = 1
+
+[node name="Control3" type="Control" parent="Panel/VBoxContainer/SmoothScrollContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+mouse_filter = 1
+
+[node name="btnJacket" type="Button" parent="Panel/VBoxContainer/SmoothScrollContainer/MarginContainer/HBoxContainer/Control3"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -50.0
+offset_right = 50.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(50, 50)
+focus_mode = 0
+mouse_filter = 1
+theme_override_styles/normal = ExtResource("3_fjpgm")
+theme_override_styles/pressed = ExtResource("3_fjpgm")
+theme_override_styles/hover = ExtResource("3_fjpgm")
+toggle_mode = true
+script = ExtResource("8_xnspg")
+scaleSize = 1.08
+
+[node name="TextureRect" type="TextureRect" parent="Panel/VBoxContainer/SmoothScrollContainer/MarginContainer/HBoxContainer/Control3/btnJacket"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -35.0
+offset_top = -35.0
+offset_right = 35.0
+offset_bottom = 35.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_lw5kw")
+expand_mode = 1
+
+[node name="Control4" type="Control" parent="Panel/VBoxContainer/SmoothScrollContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+mouse_filter = 1
+
+[node name="btnHat" type="Button" parent="Panel/VBoxContainer/SmoothScrollContainer/MarginContainer/HBoxContainer/Control4"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -50.0
+offset_right = 50.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(50, 50)
+focus_mode = 0
+mouse_filter = 1
+theme_override_styles/normal = ExtResource("3_fjpgm")
+theme_override_styles/pressed = ExtResource("3_fjpgm")
+theme_override_styles/hover = ExtResource("3_fjpgm")
+toggle_mode = true
+script = ExtResource("8_xnspg")
+scaleSize = 1.08
+
+[node name="TextureRect" type="TextureRect" parent="Panel/VBoxContainer/SmoothScrollContainer/MarginContainer/HBoxContainer/Control4/btnHat"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -35.0
+offset_top = -35.0
+offset_right = 35.0
+offset_bottom = 35.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_rwql7")
+expand_mode = 1
+
+[node name="Control5" type="Control" parent="Panel/VBoxContainer/SmoothScrollContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+mouse_filter = 1
+
+[node name="btnShorts" type="Button" parent="Panel/VBoxContainer/SmoothScrollContainer/MarginContainer/HBoxContainer/Control5"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -50.0
+offset_right = 50.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(50, 50)
+focus_mode = 0
+mouse_filter = 1
+theme_override_styles/normal = ExtResource("3_fjpgm")
+theme_override_styles/pressed = ExtResource("3_fjpgm")
+theme_override_styles/hover = ExtResource("3_fjpgm")
+toggle_mode = true
+script = ExtResource("8_xnspg")
+scaleSize = 1.08
+
+[node name="TextureRect" type="TextureRect" parent="Panel/VBoxContainer/SmoothScrollContainer/MarginContainer/HBoxContainer/Control5/btnShorts"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -35.0
+offset_top = -35.0
+offset_right = 35.0
+offset_bottom = 35.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_dym07")
+expand_mode = 1
+
+[node name="Control6" type="Control" parent="Panel/VBoxContainer/SmoothScrollContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+mouse_filter = 1
+
+[node name="btnSkirt" type="Button" parent="Panel/VBoxContainer/SmoothScrollContainer/MarginContainer/HBoxContainer/Control6"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -50.0
+offset_right = 50.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(50, 50)
+focus_mode = 0
+mouse_filter = 1
+theme_override_styles/normal = ExtResource("3_fjpgm")
+theme_override_styles/pressed = ExtResource("3_fjpgm")
+theme_override_styles/hover = ExtResource("3_fjpgm")
+toggle_mode = true
+script = ExtResource("8_xnspg")
+scaleSize = 1.08
+
+[node name="TextureRect" type="TextureRect" parent="Panel/VBoxContainer/SmoothScrollContainer/MarginContainer/HBoxContainer/Control6/btnSkirt"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -35.0
+offset_top = -35.0
+offset_right = 35.0
+offset_bottom = 35.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_xnspg")
+expand_mode = 1
+
+[node name="Control7" type="Control" parent="Panel/VBoxContainer/SmoothScrollContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+mouse_filter = 1
+
+[node name="btnPants" type="Button" parent="Panel/VBoxContainer/SmoothScrollContainer/MarginContainer/HBoxContainer/Control7"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -50.0
+offset_right = 50.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(50, 50)
+focus_mode = 0
+mouse_filter = 1
+theme_override_styles/normal = ExtResource("3_fjpgm")
+theme_override_styles/pressed = ExtResource("3_fjpgm")
+theme_override_styles/hover = ExtResource("3_fjpgm")
+toggle_mode = true
+script = ExtResource("8_xnspg")
+scaleSize = 1.08
+
+[node name="TextureRect" type="TextureRect" parent="Panel/VBoxContainer/SmoothScrollContainer/MarginContainer/HBoxContainer/Control7/btnPants"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -35.0
+offset_top = -35.0
+offset_right = 35.0
+offset_bottom = 35.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("12_7kl3j")
+expand_mode = 1
+
+[node name="Control8" type="Control" parent="Panel/VBoxContainer/SmoothScrollContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+mouse_filter = 1
+
+[node name="btnShoes" type="Button" parent="Panel/VBoxContainer/SmoothScrollContainer/MarginContainer/HBoxContainer/Control8"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -50.0
+offset_right = 50.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(50, 50)
+focus_mode = 0
+mouse_filter = 1
+theme_override_styles/normal = ExtResource("3_fjpgm")
+theme_override_styles/pressed = ExtResource("3_fjpgm")
+theme_override_styles/hover = ExtResource("3_fjpgm")
+toggle_mode = true
+script = ExtResource("8_xnspg")
+scaleSize = 1.08
+
+[node name="TextureRect" type="TextureRect" parent="Panel/VBoxContainer/SmoothScrollContainer/MarginContainer/HBoxContainer/Control8/btnShoes"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -35.0
+offset_top = -35.0
+offset_right = 35.0
+offset_bottom = 35.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("13_r6hjp")
+expand_mode = 1
+
+[node name="SmoothScrollContainer2" type="ScrollContainer" parent="Panel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 320)
+layout_mode = 2
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+script = ExtResource("1_48ndo")
+wheel_scroll_damper = SubResource("Resource_48ndo")
+dragging_scroll_damper = SubResource("Resource_b51d4")
+metadata/_custom_type_script = "uid://bgqglerkcylxx"
+
+[node name="avatarContainer" type="HFlowContainer" parent="Panel/VBoxContainer/SmoothScrollContainer2"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(634, 0)
+layout_mode = 2
+theme_override_constants/h_separation = 8
+theme_override_constants/v_separation = 8
+last_wrap_alignment = 1
+
+[node name="btnShop" type="Button" parent="." node_paths=PackedStringArray("sfx")]
+custom_minimum_size = Vector2(130, 100)
+layout_mode = 0
+offset_left = 27.0
+offset_top = 34.0
+offset_right = 229.0
+offset_bottom = 134.00005
+pivot_offset = Vector2(101, 50)
+focus_mode = 0
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = ExtResource("3_fjpgm")
+theme_override_styles/pressed = ExtResource("3_fjpgm")
+theme_override_styles/hover = ExtResource("3_fjpgm")
+script = ExtResource("4_b51d4")
+toState = "shop"
+scaleSize = 1.1
+sfx = NodePath("../PolyAudio")
+sfx_name = Array[String](["click", "confirm"])
+sfx_vol = Array[float]([-14.0, -18.0])
+sfx_delay = Array[float]([0.0, 0.05])
+
+[node name="Label" type="Label" parent="btnShop"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -84.5
+offset_top = -29.0
+offset_right = 84.5
+offset_bottom = 29.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Shop"
+label_settings = SubResource("LabelSettings_rwql7")
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 162
+
+[node name="btnHome" type="Button" parent="." node_paths=PackedStringArray("sfx")]
+custom_minimum_size = Vector2(130, 100)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -229.0
+offset_top = 34.0
+offset_right = -27.00061
+offset_bottom = 134.0
+grow_horizontal = 0
+pivot_offset = Vector2(101, 50)
+focus_mode = 0
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = ExtResource("3_fjpgm")
+theme_override_styles/pressed = ExtResource("3_fjpgm")
+theme_override_styles/hover = ExtResource("3_fjpgm")
+script = ExtResource("4_b51d4")
+toState = "menu"
+scaleSize = 1.1
+sfx = NodePath("../PolyAudio")
+sfx_name = Array[String](["click", "confirm"])
+sfx_vol = Array[float]([-14.0, -18.0])
+sfx_delay = Array[float]([0.0, 0.05])
+
+[node name="Label" type="Label" parent="btnHome"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -84.5
+offset_top = -29.0
+offset_right = 84.5
+offset_bottom = 29.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Home"
+label_settings = SubResource("LabelSettings_rwql7")
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 162
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_rwql7")
+}
+autoplay = "scene_enter"
+
+[connection signal="button_down" from="Panel/VBoxContainer/SmoothScrollContainer/MarginContainer/HBoxContainer/Control/btnShirt" to="Panel/VBoxContainer/SmoothScrollContainer/MarginContainer/HBoxContainer/Control/btnShirt" method="button_down"]
+[connection signal="button_up" from="Panel/VBoxContainer/SmoothScrollContainer/MarginContainer/HBoxContainer/Control/btnShirt" to="Panel/VBoxContainer/SmoothScrollContainer/MarginContainer/HBoxContainer/Control/btnShirt" method="button_up"]
+[connection signal="pressed" from="Panel/VBoxContainer/SmoothScrollContainer/MarginContainer/HBoxContainer/Control/btnShirt" to="Panel/VBoxContainer/SmoothScrollContainer/MarginContainer/HBoxContainer/Control/btnShirt" method="_button_pressed"]
+[connection signal="button_down" from="Panel/VBoxContainer/SmoothScrollContainer/MarginContainer/HBoxContainer/Control2/btnLongSleeve" to="Panel/VBoxContainer/SmoothScrollContainer/MarginContainer/HBoxContainer/Control2/btnLongSleeve" method="button_down"]
+[connection signal="button_up" from="Panel/VBoxContainer/SmoothScrollContainer/MarginContainer/HBoxContainer/Control2/btnLongSleeve" to="Panel/VBoxContainer/SmoothScrollContainer/MarginContainer/HBoxContainer/Control2/btnLongSleeve" method="button_up"]
+[connection signal="pressed" from="Panel/VBoxContainer/SmoothScrollContainer/MarginContainer/HBoxContainer/Control2/btnLongSleeve" to="Panel/VBoxContainer/SmoothScrollContainer/MarginContainer/HBoxContainer/Control2/btnLongSleeve" method="_button_pressed"]
+[connection signal="button_down" from="Panel/VBoxContainer/SmoothScrollContainer/MarginContainer/HBoxContainer/Control3/btnJacket" to="Panel/VBoxContainer/SmoothScrollContainer/MarginContainer/HBoxContainer/Control3/btnJacket" method="button_down"]
+[connection signal="button_up" from="Panel/VBoxContainer/SmoothScrollContainer/MarginContainer/HBoxContainer/Control3/btnJacket" to="Panel/VBoxContainer/SmoothScrollContainer/MarginContainer/HBoxContainer/Control3/btnJacket" method="button_up"]
+[connection signal="pressed" from="Panel/VBoxContainer/SmoothScrollContainer/MarginContainer/HBoxContainer/Control3/btnJacket" to="Panel/VBoxContainer/SmoothScrollContainer/MarginContainer/HBoxContainer/Control3/btnJacket" method="_button_pressed"]
+[connection signal="button_down" from="Panel/VBoxContainer/SmoothScrollContainer/MarginContainer/HBoxContainer/Control4/btnHat" to="Panel/VBoxContainer/SmoothScrollContainer/MarginContainer/HBoxContainer/Control4/btnHat" method="button_down"]
+[connection signal="button_up" from="Panel/VBoxContainer/SmoothScrollContainer/MarginContainer/HBoxContainer/Control4/btnHat" to="Panel/VBoxContainer/SmoothScrollContainer/MarginContainer/HBoxContainer/Control4/btnHat" method="button_up"]
+[connection signal="pressed" from="Panel/VBoxContainer/SmoothScrollContainer/MarginContainer/HBoxContainer/Control4/btnHat" to="Panel/VBoxContainer/SmoothScrollContainer/MarginContainer/HBoxContainer/Control4/btnHat" method="_button_pressed"]
+[connection signal="button_down" from="Panel/VBoxContainer/SmoothScrollContainer/MarginContainer/HBoxContainer/Control5/btnShorts" to="Panel/VBoxContainer/SmoothScrollContainer/MarginContainer/HBoxContainer/Control5/btnShorts" method="button_down"]
+[connection signal="button_up" from="Panel/VBoxContainer/SmoothScrollContainer/MarginContainer/HBoxContainer/Control5/btnShorts" to="Panel/VBoxContainer/SmoothScrollContainer/MarginContainer/HBoxContainer/Control5/btnShorts" method="button_up"]
+[connection signal="pressed" from="Panel/VBoxContainer/SmoothScrollContainer/MarginContainer/HBoxContainer/Control5/btnShorts" to="Panel/VBoxContainer/SmoothScrollContainer/MarginContainer/HBoxContainer/Control5/btnShorts" method="_button_pressed"]
+[connection signal="button_down" from="Panel/VBoxContainer/SmoothScrollContainer/MarginContainer/HBoxContainer/Control6/btnSkirt" to="Panel/VBoxContainer/SmoothScrollContainer/MarginContainer/HBoxContainer/Control6/btnSkirt" method="button_down"]
+[connection signal="button_up" from="Panel/VBoxContainer/SmoothScrollContainer/MarginContainer/HBoxContainer/Control6/btnSkirt" to="Panel/VBoxContainer/SmoothScrollContainer/MarginContainer/HBoxContainer/Control6/btnSkirt" method="button_up"]
+[connection signal="pressed" from="Panel/VBoxContainer/SmoothScrollContainer/MarginContainer/HBoxContainer/Control6/btnSkirt" to="Panel/VBoxContainer/SmoothScrollContainer/MarginContainer/HBoxContainer/Control6/btnSkirt" method="_button_pressed"]
+[connection signal="button_down" from="Panel/VBoxContainer/SmoothScrollContainer/MarginContainer/HBoxContainer/Control7/btnPants" to="Panel/VBoxContainer/SmoothScrollContainer/MarginContainer/HBoxContainer/Control7/btnPants" method="button_down"]
+[connection signal="button_up" from="Panel/VBoxContainer/SmoothScrollContainer/MarginContainer/HBoxContainer/Control7/btnPants" to="Panel/VBoxContainer/SmoothScrollContainer/MarginContainer/HBoxContainer/Control7/btnPants" method="button_up"]
+[connection signal="pressed" from="Panel/VBoxContainer/SmoothScrollContainer/MarginContainer/HBoxContainer/Control7/btnPants" to="Panel/VBoxContainer/SmoothScrollContainer/MarginContainer/HBoxContainer/Control7/btnPants" method="_button_pressed"]
+[connection signal="button_down" from="Panel/VBoxContainer/SmoothScrollContainer/MarginContainer/HBoxContainer/Control8/btnShoes" to="Panel/VBoxContainer/SmoothScrollContainer/MarginContainer/HBoxContainer/Control8/btnShoes" method="button_down"]
+[connection signal="button_up" from="Panel/VBoxContainer/SmoothScrollContainer/MarginContainer/HBoxContainer/Control8/btnShoes" to="Panel/VBoxContainer/SmoothScrollContainer/MarginContainer/HBoxContainer/Control8/btnShoes" method="button_up"]
+[connection signal="pressed" from="Panel/VBoxContainer/SmoothScrollContainer/MarginContainer/HBoxContainer/Control8/btnShoes" to="Panel/VBoxContainer/SmoothScrollContainer/MarginContainer/HBoxContainer/Control8/btnShoes" method="_button_pressed"]
+[connection signal="button_down" from="btnShop" to="btnShop" method="_on_button_down"]
+[connection signal="button_up" from="btnShop" to="btnShop" method="_on_button_up"]
+[connection signal="pressed" from="btnShop" to="." method="_on_btn_shop_pressed"]
+[connection signal="pressed" from="btnShop" to="btnShop" method="_on_button_pressed"]
+[connection signal="button_down" from="btnHome" to="btnHome" method="_on_button_down"]
+[connection signal="button_up" from="btnHome" to="btnHome" method="_on_button_up"]
+[connection signal="pressed" from="btnHome" to="." method="_on_btn_home_pressed"]
+[connection signal="pressed" from="btnHome" to="btnHome" method="_on_button_pressed"]

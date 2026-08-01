@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ClothingInfo" load_steps=4 format=3 uid="uid://b0l3t06jgkghl"]
+
+[ext_resource type="Texture2D" uid="uid://dcnxhnn2vr4bj" path="res://char/bottoms/pnt13.png" id="1_kcs82"]
+[ext_resource type="Texture2D" uid="uid://w6tko6egh5rt" path="res://char/bottoms/prev/Untitled440_20250913224622.png" id="2_x7p21"]
+[ext_resource type="Script" uid="uid://dlfl5k543sbco" path="res://scripts/clothingInfo.gd" id="3_c6sj7"]
+
+[resource]
+script = ExtResource("3_c6sj7")
+itemName = "grayPantsDenim"
+displayName = "Denim Gray Pants"
+category = 6
+bought = false
+price = 165
+prevTex = ExtResource("2_x7p21")
+atlasTex = ExtResource("1_kcs82")
+metadata/_custom_type_script = "uid://dlfl5k543sbco"

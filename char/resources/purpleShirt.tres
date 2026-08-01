@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ClothingInfo" load_steps=4 format=3 uid="uid://dlbuu0txfqt34"]
+
+[ext_resource type="Script" uid="uid://dlfl5k543sbco" path="res://scripts/clothingInfo.gd" id="1_2fk2o"]
+[ext_resource type="Texture2D" uid="uid://deqffu8ff3eel" path="res://char/tops/sht6.png" id="1_3vnuh"]
+[ext_resource type="Texture2D" uid="uid://b8n1qjp7gor11" path="res://char/tops/prev/Untitled440_20250913203943.png" id="2_8p0aa"]
+
+[resource]
+script = ExtResource("1_2fk2o")
+itemName = "purpleShirt"
+displayName = "Purple T-Shirt"
+price = 60
+prevTex = ExtResource("2_8p0aa")
+atlasTex = ExtResource("1_3vnuh")
+metadata/_custom_type_script = "uid://dlfl5k543sbco"

@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://bntespms4c8eh"]
+
+[ext_resource type="Script" uid="uid://st43wn6uwgbk" path="res://scripts/landing/accManager.gd" id="1_ptqdo"]
+[ext_resource type="Texture2D" uid="uid://cw3jcj4dcrnb6" path="res://images/bg/bg_main.png" id="2_i14xi"]
+
+[node name="AccManager" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ptqdo")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -38.0
+offset_top = -67.76868
+offset_right = 38.0
+offset_bottom = 67.76868
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_i14xi")
+expand_mode = 1

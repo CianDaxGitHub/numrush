@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ClothingInfo" load_steps=4 format=3 uid="uid://65aavvnio5q8"]
+
+[ext_resource type="Texture2D" uid="uid://b8ag5laclrlnu" path="res://char/bottoms/sk0.png" id="1_r8a14"]
+[ext_resource type="Texture2D" uid="uid://6rhlikygibm6" path="res://char/bottoms/prev/Untitled440_20250913222055.png" id="2_dajmv"]
+[ext_resource type="Script" uid="uid://dlfl5k543sbco" path="res://scripts/clothingInfo.gd" id="3_3r2b5"]
+
+[resource]
+script = ExtResource("3_3r2b5")
+itemName = "orangeMiniskirt"
+displayName = "Orange Miniskirt"
+category = 5
+bought = false
+price = 120
+prevTex = ExtResource("2_dajmv")
+atlasTex = ExtResource("1_r8a14")
+metadata/_custom_type_script = "uid://dlfl5k543sbco"

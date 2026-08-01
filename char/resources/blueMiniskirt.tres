@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ClothingInfo" load_steps=4 format=3 uid="uid://4ok3o7f8rb8u"]
+
+[ext_resource type="Texture2D" uid="uid://bojwn5a2qfc5m" path="res://char/bottoms/sk3.png" id="1_nn07j"]
+[ext_resource type="Texture2D" uid="uid://bvpev6bgt512h" path="res://char/bottoms/prev/Untitled440_20250913222129.png" id="2_ugvxn"]
+[ext_resource type="Script" uid="uid://dlfl5k543sbco" path="res://scripts/clothingInfo.gd" id="3_b08xw"]
+
+[resource]
+script = ExtResource("3_b08xw")
+itemName = "blueMiniskirt"
+displayName = "Blue Miniskirt"
+category = 5
+bought = false
+price = 120
+prevTex = ExtResource("2_ugvxn")
+atlasTex = ExtResource("1_nn07j")
+metadata/_custom_type_script = "uid://dlfl5k543sbco"

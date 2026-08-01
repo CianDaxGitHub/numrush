@@ -1,0 +1,609 @@
+[gd_scene load_steps=39 format=3 uid="uid://bi0aw5ocqbq7m"]
+
+[ext_resource type="Script" uid="uid://cyu6kkt3whuvw" path="res://scripts/landing/create_account.gd" id="1_ds41c"]
+[ext_resource type="Script" uid="uid://c4q74v6jv7ny2" path="res://scripts/buttons/menuButton.gd" id="2_30bcj"]
+[ext_resource type="Texture2D" uid="uid://b5ajubep1sq2" path="res://images/name.png" id="2_ey86c"]
+[ext_resource type="PackedScene" uid="uid://qkd4tm4yffxp" path="res://scenes/polyAudio.tscn" id="3_e1bjl"]
+[ext_resource type="StyleBox" uid="uid://dnnyrj0dbbmnh" path="res://themes/cardbtn2.tres" id="3_g606p"]
+[ext_resource type="ButtonGroup" uid="uid://dvmtifa1vjl2r" path="res://genderChoice.tres" id="3_wtnkc"]
+[ext_resource type="FontFile" uid="uid://b3y7klyjp8l0n" path="res://fonts/Pangolin-Regular.ttf" id="4_1fvi4"]
+[ext_resource type="Script" uid="uid://b7nng4y5xxvbo" path="res://scripts/soundLibrary.gd" id="4_hmbo2"]
+[ext_resource type="Script" uid="uid://y7kgv0a3gc3g" path="res://scripts/soundEffect.gd" id="5_nop77"]
+[ext_resource type="FontFile" uid="uid://c1xv8vejetl6c" path="res://fonts/PoetsenOne-Regular.ttf" id="6_5d4ru"]
+[ext_resource type="AudioStream" uid="uid://bjyf5oq13lthl" path="res://sounds/clicky button 3.wav" id="6_n72i0"]
+[ext_resource type="Script" uid="uid://xumw1o6exii8" path="res://scripts/buttons/radioButton.gd" id="6_vhcoj"]
+[ext_resource type="AudioStream" uid="uid://b24ifncas70ex" path="res://sounds/metalswish.wav" id="7_hk30x"]
+[ext_resource type="StyleBox" uid="uid://cuap02qymupah" path="res://themes/accDisabled.tres" id="8_t5pca"]
+[ext_resource type="StyleBox" uid="uid://dd44wurwks3wr" path="res://themes/accNormal.tres" id="9_uxwro"]
+[ext_resource type="Script" uid="uid://4f21oaokgm8i" path="res://scripts/buttons/sizableButton.gd" id="10_uxwro"]
+
+[sub_resource type="Resource" id="Resource_u3xow"]
+script = ExtResource("5_nop77")
+tag = "click"
+stream = ExtResource("6_n72i0")
+metadata/_custom_type_script = "uid://y7kgv0a3gc3g"
+
+[sub_resource type="Resource" id="Resource_qaiyt"]
+script = ExtResource("5_nop77")
+tag = "confirm"
+stream = ExtResource("7_hk30x")
+metadata/_custom_type_script = "uid://y7kgv0a3gc3g"
+
+[sub_resource type="Resource" id="Resource_3d23v"]
+script = ExtResource("4_hmbo2")
+soundFx = Array[ExtResource("5_nop77")]([SubResource("Resource_u3xow"), SubResource("Resource_qaiyt")])
+metadata/_custom_type_script = "uid://b7nng4y5xxvbo"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e1bjl"]
+bg_color = Color(0.54901963, 0.43137255, 0.35686275, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.399541, 0.250223, 0.185011, 1)
+corner_radius_top_left = 34
+corner_radius_top_right = 34
+corner_radius_bottom_right = 34
+corner_radius_bottom_left = 34
+
+[sub_resource type="LabelSettings" id="LabelSettings_ij0pr"]
+font = ExtResource("6_5d4ru")
+font_size = 48
+outline_size = 16
+outline_color = Color(0.62832, 0.269837, 0.108442, 1)
+shadow_size = 0
+shadow_color = Color(0, 0, 0, 0.443137)
+shadow_offset = Vector2(4, 6)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4v62j"]
+bg_color = Color(0.937255, 0.552941, 0.294118, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.619608, 0.321569, 0.231373, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+shadow_color = Color(0.341176, 0.341176, 0.341176, 0.6)
+shadow_size = 10
+
+[sub_resource type="LabelSettings" id="LabelSettings_uxwro"]
+font = ExtResource("6_5d4ru")
+font_size = 68
+outline_size = 24
+outline_color = Color(0.627451, 0.27058825, 0.10980392, 1)
+stacked_outline_count = 1
+stacked_outline_0/size = 24
+stacked_outline_0/color = Color(0.44888473, 0.12095585, 0.07990544, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_45n8t"]
+bg_color = Color(1, 1, 1, 0)
+border_color = Color(0.823529, 0.376471, 0.00784314, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1fvi4"]
+bg_color = Color(0.272223, 0.561449, 0.769464, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.933333, 0.933333, 0.933333, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+shadow_color = Color(0, 0, 0, 0.243)
+shadow_size = 1
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="LabelSettings" id="LabelSettings_vhcoj"]
+font = ExtResource("6_5d4ru")
+font_size = 36
+outline_size = 12
+outline_color = Color(0.0848284, 0.340338, 0.488321, 1)
+shadow_size = 0
+shadow_color = Color(0, 0, 0, 0.443137)
+shadow_offset = Vector2(4, 6)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5d4ru"]
+bg_color = Color(0.846318, 0.269345, 0.40751, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.933333, 0.933333, 0.933333, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+shadow_color = Color(0, 0, 0, 0.243)
+shadow_size = 1
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="LabelSettings" id="LabelSettings_5d4ru"]
+font = ExtResource("6_5d4ru")
+font_size = 36
+outline_size = 12
+outline_color = Color(0.602456, 0.100188, 0.32574, 1)
+shadow_size = 0
+shadow_color = Color(0, 0, 0, 0.443137)
+shadow_offset = Vector2(4, 6)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ey86c"]
+content_margin_left = 24.0
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.823529, 0.376471, 0.00784314, 1)
+corner_radius_top_left = 18
+corner_radius_top_right = 18
+corner_radius_bottom_right = 18
+corner_radius_bottom_left = 18
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g606p"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e1bjl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ij0pr"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_g606p"]
+font = ExtResource("6_5d4ru")
+font_size = 56
+outline_size = 16
+outline_color = Color(0.627451, 0.27058825, 0.10980392, 1)
+stacked_outline_count = 1
+stacked_outline_0/size = 16
+stacked_outline_0/color = Color(0.44888473, 0.12095585, 0.07990544, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hmbo2"]
+
+[sub_resource type="Gradient" id="Gradient_8y37l"]
+offsets = PackedFloat32Array(0.5346154, 0.58076924, 0.72692305, 0.7346154, 0.88461536, 0.90384614)
+colors = PackedColorArray(1, 1, 1, 1, 0.38157934, 0.17121983, 0.028179208, 0.7490196, 0.38157934, 0.17121983, 0.028179208, 0.7490196, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_nop77"]
+gradient = SubResource("Gradient_8y37l")
+width = 38
+height = 38
+fill = 2
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.99572647, 0.0982906)
+
+[sub_resource type="Gradient" id="Gradient_c23j8"]
+offsets = PackedFloat32Array(0.72692305, 0.7346154, 0.88461536, 0.90384614)
+colors = PackedColorArray(0.38157934, 0.17121983, 0.028179208, 0.7490196, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_n72i0"]
+gradient = SubResource("Gradient_c23j8")
+width = 38
+height = 38
+fill = 2
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.99572647, 0.0982906)
+
+[node name="CreateAccount" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ds41c")
+genderOption = ExtResource("3_wtnkc")
+
+[node name="PolyAudio" parent="." instance=ExtResource("3_e1bjl")]
+bus = &"sfx"
+sfxLib = SubResource("Resource_3d23v")
+
+[node name="btnBack" type="Button" parent="." node_paths=PackedStringArray("sfx")]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(130, 100)
+layout_mode = 0
+offset_left = 32.0
+offset_top = 32.0
+offset_right = 234.0
+offset_bottom = 132.0
+pivot_offset = Vector2(101, 50)
+focus_mode = 0
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = ExtResource("3_g606p")
+theme_override_styles/pressed = ExtResource("3_g606p")
+theme_override_styles/hover = ExtResource("3_g606p")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_e1bjl")
+script = ExtResource("2_30bcj")
+toState = "landing"
+scaleSize = 1.1
+sfx = NodePath("../PolyAudio")
+sfx_name = Array[String](["click"])
+sfx_vol = Array[float]([-16.0])
+sfx_delay = Array[float]([0.0])
+
+[node name="Label" type="Label" parent="btnBack"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -84.5
+offset_top = -29.0
+offset_right = 84.5
+offset_bottom = 29.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Back"
+label_settings = SubResource("LabelSettings_ij0pr")
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 162
+
+[node name="Form" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -304.5
+offset_top = -454.0
+offset_right = 304.5
+offset_bottom = 454.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_4v62j")
+
+[node name="Sign In" type="Label" parent="Form"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -243.5
+offset_top = 19.5
+offset_right = 243.5
+offset_bottom = 156.5
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 92
+text = "Create Account"
+label_settings = SubResource("LabelSettings_uxwro")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Form"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -296.5
+offset_top = -337.0
+offset_right = 296.5
+offset_bottom = -6.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ey86c")
+
+[node name="Name" type="LineEdit" parent="Form/TextureRect"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -230.0
+offset_top = 20.142502
+offset_right = 230.0
+offset_bottom = 108.143005
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 1
+theme_override_colors/font_color = Color(0.823529, 0.376471, 0.00784314, 1)
+theme_override_colors/font_placeholder_color = Color(0, 0, 0, 0.113725)
+theme_override_colors/caret_color = Color(0.823529, 0.376471, 0.00784314, 1)
+theme_override_fonts/font = ExtResource("4_1fvi4")
+theme_override_font_sizes/font_size = 52
+theme_override_styles/normal = SubResource("StyleBoxFlat_45n8t")
+placeholder_text = "Enter your Name"
+alignment = 1
+max_length = 30
+context_menu_enabled = false
+emoji_menu_enabled = false
+deselect_on_focus_loss_enabled = false
+caret_blink = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Form"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -265.5
+offset_top = -4.5
+offset_right = 266.5
+offset_bottom = 319.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 45
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Form/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 32
+metadata/_edit_use_anchors_ = true
+
+[node name="Control" type="Control" parent="Form/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(180, 72)
+layout_mode = 2
+
+[node name="btnMale" type="Button" parent="Form/VBoxContainer/HBoxContainer2/Control"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -90.0
+offset_top = -36.0
+offset_right = 90.0
+offset_bottom = 36.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(112.5, 43)
+size_flags_horizontal = 3
+focus_mode = 0
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_1fvi4")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_1fvi4")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1fvi4")
+toggle_mode = true
+button_group = ExtResource("3_wtnkc")
+script = ExtResource("6_vhcoj")
+scaleSize = 1.1
+
+[node name="Label" type="Label" parent="Form/VBoxContainer/HBoxContainer2/Control/btnMale"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -65.0
+offset_top = -26.0
+offset_right = 66.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Male"
+label_settings = SubResource("LabelSettings_vhcoj")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control2" type="Control" parent="Form/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(150, 72)
+layout_mode = 2
+
+[node name="btnFemale" type="Button" parent="Form/VBoxContainer/HBoxContainer2/Control2"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -90.0
+offset_top = -36.0
+offset_right = 90.0
+offset_bottom = 36.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(112.5, 43)
+size_flags_horizontal = 3
+focus_mode = 0
+theme_override_colors/font_color = Color(0.823529, 0.376471, 0.00784314, 1)
+theme_override_colors/font_focus_color = Color(0.823529, 0.376471, 0.00784314, 1)
+theme_override_colors/font_pressed_color = Color(0.823529, 0.376471, 0.00784314, 1)
+theme_override_colors/font_hover_color = Color(0.823529, 0.376471, 0.00784314, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.823529, 0.376471, 0.00784314, 1)
+theme_override_colors/font_disabled_color = Color(0.823529, 0.376471, 0.00784314, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_5d4ru")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5d4ru")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5d4ru")
+toggle_mode = true
+button_group = ExtResource("3_wtnkc")
+script = ExtResource("6_vhcoj")
+scaleSize = 1.1
+
+[node name="Label" type="Label" parent="Form/VBoxContainer/HBoxContainer2/Control2/btnFemale"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -65.0
+offset_top = -26.0
+offset_right = 66.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Female"
+label_settings = SubResource("LabelSettings_5d4ru")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Age" type="LineEdit" parent="Form/VBoxContainer/HBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.0
+focus_mode = 1
+theme_override_colors/font_color = Color(0.823529, 0.376471, 0.00784314, 1)
+theme_override_colors/font_placeholder_color = Color(0, 0, 0, 0.113725)
+theme_override_colors/caret_color = Color(0.823529, 0.376471, 0.00784314, 1)
+theme_override_fonts/font = ExtResource("4_1fvi4")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_ey86c")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g606p")
+placeholder_text = "Age"
+alignment = 1
+virtual_keyboard_type = 2
+deselect_on_focus_loss_enabled = false
+caret_blink = true
+
+[node name="Username" type="LineEdit" parent="Form/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.62
+focus_mode = 1
+theme_override_colors/font_color = Color(0.823529, 0.376471, 0.00784314, 1)
+theme_override_colors/font_placeholder_color = Color(0, 0, 0, 0.113725)
+theme_override_colors/caret_color = Color(0.823529, 0.376471, 0.00784314, 1)
+theme_override_fonts/font = ExtResource("4_1fvi4")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxFlat_ey86c")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_e1bjl")
+placeholder_text = "Username (e.g. Loopy_456)"
+deselect_on_focus_loss_enabled = false
+caret_blink = true
+
+[node name="userWarning" type="Label" parent="Form/VBoxContainer/Username"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_top = -0.375671
+anchor_bottom = -0.375671
+offset_left = 7.5
+offset_top = -12.3354
+offset_right = 507.5
+offset_bottom = 29.6646
+pivot_offset = Vector2(0, 21)
+theme_override_colors/font_color = Color(1, 1, 1, 0.411765)
+theme_override_font_sizes/font_size = 25
+
+[node name="Password" type="LineEdit" parent="Form/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.62
+focus_mode = 1
+theme_override_colors/font_color = Color(0.823529, 0.376471, 0.00784314, 1)
+theme_override_colors/font_placeholder_color = Color(0, 0, 0, 0.113725)
+theme_override_colors/caret_color = Color(0.823529, 0.376471, 0.00784314, 1)
+theme_override_fonts/font = ExtResource("4_1fvi4")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxFlat_ey86c")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ij0pr")
+placeholder_text = "Password"
+middle_mouse_paste_enabled = false
+deselect_on_focus_loss_enabled = false
+caret_blink = true
+secret = true
+
+[node name="passWarning" type="Label" parent="Form/VBoxContainer/Password"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_top = -0.375671
+anchor_bottom = -0.375671
+offset_left = 7.5
+offset_top = -11.1478
+offset_right = 507.5
+offset_bottom = 30.8522
+pivot_offset = Vector2(0, 21)
+theme_override_colors/font_color = Color(1, 1, 1, 0.411765)
+theme_override_font_sizes/font_size = 25
+
+[node name="Done" type="Button" parent="Form" node_paths=PackedStringArray("sfx")]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(187, 100)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -187.0
+offset_top = -55.6187
+offset_right = 183.0
+offset_bottom = 44.3813
+grow_horizontal = 2
+grow_vertical = 0
+pivot_offset = Vector2(185, 50)
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(1, 1, 1, 0.780392)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("9_uxwro")
+theme_override_styles/pressed = ExtResource("9_uxwro")
+theme_override_styles/hover = ExtResource("9_uxwro")
+theme_override_styles/disabled = ExtResource("8_t5pca")
+script = ExtResource("10_uxwro")
+scaleSize = 1.1
+sfx = NodePath("../../PolyAudio")
+sfx_name = Array[String](["click", "confirm"])
+sfx_vol = Array[float]([-14.0, -18.0])
+sfx_delay = Array[float]([0.0, 0.05])
+
+[node name="Sign In" type="Label" parent="Form/Done"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -161.0
+offset_top = -68.5
+offset_right = 161.0
+offset_bottom = 68.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 92
+text = "Done"
+label_settings = SubResource("LabelSettings_g606p")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CheckBox" type="CheckBox" parent="Form"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -262.5
+offset_top = 329.0
+offset_right = 160.5
+offset_bottom = 385.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 8
+theme_override_fonts/font = ExtResource("4_1fvi4")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/focus = SubResource("StyleBoxEmpty_hmbo2")
+theme_override_icons/checked = SubResource("GradientTexture2D_nop77")
+theme_override_icons/unchecked = SubResource("GradientTexture2D_n72i0")
+text = "Show Password"
+
+[connection signal="button_down" from="btnBack" to="btnBack" method="_on_button_down"]
+[connection signal="button_up" from="btnBack" to="btnBack" method="_on_button_up"]
+[connection signal="pressed" from="btnBack" to="btnBack" method="_on_button_pressed"]
+[connection signal="pressed" from="Form/VBoxContainer/HBoxContainer2/Control/btnMale" to="." method="_on_pressed"]
+[connection signal="toggled" from="Form/VBoxContainer/HBoxContainer2/Control/btnMale" to="Form/VBoxContainer/HBoxContainer2/Control/btnMale" method="_on_toggled"]
+[connection signal="pressed" from="Form/VBoxContainer/HBoxContainer2/Control2/btnFemale" to="." method="_on_pressed"]
+[connection signal="toggled" from="Form/VBoxContainer/HBoxContainer2/Control2/btnFemale" to="Form/VBoxContainer/HBoxContainer2/Control2/btnFemale" method="_on_toggled"]
+[connection signal="button_down" from="Form/Done" to="Form/Done" method="button_down"]
+[connection signal="button_up" from="Form/Done" to="Form/Done" method="button_up"]
+[connection signal="pressed" from="Form/Done" to="." method="_on_done_pressed"]
+[connection signal="pressed" from="Form/Done" to="Form/Done" method="_button_pressed"]
+[connection signal="toggled" from="Form/CheckBox" to="." method="_on_check_box_toggled"]

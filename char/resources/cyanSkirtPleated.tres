@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ClothingInfo" load_steps=4 format=3 uid="uid://cniuy7vso8qxn"]
+
+[ext_resource type="Texture2D" uid="uid://yxlgsksy103h" path="res://char/bottoms/sk13.png" id="1_o0tue"]
+[ext_resource type="Texture2D" uid="uid://1w7oru5u0q18" path="res://char/bottoms/prev/Untitled440_20250915232052.png" id="2_68j7s"]
+[ext_resource type="Script" uid="uid://dlfl5k543sbco" path="res://scripts/clothingInfo.gd" id="3_s8413"]
+
+[resource]
+script = ExtResource("3_s8413")
+itemName = "cyanSkirtPleated"
+displayName = "Cyan Pleated Skirt"
+category = 5
+price = 50
+prevTex = ExtResource("2_68j7s")
+atlasTex = ExtResource("1_o0tue")
+metadata/_custom_type_script = "uid://dlfl5k543sbco"

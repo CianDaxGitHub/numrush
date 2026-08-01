@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ClothingInfo" load_steps=4 format=3 uid="uid://b0m6povb0dxus"]
+
+[ext_resource type="Texture2D" uid="uid://dh8qskobq1cml" path="res://char/bottoms/shr1.png" id="1_omfyd"]
+[ext_resource type="Texture2D" uid="uid://31wxvqq4xudf" path="res://char/bottoms/prev/Untitled440_20250913222622.png" id="2_hw11o"]
+[ext_resource type="Script" uid="uid://dlfl5k543sbco" path="res://scripts/clothingInfo.gd" id="3_7xcw5"]
+
+[resource]
+script = ExtResource("3_7xcw5")
+itemName = "orangeShorts"
+displayName = "Orange Shorts"
+category = 4
+price = 90
+prevTex = ExtResource("2_hw11o")
+atlasTex = ExtResource("1_omfyd")
+metadata/_custom_type_script = "uid://dlfl5k543sbco"

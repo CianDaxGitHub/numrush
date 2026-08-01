@@ -1,0 +1,399 @@
+[gd_scene load_steps=11 format=3 uid="uid://0cxl2oc50ij7"]
+
+[ext_resource type="Script" uid="uid://c4q74v6jv7ny2" path="res://scripts/buttons/menuButton.gd" id="1_klgdb"]
+[ext_resource type="Script" uid="uid://dlbbj7086vdvc" path="res://scripts/buttons/choiceButton.gd" id="1_mcvr8"]
+[ext_resource type="PackedScene" uid="uid://d22sgef6pxhwl" path="res://carousel.tscn" id="3_e0arn"]
+[ext_resource type="Texture2D" uid="uid://dsttby0mtx81v" path="res://images/Untitled design (3).png" id="4_037ec"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mcvr8"]
+bg_color = Color(0.980392, 0.611765, 0.286275, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.705882, 0.333333, 0.196078, 1)
+corner_radius_top_left = 18
+corner_radius_top_right = 18
+corner_radius_bottom_right = 18
+corner_radius_bottom_left = 18
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e0arn"]
+bg_color = Color(0.846318, 0.269345, 0.40751, 1)
+border_width_left = 16
+border_width_top = 16
+border_width_right = 16
+border_width_bottom = 16
+corner_radius_top_left = 48
+corner_radius_top_right = 48
+corner_radius_bottom_right = 48
+corner_radius_bottom_left = 48
+shadow_color = Color(0, 0, 0, 0.243)
+shadow_size = 3
+shadow_offset = Vector2(2, 3)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_037ec"]
+bg_color = Color(0.318791, 0.55584, 0.323543, 1)
+border_width_left = 16
+border_width_top = 16
+border_width_right = 16
+border_width_bottom = 16
+corner_radius_top_left = 48
+corner_radius_top_right = 48
+corner_radius_bottom_right = 48
+corner_radius_bottom_left = 48
+shadow_color = Color(0, 0, 0, 0.243)
+shadow_size = 3
+shadow_offset = Vector2(2, 3)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y1o0p"]
+bg_color = Color(0.799953, 0.745091, 0.414682, 1)
+border_width_left = 16
+border_width_top = 16
+border_width_right = 16
+border_width_bottom = 16
+corner_radius_top_left = 48
+corner_radius_top_right = 48
+corner_radius_bottom_right = 48
+corner_radius_bottom_left = 48
+shadow_color = Color(0, 0, 0, 0.243)
+shadow_size = 3
+shadow_offset = Vector2(2, 3)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r8yej"]
+bg_color = Color(0.272223, 0.561449, 0.769464, 1)
+border_width_left = 16
+border_width_top = 16
+border_width_right = 16
+border_width_bottom = 16
+corner_radius_top_left = 48
+corner_radius_top_right = 48
+corner_radius_bottom_right = 48
+corner_radius_bottom_left = 48
+shadow_color = Color(0, 0, 0, 0.243)
+shadow_size = 3
+shadow_offset = Vector2(2, 3)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3y2rt"]
+bg_color = Color(0.865713, 0.376651, 0.255844, 1)
+border_width_left = 16
+border_width_top = 16
+border_width_right = 16
+border_width_bottom = 16
+corner_radius_top_left = 48
+corner_radius_top_right = 48
+corner_radius_bottom_right = 48
+corner_radius_bottom_left = 48
+shadow_color = Color(0, 0, 0, 0.243)
+shadow_size = 3
+shadow_offset = Vector2(2, 3)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HFlowContainer2" type="HFlowContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -179.0
+offset_top = -161.0
+offset_right = 179.0
+offset_bottom = 305.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="btnAdd" type="Button" parent="HFlowContainer2"]
+custom_minimum_size = Vector2(358, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "Addition"
+script = ExtResource("1_mcvr8")
+toState = "difficulty"
+scaleSize = 1.15
+
+[node name="btnSub" type="Button" parent="HFlowContainer2"]
+custom_minimum_size = Vector2(358, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "Subtraction"
+script = ExtResource("1_mcvr8")
+gameChoice = 1
+toState = "difficulty"
+
+[node name="btnMul" type="Button" parent="HFlowContainer2"]
+custom_minimum_size = Vector2(358, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "Multiplication"
+script = ExtResource("1_mcvr8")
+gameChoice = 2
+toState = "difficulty"
+
+[node name="btnDiv" type="Button" parent="HFlowContainer2"]
+custom_minimum_size = Vector2(358, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "Division"
+script = ExtResource("1_mcvr8")
+gameChoice = 3
+toState = "difficulty"
+
+[node name="btnMix" type="Button" parent="HFlowContainer2"]
+custom_minimum_size = Vector2(358, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "Mixed"
+script = ExtResource("1_mcvr8")
+gameChoice = 4
+toState = "difficulty"
+
+[node name="btnAvatar" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_top = -209.0
+offset_right = 160.0
+offset_bottom = -109.0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 26
+text = "avatar"
+script = ExtResource("1_klgdb")
+toState = "avatar"
+
+[node name="btnAbout" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -160.0
+offset_top = -209.0
+offset_right = -30.0
+offset_bottom = -109.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 26
+text = "about"
+script = ExtResource("1_klgdb")
+toState = "about"
+
+[node name="btnTutorial" type="Button" parent="."]
+layout_mode = 1
+offset_left = 28.0
+offset_top = 49.0
+offset_right = 158.0
+offset_bottom = 149.0
+theme_override_font_sizes/font_size = 26
+text = "tut"
+script = ExtResource("1_klgdb")
+toState = "tutorial"
+
+[node name="btnShop" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_top = -341.0
+offset_right = 160.0
+offset_bottom = -241.0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 26
+text = "shop"
+script = ExtResource("1_klgdb")
+toState = "shop"
+
+[node name="btnRecords" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -160.0
+offset_top = -342.0
+offset_right = -30.0
+offset_bottom = -242.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 26
+text = "records"
+script = ExtResource("1_klgdb")
+toState = "records"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -319.0
+offset_top = -114.0
+offset_right = 319.0
+offset_bottom = 174.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="Button" type="Button" parent="HBoxContainer"]
+custom_minimum_size = Vector2(80, 200)
+layout_mode = 2
+theme_override_styles/hover = SubResource("StyleBoxFlat_mcvr8")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mcvr8")
+theme_override_styles/normal = SubResource("StyleBoxFlat_mcvr8")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(450, 288)
+layout_mode = 2
+alignment = 1
+
+[node name="Node2D" parent="HBoxContainer/HBoxContainer" node_paths=PackedStringArray("position_offset") instance=ExtResource("3_e0arn")]
+position = Vector2(235, 144)
+spacing = 0.0
+wraparound_enabled = false
+wraparound_radius = 500.0
+wraparound_height = 0.0
+opacity_strength = 0.3
+scale_strength = 0.2
+selected_index = 4
+position_offset = NodePath("Control")
+
+[node name="Control" type="Control" parent="HBoxContainer/HBoxContainer/Node2D"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1125.0
+offset_right = -1125.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Add" type="Button" parent="HBoxContainer/HBoxContainer/Node2D/Control"]
+modulate = Color(1, 1, 1, 0)
+z_index = -4
+layout_mode = 0
+offset_top = -125.0
+offset_right = 250.0
+offset_bottom = 125.0
+scale = Vector2(0.2, 0.2)
+pivot_offset = Vector2(125, 125)
+focus_mode = 0
+mouse_filter = 2
+theme_override_styles/hover = SubResource("StyleBoxFlat_e0arn")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_e0arn")
+theme_override_styles/normal = SubResource("StyleBoxFlat_e0arn")
+script = ExtResource("1_mcvr8")
+toState = "difficulty"
+scaleSize = 1.15
+
+[node name="Sub" type="Button" parent="HBoxContainer/HBoxContainer/Node2D/Control"]
+modulate = Color(1, 1, 1, 0.1)
+z_index = -3
+layout_mode = 0
+offset_left = 250.0
+offset_top = -125.0
+offset_right = 500.0
+offset_bottom = 125.0
+scale = Vector2(0.4, 0.4)
+pivot_offset = Vector2(125, 125)
+focus_mode = 0
+mouse_filter = 2
+theme_override_styles/hover = SubResource("StyleBoxFlat_037ec")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_037ec")
+theme_override_styles/normal = SubResource("StyleBoxFlat_037ec")
+script = ExtResource("1_mcvr8")
+gameChoice = 1
+toState = "difficulty"
+scaleSize = 1.15
+
+[node name="Mul" type="Button" parent="HBoxContainer/HBoxContainer/Node2D/Control"]
+modulate = Color(1, 1, 1, 0.4)
+z_index = -2
+layout_mode = 0
+offset_left = 500.0
+offset_top = -125.0
+offset_right = 750.0
+offset_bottom = 125.0
+scale = Vector2(0.6, 0.6)
+pivot_offset = Vector2(125, 125)
+focus_mode = 0
+mouse_filter = 2
+theme_override_styles/hover = SubResource("StyleBoxFlat_y1o0p")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_y1o0p")
+theme_override_styles/normal = SubResource("StyleBoxFlat_y1o0p")
+script = ExtResource("1_mcvr8")
+gameChoice = 2
+toState = "difficulty"
+scaleSize = 1.15
+
+[node name="Div" type="Button" parent="HBoxContainer/HBoxContainer/Node2D/Control"]
+modulate = Color(1, 1, 1, 0.7)
+z_index = -1
+layout_mode = 0
+offset_left = 750.0
+offset_top = -125.0
+offset_right = 1000.0
+offset_bottom = 125.0
+scale = Vector2(0.8, 0.8)
+pivot_offset = Vector2(125, 125)
+focus_mode = 0
+mouse_filter = 2
+theme_override_styles/hover = SubResource("StyleBoxFlat_r8yej")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_r8yej")
+theme_override_styles/normal = SubResource("StyleBoxFlat_r8yej")
+script = ExtResource("1_mcvr8")
+gameChoice = 3
+toState = "difficulty"
+scaleSize = 1.15
+
+[node name="Mix" type="Button" parent="HBoxContainer/HBoxContainer/Node2D/Control"]
+z_index = 1
+layout_mode = 0
+offset_left = 1000.0
+offset_top = -125.0
+offset_right = 1250.0
+offset_bottom = 125.0
+pivot_offset = Vector2(125, 125)
+focus_mode = 0
+theme_override_styles/hover = SubResource("StyleBoxFlat_e0arn")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_e0arn")
+theme_override_styles/normal = SubResource("StyleBoxFlat_3y2rt")
+script = ExtResource("1_mcvr8")
+gameChoice = 4
+toState = "difficulty"
+scaleSize = 1.15
+
+[node name="Button2" type="Button" parent="HBoxContainer"]
+custom_minimum_size = Vector2(80, 200)
+layout_mode = 2
+theme_override_styles/hover = SubResource("StyleBoxFlat_mcvr8")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mcvr8")
+theme_override_styles/normal = SubResource("StyleBoxFlat_mcvr8")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -215.0
+offset_top = 125.0
+offset_right = 215.0
+offset_bottom = 555.0
+grow_horizontal = 2
+mouse_filter = 2
+texture = ExtResource("4_037ec")
+expand_mode = 1

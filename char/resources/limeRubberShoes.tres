@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ClothingInfo" load_steps=4 format=3 uid="uid://8j5cfvfa60ud"]
+
+[ext_resource type="Texture2D" uid="uid://nudeggtn51ib" path="res://char/shoes/shs20.png" id="1_7j847"]
+[ext_resource type="Texture2D" uid="uid://cd0pj4vdjnivw" path="res://char/shoes/prev/Untitled440_20250914102444.png" id="2_yayjb"]
+[ext_resource type="Script" uid="uid://dlfl5k543sbco" path="res://scripts/clothingInfo.gd" id="3_vv0yj"]
+
+[resource]
+script = ExtResource("3_vv0yj")
+itemName = "limeRubberShoes"
+displayName = "Lime Rubber Shoes"
+category = 7
+bought = false
+price = 140
+prevTex = ExtResource("2_yayjb")
+atlasTex = ExtResource("1_7j847")
+metadata/_custom_type_script = "uid://dlfl5k543sbco"

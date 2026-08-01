@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ClothingInfo" load_steps=4 format=3 uid="uid://dl4vna37krkc4"]
+
+[ext_resource type="Texture2D" uid="uid://c44jloet2ukgy" path="res://char/shoes/shs10.png" id="1_2eo2i"]
+[ext_resource type="Texture2D" uid="uid://c5pi1ntrnjxjg" path="res://char/shoes/prev/Untitled440_20250914103215.png" id="2_8fgns"]
+[ext_resource type="Script" uid="uid://dlfl5k543sbco" path="res://scripts/clothingInfo.gd" id="3_rm6yu"]
+
+[resource]
+script = ExtResource("3_rm6yu")
+itemName = "yellowFlatShoes"
+displayName = "Yellow Flat Shoes"
+category = 7
+bought = false
+price = 85
+prevTex = ExtResource("2_8fgns")
+atlasTex = ExtResource("1_2eo2i")
+metadata/_custom_type_script = "uid://dlfl5k543sbco"

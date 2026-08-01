@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ClothingInfo" load_steps=4 format=3 uid="uid://cq8dvvlpakcny"]
+
+[ext_resource type="Texture2D" uid="uid://b8kb647g5qrs2" path="res://char/tops/sht2.png" id="1_dvcoo"]
+[ext_resource type="Texture2D" uid="uid://c23g1ixj7utjn" path="res://char/tops/prev/Untitled440_20250913204145.png" id="2_fscts"]
+[ext_resource type="Script" uid="uid://dlfl5k543sbco" path="res://scripts/clothingInfo.gd" id="3_oss4k"]
+
+[resource]
+script = ExtResource("3_oss4k")
+itemName = "grayShirt"
+displayName = "Gray T-Shirt"
+category = 0
+bought = false
+price = 60
+prevTex = ExtResource("2_fscts")
+atlasTex = ExtResource("1_dvcoo")
+metadata/_custom_type_script = "uid://dlfl5k543sbco"

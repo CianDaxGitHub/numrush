@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ClothingInfo" load_steps=4 format=3 uid="uid://unv3bm3ssh28"]
+
+[ext_resource type="Texture2D" uid="uid://bkcuwktf0tvg5" path="res://char/hats/hat42.png" id="1_dhfat"]
+[ext_resource type="Texture2D" uid="uid://bsdopy7d6nwbe" path="res://char/hats/prev/Untitled440_20250915234438.png" id="2_wh02h"]
+[ext_resource type="Script" uid="uid://dlfl5k543sbco" path="res://scripts/clothingInfo.gd" id="3_bhf83"]
+
+[resource]
+script = ExtResource("3_bhf83")
+itemName = "grayBeanie"
+displayName = "Gray Beanie"
+category = 3
+price = 95
+prevTex = ExtResource("2_wh02h")
+atlasTex = ExtResource("1_dhfat")
+metadata/_custom_type_script = "uid://dlfl5k543sbco"

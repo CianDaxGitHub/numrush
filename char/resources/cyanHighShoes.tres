@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ClothingInfo" load_steps=4 format=3 uid="uid://dtfu5lwcohfal"]
+
+[ext_resource type="Texture2D" uid="uid://b78ilpok8abx6" path="res://char/shoes/shs15.png" id="1_wkrpx"]
+[ext_resource type="Texture2D" uid="uid://cdpvsfxx5gi6j" path="res://char/shoes/prev/Untitled440_20250915232913.png" id="2_os4vx"]
+[ext_resource type="Script" uid="uid://dlfl5k543sbco" path="res://scripts/clothingInfo.gd" id="3_lnus0"]
+
+[resource]
+script = ExtResource("3_lnus0")
+itemName = "cyanHighShoes"
+displayName = "Cyan High Shoes"
+category = 7
+bought = false
+price = 80
+prevTex = ExtResource("2_os4vx")
+atlasTex = ExtResource("1_wkrpx")
+metadata/_custom_type_script = "uid://dlfl5k543sbco"

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ClothingInfo" load_steps=4 format=3 uid="uid://kidj2ssetxo8"]
+
+[ext_resource type="Texture2D" uid="uid://dbj0jpav12ds8" path="res://char/tops/jkt2.png" id="1_v42gx"]
+[ext_resource type="Texture2D" uid="uid://ll4u3lde4p0k" path="res://char/tops/prev/Untitled440_20250913215546.png" id="2_uvr5d"]
+[ext_resource type="Script" uid="uid://dlfl5k543sbco" path="res://scripts/clothingInfo.gd" id="3_hj7yy"]
+
+[resource]
+script = ExtResource("3_hj7yy")
+itemName = "blueJacket"
+displayName = "Blue Jacket"
+category = 2
+bought = false
+price = 150
+prevTex = ExtResource("2_uvr5d")
+atlasTex = ExtResource("1_v42gx")
+metadata/_custom_type_script = "uid://dlfl5k543sbco"

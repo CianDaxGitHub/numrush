@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ClothingInfo" load_steps=4 format=3 uid="uid://bavq8f2mflf4o"]
+
+[ext_resource type="Texture2D" uid="uid://di0yp66v4hwn0" path="res://char/shoes/shs4.png" id="1_7lpw3"]
+[ext_resource type="Texture2D" uid="uid://0cw13jrr1wdc" path="res://char/shoes/prev/Untitled440_20250915233654.png" id="2_0y2vt"]
+[ext_resource type="Script" uid="uid://dlfl5k543sbco" path="res://scripts/clothingInfo.gd" id="3_8lqx2"]
+
+[resource]
+script = ExtResource("3_8lqx2")
+itemName = "pinkDollShoes"
+displayName = "Pink Doll Shoes"
+category = 7
+bought = false
+price = 80
+prevTex = ExtResource("2_0y2vt")
+atlasTex = ExtResource("1_7lpw3")
+metadata/_custom_type_script = "uid://dlfl5k543sbco"

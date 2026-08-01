@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ckcxtmlrb58hm"
+path="res://.godot/imported/printer laser paper tray open 2.wav-102fb2e4c54daa02836255ab720cdc2f.sample"
+
+[deps]
+
+source_file="res://sounds/printer laser paper tray open 2.wav"
+dest_files=["res://.godot/imported/printer laser paper tray open 2.wav-102fb2e4c54daa02836255ab720cdc2f.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

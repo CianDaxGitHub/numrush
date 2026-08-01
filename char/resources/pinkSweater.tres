@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ClothingInfo" load_steps=4 format=3 uid="uid://stfhfe0nj0o7"]
+
+[ext_resource type="Texture2D" uid="uid://bueegc5y5i6wu" path="res://char/tops/slv2.png" id="1_dtl7e"]
+[ext_resource type="Texture2D" uid="uid://02cmiofuyepj" path="res://char/tops/prev/Untitled440_20250913210219.png" id="2_g8b2x"]
+[ext_resource type="Script" uid="uid://dlfl5k543sbco" path="res://scripts/clothingInfo.gd" id="3_s3cgv"]
+
+[resource]
+script = ExtResource("3_s3cgv")
+itemName = "pinkSweater"
+displayName = "Pink Sweater"
+category = 1
+bought = false
+price = 150
+prevTex = ExtResource("2_g8b2x")
+atlasTex = ExtResource("1_dtl7e")
+metadata/_custom_type_script = "uid://dlfl5k543sbco"

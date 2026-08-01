@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ClothingInfo" load_steps=4 format=3 uid="uid://bpce0hsnp24g6"]
+
+[ext_resource type="Texture2D" uid="uid://djyqt32i1ddkx" path="res://char/shoes/shs5.png" id="1_mx2dy"]
+[ext_resource type="Texture2D" uid="uid://dlbtaah68e2d1" path="res://char/shoes/prev/Untitled440_20250915233759.png" id="2_elb7f"]
+[ext_resource type="Script" uid="uid://dlfl5k543sbco" path="res://scripts/clothingInfo.gd" id="3_gx5qq"]
+
+[resource]
+script = ExtResource("3_gx5qq")
+itemName = "blueDollShoes"
+displayName = "Blue Doll Shoes"
+category = 7
+price = 90
+prevTex = ExtResource("2_elb7f")
+atlasTex = ExtResource("1_mx2dy")
+metadata/_custom_type_script = "uid://dlfl5k543sbco"

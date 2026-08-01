@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ClothingInfo" load_steps=4 format=3 uid="uid://bla0yjjjl28de"]
+
+[ext_resource type="Texture2D" uid="uid://ckoy7mb48obs" path="res://char/bottoms/shr2.png" id="1_hcgps"]
+[ext_resource type="Script" uid="uid://dlfl5k543sbco" path="res://scripts/clothingInfo.gd" id="2_hcgps"]
+[ext_resource type="Texture2D" uid="uid://b2yp68qh5oq67" path="res://char/bottoms/prev/Untitled440_20250913222640.png" id="2_ib8wi"]
+
+[resource]
+script = ExtResource("2_hcgps")
+itemName = "pinkShorts"
+displayName = "Pink Shorts"
+category = 4
+bought = false
+price = 90
+prevTex = ExtResource("2_ib8wi")
+atlasTex = ExtResource("1_hcgps")
+metadata/_custom_type_script = "uid://dlfl5k543sbco"

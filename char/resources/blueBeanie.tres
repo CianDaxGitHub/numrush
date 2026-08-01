@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ClothingInfo" load_steps=4 format=3 uid="uid://ehbeygd75v5t"]
+
+[ext_resource type="Texture2D" uid="uid://bwfgin4d6mltl" path="res://char/hats/hat38.png" id="1_7e1a6"]
+[ext_resource type="Texture2D" uid="uid://dcf5k48hrjlbb" path="res://char/hats/prev/Untitled440_20250915234220.png" id="2_xhp5v"]
+[ext_resource type="Script" uid="uid://dlfl5k543sbco" path="res://scripts/clothingInfo.gd" id="3_68kgw"]
+
+[resource]
+script = ExtResource("3_68kgw")
+itemName = "blueBeanie"
+displayName = "Blue Beanie"
+category = 3
+price = 95
+prevTex = ExtResource("2_xhp5v")
+atlasTex = ExtResource("1_7e1a6")
+metadata/_custom_type_script = "uid://dlfl5k543sbco"

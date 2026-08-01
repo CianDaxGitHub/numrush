@@ -1,0 +1,416 @@
+[gd_scene load_steps=32 format=3 uid="uid://cgvgirnnuclxl"]
+
+[ext_resource type="Script" uid="uid://c3rodyl566ndr" path="res://scripts/landing/sign_in.gd" id="1_slewp"]
+[ext_resource type="Script" uid="uid://c4q74v6jv7ny2" path="res://scripts/buttons/menuButton.gd" id="2_4dyaw"]
+[ext_resource type="FontFile" uid="uid://b3y7klyjp8l0n" path="res://fonts/Pangolin-Regular.ttf" id="2_871l1"]
+[ext_resource type="PackedScene" uid="uid://qkd4tm4yffxp" path="res://scenes/polyAudio.tscn" id="2_e63og"]
+[ext_resource type="StyleBox" uid="uid://dnnyrj0dbbmnh" path="res://themes/cardbtn2.tres" id="2_kpeow"]
+[ext_resource type="Script" uid="uid://b7nng4y5xxvbo" path="res://scripts/soundLibrary.gd" id="3_8y37l"]
+[ext_resource type="FontFile" uid="uid://c1xv8vejetl6c" path="res://fonts/PoetsenOne-Regular.ttf" id="3_o4wco"]
+[ext_resource type="StyleBox" uid="uid://cuap02qymupah" path="res://themes/accDisabled.tres" id="3_p2h0c"]
+[ext_resource type="Script" uid="uid://y7kgv0a3gc3g" path="res://scripts/soundEffect.gd" id="4_hsimn"]
+[ext_resource type="AudioStream" uid="uid://bjyf5oq13lthl" path="res://sounds/clicky button 3.wav" id="5_c23j8"]
+[ext_resource type="Script" uid="uid://4f21oaokgm8i" path="res://scripts/buttons/sizableButton.gd" id="5_o4wco"]
+[ext_resource type="AudioStream" uid="uid://b24ifncas70ex" path="res://sounds/metalswish.wav" id="6_guvu8"]
+
+[sub_resource type="Resource" id="Resource_n0apr"]
+script = ExtResource("4_hsimn")
+tag = "click"
+stream = ExtResource("5_c23j8")
+metadata/_custom_type_script = "uid://y7kgv0a3gc3g"
+
+[sub_resource type="Resource" id="Resource_uv4g1"]
+script = ExtResource("4_hsimn")
+tag = "confirm"
+stream = ExtResource("6_guvu8")
+metadata/_custom_type_script = "uid://y7kgv0a3gc3g"
+
+[sub_resource type="Resource" id="Resource_7nrsf"]
+script = ExtResource("3_8y37l")
+soundFx = Array[ExtResource("4_hsimn")]([SubResource("Resource_n0apr"), SubResource("Resource_uv4g1")])
+metadata/_custom_type_script = "uid://b7nng4y5xxvbo"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kpeow"]
+bg_color = Color(0.54901963, 0.43137255, 0.35686275, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.399541, 0.250223, 0.185011, 1)
+corner_radius_top_left = 34
+corner_radius_top_right = 34
+corner_radius_bottom_right = 34
+corner_radius_bottom_left = 34
+
+[sub_resource type="LabelSettings" id="LabelSettings_e63og"]
+font = ExtResource("3_o4wco")
+font_size = 48
+outline_size = 16
+outline_color = Color(0.62832, 0.269837, 0.108442, 1)
+shadow_size = 0
+shadow_color = Color(0, 0, 0, 0.443137)
+shadow_offset = Vector2(4, 6)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mu45i"]
+bg_color = Color(0.937255, 0.552941, 0.294118, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.619608, 0.321569, 0.231373, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+shadow_color = Color(0.340339, 0.340339, 0.340339, 0.6)
+shadow_size = 10
+
+[sub_resource type="LabelSettings" id="LabelSettings_kpeow"]
+font = ExtResource("3_o4wco")
+font_size = 92
+outline_size = 24
+outline_color = Color(0.627451, 0.27058825, 0.10980392, 1)
+stacked_outline_count = 1
+stacked_outline_0/size = 24
+stacked_outline_0/color = Color(0.44888473, 0.12095585, 0.07990544, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_smi6x"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.823529, 0.376471, 0.00784314, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+expand_margin_left = 20.0
+expand_margin_right = 20.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kpeow"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e63og"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kl35i"]
+bg_color = Color(0.866667, 0.411765, 0.235294, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.619608, 0.321569, 0.231373, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+shadow_color = Color(1, 1, 1, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s4yy1"]
+bg_color = Color(0.827451, 0.356863, 0.168627, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.619608, 0.321569, 0.231373, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+shadow_color = Color(1, 1, 1, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cnnum"]
+bg_color = Color(0.823529, 0.376471, 0.203922, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.619608, 0.321569, 0.231373, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+shadow_color = Color(1, 1, 1, 0)
+
+[sub_resource type="LabelSettings" id="LabelSettings_o4wco"]
+font = ExtResource("3_o4wco")
+font_size = 56
+outline_size = 16
+outline_color = Color(0.627451, 0.27058825, 0.10980392, 1)
+stacked_outline_count = 1
+stacked_outline_0/size = 16
+stacked_outline_0/color = Color(0.44888473, 0.12095585, 0.07990544, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8y37l"]
+
+[sub_resource type="Gradient" id="Gradient_8y37l"]
+offsets = PackedFloat32Array(0.5346154, 0.58076924, 0.72692305, 0.7346154, 0.88461536, 0.90384614)
+colors = PackedColorArray(1, 1, 1, 1, 0.38157934, 0.17121983, 0.028179208, 0.7490196, 0.38157934, 0.17121983, 0.028179208, 0.7490196, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_hsimn"]
+gradient = SubResource("Gradient_8y37l")
+width = 38
+height = 38
+fill = 2
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.99572647, 0.0982906)
+
+[sub_resource type="Gradient" id="Gradient_c23j8"]
+offsets = PackedFloat32Array(0.72692305, 0.7346154, 0.88461536, 0.90384614)
+colors = PackedColorArray(0.38157934, 0.17121983, 0.028179208, 0.7490196, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_guvu8"]
+gradient = SubResource("Gradient_c23j8")
+width = 38
+height = 38
+fill = 2
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.99572647, 0.0982906)
+
+[node name="SignIn" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_slewp")
+
+[node name="PolyAudio" parent="." instance=ExtResource("2_e63og")]
+bus = &"sfx"
+sfxLib = SubResource("Resource_7nrsf")
+
+[node name="btnBack" type="Button" parent="." node_paths=PackedStringArray("sfx")]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(130, 100)
+layout_mode = 1
+offset_left = 32.0
+offset_top = 32.0
+offset_right = 234.0
+offset_bottom = 132.0
+pivot_offset = Vector2(101, 50)
+focus_mode = 0
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = ExtResource("2_kpeow")
+theme_override_styles/pressed = ExtResource("2_kpeow")
+theme_override_styles/hover = ExtResource("2_kpeow")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_kpeow")
+script = ExtResource("2_4dyaw")
+toState = "landing"
+scaleSize = 1.1
+sfx = NodePath("../PolyAudio")
+sfx_name = Array[String](["click"])
+sfx_vol = Array[float]([-14.0])
+sfx_delay = Array[float]([0.0])
+
+[node name="Label" type="Label" parent="btnBack"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -84.5
+offset_top = -29.0
+offset_right = 84.5
+offset_bottom = 29.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Back"
+label_settings = SubResource("LabelSettings_e63og")
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 162
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -323.5
+offset_top = -305.0
+offset_right = 323.5
+offset_bottom = 305.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_mu45i")
+
+[node name="Sign In" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -161.0
+offset_top = 11.0
+offset_right = 161.0
+offset_bottom = 148.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 92
+text = "Sign In"
+label_settings = SubResource("LabelSettings_kpeow")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -267.0
+offset_top = -123.0
+offset_right = 265.0
+offset_bottom = 161.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 60
+
+[node name="Username" type="LineEdit" parent="Panel/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.823529, 0.376471, 0.00784314, 1)
+theme_override_colors/font_placeholder_color = Color(0, 0, 0, 0.113725)
+theme_override_colors/caret_color = Color(0.823529, 0.376471, 0.00784314, 1)
+theme_override_fonts/font = ExtResource("2_871l1")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxFlat_smi6x")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_kpeow")
+placeholder_text = "Username"
+deselect_on_focus_loss_enabled = false
+caret_blink = true
+
+[node name="userInst" type="Label" parent="Panel/VBoxContainer/Username"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_top = -0.376238
+anchor_bottom = -0.376238
+offset_left = 17.0
+offset_top = 3.0
+offset_right = 526.0
+offset_bottom = 45.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 0.411765)
+theme_override_fonts/font = ExtResource("2_871l1")
+theme_override_font_sizes/font_size = 32
+text = "Enter your username."
+
+[node name="Password" type="LineEdit" parent="Panel/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.823529, 0.376471, 0.00784314, 1)
+theme_override_colors/font_placeholder_color = Color(0, 0, 0, 0.113725)
+theme_override_colors/caret_color = Color(0.823529, 0.376471, 0.00784314, 1)
+theme_override_fonts/font = ExtResource("2_871l1")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxFlat_smi6x")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_e63og")
+placeholder_text = "Password"
+deselect_on_focus_loss_enabled = false
+caret_blink = true
+secret = true
+
+[node name="passInst" type="Label" parent="Panel/VBoxContainer/Password"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_top = -0.375671
+anchor_bottom = -0.375671
+offset_left = 20.0
+offset_top = 3.31844
+offset_right = 533.0
+offset_bottom = 45.3184
+theme_override_colors/font_color = Color(1, 1, 1, 0.411765)
+theme_override_fonts/font = ExtResource("2_871l1")
+theme_override_font_sizes/font_size = 32
+text = "Enter your password."
+
+[node name="Done" type="Button" parent="Panel" node_paths=PackedStringArray("sfx")]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(308, 108)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -154.0
+offset_top = -70.0
+offset_right = 154.0
+offset_bottom = 38.0
+grow_horizontal = 2
+grow_vertical = 0
+pivot_offset = Vector2(154, 54)
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(1, 1, 1, 0.780392)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_kl35i")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_s4yy1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_cnnum")
+theme_override_styles/disabled = ExtResource("3_p2h0c")
+script = ExtResource("5_o4wco")
+scaleSize = 1.08
+sfx = NodePath("../../PolyAudio")
+sfx_name = Array[String](["click", "confirm"])
+sfx_vol = Array[float]([-14.0, -18.0])
+sfx_delay = Array[float]([0.0, 0.05])
+
+[node name="Sign In" type="Label" parent="Panel/Done"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -161.0
+offset_top = -68.5
+offset_right = 161.0
+offset_bottom = 68.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 92
+text = "Done"
+label_settings = SubResource("LabelSettings_o4wco")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CheckBox" type="CheckBox" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -262.5
+offset_top = 171.0
+offset_right = 160.5
+offset_bottom = 227.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 8
+theme_override_fonts/font = ExtResource("2_871l1")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/focus = SubResource("StyleBoxEmpty_8y37l")
+theme_override_icons/checked = SubResource("GradientTexture2D_hsimn")
+theme_override_icons/unchecked = SubResource("GradientTexture2D_guvu8")
+text = "Show Password"
+
+[connection signal="button_down" from="btnBack" to="btnBack" method="_on_button_down"]
+[connection signal="button_up" from="btnBack" to="btnBack" method="_on_button_up"]
+[connection signal="pressed" from="btnBack" to="btnBack" method="_on_button_pressed"]
+[connection signal="text_changed" from="Panel/VBoxContainer/Username" to="." method="_validate_form"]
+[connection signal="text_changed" from="Panel/VBoxContainer/Password" to="." method="_validate_form"]
+[connection signal="button_down" from="Panel/Done" to="Panel/Done" method="button_down"]
+[connection signal="button_up" from="Panel/Done" to="Panel/Done" method="button_up"]
+[connection signal="pressed" from="Panel/Done" to="." method="_on_done_pressed"]
+[connection signal="pressed" from="Panel/Done" to="Panel/Done" method="_button_pressed"]
+[connection signal="toggled" from="Panel/CheckBox" to="." method="_on_check_box_toggled"]

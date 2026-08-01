@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ClothingInfo" load_steps=4 format=3 uid="uid://cx4d20uh5kbir"]
+
+[ext_resource type="Texture2D" uid="uid://l0uewikmnh43" path="res://char/tops/slv0.png" id="1_rukcl"]
+[ext_resource type="Texture2D" uid="uid://bn5vemrk15k41" path="res://char/tops/prev/Untitled440_20250913210157.png" id="2_j83xv"]
+[ext_resource type="Script" uid="uid://dlfl5k543sbco" path="res://scripts/clothingInfo.gd" id="3_kxkf8"]
+
+[resource]
+script = ExtResource("3_kxkf8")
+itemName = "yellowSweater"
+displayName = "Yellow Sweater"
+category = 1
+price = 150
+prevTex = ExtResource("2_j83xv")
+atlasTex = ExtResource("1_rukcl")
+metadata/_custom_type_script = "uid://dlfl5k543sbco"

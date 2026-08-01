@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ClothingInfo" load_steps=4 format=3 uid="uid://v3gwnckwp8k7"]
+
+[ext_resource type="Texture2D" uid="uid://c3ct7b8uqj2qu" path="res://char/hats/hat43.png" id="1_fkgqv"]
+[ext_resource type="Texture2D" uid="uid://ckgp3clvuumuj" path="res://char/hats/prev/Untitled440_20250915234421.png" id="2_cen5u"]
+[ext_resource type="Script" uid="uid://dlfl5k543sbco" path="res://scripts/clothingInfo.gd" id="3_qubjy"]
+
+[resource]
+script = ExtResource("3_qubjy")
+itemName = "violetBeanie"
+displayName = "Violet Beanie"
+category = 3
+price = 95
+prevTex = ExtResource("2_cen5u")
+atlasTex = ExtResource("1_fkgqv")
+metadata/_custom_type_script = "uid://dlfl5k543sbco"

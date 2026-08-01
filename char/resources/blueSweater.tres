@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ClothingInfo" load_steps=4 format=3 uid="uid://bjeiu7rnwynxu"]
+
+[ext_resource type="Texture2D" uid="uid://bumh2v8dmn26" path="res://char/tops/slv1.png" id="1_wd6uk"]
+[ext_resource type="Texture2D" uid="uid://0fhy6rbp07hi" path="res://char/tops/prev/Untitled440_20250913210122.png" id="2_bo655"]
+[ext_resource type="Script" uid="uid://dlfl5k543sbco" path="res://scripts/clothingInfo.gd" id="3_alg2s"]
+
+[resource]
+script = ExtResource("3_alg2s")
+itemName = "blueSweater"
+displayName = "Blue Sweater"
+category = 1
+bought = false
+price = 150
+prevTex = ExtResource("2_bo655")
+atlasTex = ExtResource("1_wd6uk")
+metadata/_custom_type_script = "uid://dlfl5k543sbco"

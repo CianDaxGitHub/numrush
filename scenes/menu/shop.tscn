@@ -1,0 +1,391 @@
+[gd_scene load_steps=29 format=3 uid="uid://bq7bulmkjtkc0"]
+
+[ext_resource type="Script" uid="uid://ca2oyljmpwbha" path="res://scenes/menu/shop.gd" id="1_ddlou"]
+[ext_resource type="Texture2D" uid="uid://birybgw01nn1k" path="res://images/syrill/shop cover.png" id="2_wndna"]
+[ext_resource type="Script" uid="uid://b7nng4y5xxvbo" path="res://scripts/soundLibrary.gd" id="3_6yeeo"]
+[ext_resource type="Script" uid="uid://y7kgv0a3gc3g" path="res://scripts/soundEffect.gd" id="4_ovoj6"]
+[ext_resource type="Script" uid="uid://bgqglerkcylxx" path="res://addons/SmoothScroll/SmoothScrollContainer.gd" id="4_oy6of"]
+[ext_resource type="AudioStream" uid="uid://bjyf5oq13lthl" path="res://sounds/clicky button 3.wav" id="5_m7ipp"]
+[ext_resource type="Script" uid="uid://b7h0k2h2qwlqv" path="res://addons/SmoothScroll/scroll_damper/expo_scroll_damper.gd" id="5_s175p"]
+[ext_resource type="AudioStream" uid="uid://b24ifncas70ex" path="res://sounds/metalswish.wav" id="6_g0uxl"]
+[ext_resource type="Script" uid="uid://c4q74v6jv7ny2" path="res://scripts/buttons/menuButton.gd" id="6_svvuu"]
+[ext_resource type="FontFile" uid="uid://cra6e443qhmdm" path="res://fonts/Oswald-Regular.ttf" id="7_5a14i"]
+[ext_resource type="AudioStream" uid="uid://bynn8tmtcfabd" path="res://sounds/bought.mp3" id="7_lkjnk"]
+[ext_resource type="StyleBox" uid="uid://dnnyrj0dbbmnh" path="res://themes/cardbtn2.tres" id="8_s175p"]
+[ext_resource type="FontFile" uid="uid://c1xv8vejetl6c" path="res://fonts/PoetsenOne-Regular.ttf" id="9_ddlou"]
+[ext_resource type="PackedScene" uid="uid://qkd4tm4yffxp" path="res://scenes/polyAudio.tscn" id="10_ddlou"]
+[ext_resource type="Texture2D" uid="uid://ds63k110eiblr" path="res://images/syrill/coin.png" id="11_m7ipp"]
+
+[sub_resource type="Resource" id="Resource_xxf4w"]
+script = ExtResource("4_ovoj6")
+tag = "click"
+stream = ExtResource("5_m7ipp")
+metadata/_custom_type_script = "uid://y7kgv0a3gc3g"
+
+[sub_resource type="Resource" id="Resource_m7ipp"]
+script = ExtResource("4_ovoj6")
+tag = "confirm"
+stream = ExtResource("6_g0uxl")
+metadata/_custom_type_script = "uid://y7kgv0a3gc3g"
+
+[sub_resource type="Resource" id="Resource_g0uxl"]
+script = ExtResource("4_ovoj6")
+tag = "bought"
+stream = ExtResource("7_lkjnk")
+metadata/_custom_type_script = "uid://y7kgv0a3gc3g"
+
+[sub_resource type="Resource" id="Resource_lkjnk"]
+script = ExtResource("3_6yeeo")
+soundFx = Array[ExtResource("4_ovoj6")]([SubResource("Resource_xxf4w"), SubResource("Resource_m7ipp"), SubResource("Resource_g0uxl")])
+metadata/_custom_type_script = "uid://b7nng4y5xxvbo"
+
+[sub_resource type="Resource" id="Resource_ddlou"]
+script = ExtResource("5_s175p")
+friction = 3.0
+
+[sub_resource type="Resource" id="Resource_0csgs"]
+script = ExtResource("5_s175p")
+friction = 3.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6epge"]
+texture = ExtResource("2_wndna")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m7ipp"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.847376, 0.416725, 0.210212, 1)
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+
+[sub_resource type="LabelSettings" id="LabelSettings_0csgs"]
+font = ExtResource("9_ddlou")
+font_size = 48
+outline_size = 16
+outline_color = Color(0.62832, 0.269837, 0.108442, 1)
+shadow_size = 0
+shadow_color = Color(0, 0, 0, 0.443137)
+shadow_offset = Vector2(4, 6)
+
+[sub_resource type="Animation" id="Animation_ddlou"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PanelShop:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-111.5, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("btnAvatar:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(32, 1148)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PanelShop/coins/coinLabel:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("PanelShop/coins/coinLabel:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_0csgs"]
+resource_name = "coin_flash"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PanelShop/coins/coinLabel:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.6),
+"transitions": PackedFloat32Array(-2, -2, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(3.1229057, 3.1229057, 3.1229057, 1), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PanelShop/coins/coinLabel:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.13333334, 0.43333334, 0.5, 0.6),
+"transitions": PackedFloat32Array(0.5, 2, 1, -2, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.2, 1.2), Vector2(1.15, 1.15), Vector2(0.95, 0.95), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_s175p"]
+resource_name = "scene_enter"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PanelShop:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.7),
+"transitions": PackedFloat32Array(-2, 1),
+"update": 0,
+"values": [Vector2(-111.5, -327), Vector2(-111.5, -2)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("btnAvatar:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.23333335, 0.70000005, 1),
+"transitions": PackedFloat32Array(-2, -2, 1),
+"update": 0,
+"values": [Vector2(32, 1358), Vector2(32, 1132), Vector2(32, 1148)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0csgs"]
+_data = {
+&"RESET": SubResource("Animation_ddlou"),
+&"coin_flash": SubResource("Animation_0csgs"),
+&"scene_enter": SubResource("Animation_s175p")
+}
+
+[node name="Shop" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ddlou")
+
+[node name="PolyAudio" parent="." instance=ExtResource("10_ddlou")]
+bus = &"sfx"
+sfxLib = SubResource("Resource_lkjnk")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 26.0
+offset_top = -440.0
+offset_right = -26.0
+offset_bottom = 472.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+script = ExtResource("4_oy6of")
+speed = 650.0
+wheel_scroll_damper = SubResource("Resource_ddlou")
+dragging_scroll_damper = SubResource("Resource_0csgs")
+drag_with_mouse = false
+allow_horizontal_scroll = false
+metadata/_custom_type_script = "uid://bgqglerkcylxx"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 24
+alignment = 1
+
+[node name="dummy" type="Control" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+mouse_filter = 1
+
+[node name="PanelShop" type="Panel" parent="."]
+z_index = 2
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -471.5
+offset_right = 471.5
+offset_bottom = 280.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_6epge")
+
+[node name="coins" type="Panel" parent="PanelShop"]
+layout_mode = 0
+offset_left = 137.5
+offset_top = 51.0
+offset_right = 331.5
+offset_bottom = 122.0
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_m7ipp")
+
+[node name="TextureRect" type="TextureRect" parent="PanelShop/coins"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -39.0
+offset_top = -71.5
+offset_right = 77.0
+offset_bottom = 44.5
+grow_vertical = 2
+texture = ExtResource("11_m7ipp")
+expand_mode = 1
+
+[node name="coinLabel" type="Label" parent="PanelShop/coins"]
+unique_name_in_owner = true
+z_index = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -40.5
+offset_right = 83.0
+offset_bottom = 39.5
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(54, 40)
+theme_override_colors/font_color = Color(0.831373, 0.541176, 0.168627, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.447059)
+theme_override_fonts/font = ExtResource("7_5a14i")
+theme_override_font_sizes/font_size = 50
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="btnHome" type="Button" parent="PanelShop" node_paths=PackedStringArray("sfx")]
+custom_minimum_size = Vector2(130, 100)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -341.5
+offset_top = 34.0
+offset_right = -139.5
+offset_bottom = 134.0
+grow_horizontal = 0
+pivot_offset = Vector2(101, 50)
+focus_mode = 0
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = ExtResource("8_s175p")
+theme_override_styles/pressed = ExtResource("8_s175p")
+theme_override_styles/hover = ExtResource("8_s175p")
+script = ExtResource("6_svvuu")
+toState = "menu"
+scaleSize = 1.1
+sfx = NodePath("../../PolyAudio")
+sfx_name = Array[String](["click", "confirm"])
+sfx_vol = Array[float]([-14.0, -18.0])
+sfx_delay = Array[float]([0.0, 0.05])
+
+[node name="Label" type="Label" parent="PanelShop/btnHome"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -84.5
+offset_top = -29.0
+offset_right = 84.5
+offset_bottom = 29.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Home"
+label_settings = SubResource("LabelSettings_0csgs")
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 162
+
+[node name="btnAvatar" type="Button" parent="." node_paths=PackedStringArray("sfx")]
+custom_minimum_size = Vector2(130, 100)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 32.0
+offset_top = -132.0
+offset_right = 340.0
+offset_bottom = -32.0
+grow_vertical = 0
+pivot_offset = Vector2(154, 50)
+focus_mode = 0
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = ExtResource("8_s175p")
+theme_override_styles/pressed = ExtResource("8_s175p")
+theme_override_styles/hover = ExtResource("8_s175p")
+script = ExtResource("6_svvuu")
+toState = "avatar"
+scaleSize = 1.1
+sfx = NodePath("../PolyAudio")
+sfx_name = Array[String](["click", "confirm"])
+sfx_vol = Array[float]([-14.0, -18.0])
+sfx_delay = Array[float]([0.0, 0.05])
+
+[node name="Label" type="Label" parent="btnAvatar"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -84.5
+offset_top = -29.0
+offset_right = 84.5
+offset_bottom = 29.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Avatar"
+label_settings = SubResource("LabelSettings_0csgs")
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 162
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_0csgs")
+}
+autoplay = "scene_enter"
+
+[connection signal="button_down" from="PanelShop/btnHome" to="PanelShop/btnHome" method="_on_button_down"]
+[connection signal="button_up" from="PanelShop/btnHome" to="PanelShop/btnHome" method="_on_button_up"]
+[connection signal="pressed" from="PanelShop/btnHome" to="PanelShop/btnHome" method="_on_button_pressed"]
+[connection signal="button_down" from="btnAvatar" to="btnAvatar" method="_on_button_down"]
+[connection signal="button_up" from="btnAvatar" to="btnAvatar" method="_on_button_up"]
+[connection signal="pressed" from="btnAvatar" to="btnAvatar" method="_on_button_pressed"]

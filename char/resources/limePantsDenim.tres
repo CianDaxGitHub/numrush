@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ClothingInfo" load_steps=4 format=3 uid="uid://b0qyjjnx2hwwe"]
+
+[ext_resource type="Texture2D" uid="uid://bib05fpndjwhq" path="res://char/bottoms/pnt7.png" id="1_oh7mn"]
+[ext_resource type="Texture2D" uid="uid://d27aqcob63jx" path="res://char/bottoms/prev/Untitled440_20250913225037.png" id="2_jf0xi"]
+[ext_resource type="Script" uid="uid://dlfl5k543sbco" path="res://scripts/clothingInfo.gd" id="3_3054q"]
+
+[resource]
+script = ExtResource("3_3054q")
+itemName = "limePantsDenim"
+displayName = "Denim Lime Pants"
+category = 6
+price = 165
+prevTex = ExtResource("2_jf0xi")
+atlasTex = ExtResource("1_oh7mn")
+metadata/_custom_type_script = "uid://dlfl5k543sbco"

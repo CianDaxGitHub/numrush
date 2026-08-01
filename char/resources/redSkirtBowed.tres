@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ClothingInfo" load_steps=4 format=3 uid="uid://cellpqtsqt2wr"]
+
+[ext_resource type="Texture2D" uid="uid://ck3qmvvnqavmf" path="res://char/bottoms/sk8.png" id="1_ecy7f"]
+[ext_resource type="Texture2D" uid="uid://kkgivwtb7ai6" path="res://char/bottoms/prev/Untitled440_20250915231409.png" id="2_i1kgk"]
+[ext_resource type="Script" uid="uid://dlfl5k543sbco" path="res://scripts/clothingInfo.gd" id="3_0c501"]
+
+[resource]
+script = ExtResource("3_0c501")
+itemName = "redSkirtBowed"
+displayName = "Red Bowed Skirt"
+category = 5
+bought = false
+price = 100
+prevTex = ExtResource("2_i1kgk")
+atlasTex = ExtResource("1_ecy7f")
+metadata/_custom_type_script = "uid://dlfl5k543sbco"

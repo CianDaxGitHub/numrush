@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ClothingInfo" load_steps=4 format=3 uid="uid://rhaqwv6w2408"]
+
+[ext_resource type="Texture2D" uid="uid://hrgfyknl85u7" path="res://char/hats/hat6.png" id="1_hw0sl"]
+[ext_resource type="Texture2D" uid="uid://dffiy3qsjyp3e" path="res://char/hats/prev/Untitled440_20250916125652.png" id="2_rd07m"]
+[ext_resource type="Script" uid="uid://dlfl5k543sbco" path="res://scripts/clothingInfo.gd" id="3_clui7"]
+
+[resource]
+script = ExtResource("3_clui7")
+itemName = "pinkSalokot"
+displayName = "Pink Anahaw Hat"
+category = 3
+bought = false
+price = 80
+prevTex = ExtResource("2_rd07m")
+atlasTex = ExtResource("1_hw0sl")
+metadata/_custom_type_script = "uid://dlfl5k543sbco"

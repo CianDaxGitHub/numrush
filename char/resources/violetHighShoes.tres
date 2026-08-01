@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ClothingInfo" load_steps=4 format=3 uid="uid://boj7xxx4q4scm"]
+
+[ext_resource type="Texture2D" uid="uid://bltfmrpb3nrsn" path="res://char/shoes/shs13.png" id="1_0wfs6"]
+[ext_resource type="Texture2D" uid="uid://be58n6njrtfcx" path="res://char/shoes/prev/Untitled440_20250915232856.png" id="2_ka23c"]
+[ext_resource type="Script" uid="uid://dlfl5k543sbco" path="res://scripts/clothingInfo.gd" id="3_88qlr"]
+
+[resource]
+script = ExtResource("3_88qlr")
+itemName = "violetHighShoes"
+displayName = "Violet High Shoes"
+category = 7
+bought = false
+price = 80
+prevTex = ExtResource("2_ka23c")
+atlasTex = ExtResource("1_0wfs6")
+metadata/_custom_type_script = "uid://dlfl5k543sbco"

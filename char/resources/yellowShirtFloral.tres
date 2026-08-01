@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ClothingInfo" load_steps=4 format=3 uid="uid://bjjulvdphjjkl"]
+
+[ext_resource type="Texture2D" uid="uid://c055beuccm4np" path="res://char/tops/slv11.png" id="1_8ttcc"]
+[ext_resource type="Texture2D" uid="uid://nq3444tiiem0" path="res://char/tops/prev/Untitled440_20250913205138.png" id="2_g1dxn"]
+[ext_resource type="Script" uid="uid://dlfl5k543sbco" path="res://scripts/clothingInfo.gd" id="3_8q13w"]
+
+[resource]
+script = ExtResource("3_8q13w")
+itemName = "yellowShirtFloral"
+displayName = "Yellow Floral Shirt"
+category = 1
+price = 100
+prevTex = ExtResource("2_g1dxn")
+atlasTex = ExtResource("1_8ttcc")
+metadata/_custom_type_script = "uid://dlfl5k543sbco"

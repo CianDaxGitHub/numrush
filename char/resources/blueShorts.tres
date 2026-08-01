@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ClothingInfo" load_steps=4 format=3 uid="uid://bo74re05v4y44"]
+
+[ext_resource type="Texture2D" uid="uid://citc55htfjwpj" path="res://char/bottoms/shr0.png" id="1_nn2r5"]
+[ext_resource type="Texture2D" uid="uid://b80bxn6ydpr4b" path="res://char/bottoms/prev/Untitled440_20250913223016.png" id="2_6marx"]
+[ext_resource type="Script" uid="uid://dlfl5k543sbco" path="res://scripts/clothingInfo.gd" id="2_nn2r5"]
+
+[resource]
+script = ExtResource("2_nn2r5")
+itemName = "blueShorts"
+displayName = "Blue Shorts"
+category = 4
+bought = false
+price = 90
+prevTex = ExtResource("2_6marx")
+atlasTex = ExtResource("1_nn2r5")
+metadata/_custom_type_script = "uid://dlfl5k543sbco"

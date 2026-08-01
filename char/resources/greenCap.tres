@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ClothingInfo" load_steps=4 format=3 uid="uid://b25d1najtfd1i"]
+
+[ext_resource type="Texture2D" uid="uid://ctwm1yabgma7v" path="res://char/hats/hat34.png" id="1_o8mbj"]
+[ext_resource type="Texture2D" uid="uid://d3cgdpm80ywk1" path="res://char/hats/prev/Untitled440_20250915235056.png" id="2_fb1rc"]
+[ext_resource type="Script" uid="uid://dlfl5k543sbco" path="res://scripts/clothingInfo.gd" id="3_ph77b"]
+
+[resource]
+script = ExtResource("3_ph77b")
+itemName = "greenCap"
+displayName = "Green Cap"
+category = 3
+bought = false
+price = 50
+prevTex = ExtResource("2_fb1rc")
+atlasTex = ExtResource("1_o8mbj")
+metadata/_custom_type_script = "uid://dlfl5k543sbco"

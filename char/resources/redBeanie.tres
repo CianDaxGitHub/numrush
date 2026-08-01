@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ClothingInfo" load_steps=4 format=3 uid="uid://bdh2j6xiclyjt"]
+
+[ext_resource type="Texture2D" uid="uid://sl2g7n74mm88" path="res://char/hats/hat37.png" id="1_8wbhc"]
+[ext_resource type="Texture2D" uid="uid://cksh83wig6qhl" path="res://char/hats/prev/Untitled440_20250915234340.png" id="2_mi0pd"]
+[ext_resource type="Script" uid="uid://dlfl5k543sbco" path="res://scripts/clothingInfo.gd" id="3_oerme"]
+
+[resource]
+script = ExtResource("3_oerme")
+itemName = "redBeanie"
+displayName = "Red Beanie"
+category = 3
+price = 95
+prevTex = ExtResource("2_mi0pd")
+atlasTex = ExtResource("1_8wbhc")
+metadata/_custom_type_script = "uid://dlfl5k543sbco"

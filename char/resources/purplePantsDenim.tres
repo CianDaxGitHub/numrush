@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ClothingInfo" load_steps=4 format=3 uid="uid://cphq1tej4rc3y"]
+
+[ext_resource type="Texture2D" uid="uid://dq7j1e123c1dx" path="res://char/bottoms/pnt12.png" id="1_ye1ke"]
+[ext_resource type="Texture2D" uid="uid://p6c8xrgt7btd" path="res://char/bottoms/prev/Untitled440_20250913230621.png" id="2_vl4ug"]
+[ext_resource type="Script" uid="uid://dlfl5k543sbco" path="res://scripts/clothingInfo.gd" id="3_8rpk8"]
+
+[resource]
+script = ExtResource("3_8rpk8")
+itemName = "purplePantsDenim"
+displayName = "Denim Purple Pants"
+category = 6
+bought = false
+price = 165
+prevTex = ExtResource("2_vl4ug")
+atlasTex = ExtResource("1_ye1ke")
+metadata/_custom_type_script = "uid://dlfl5k543sbco"

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ClothingInfo" load_steps=4 format=3 uid="uid://kok3v7fp2yko"]
+
+[ext_resource type="Texture2D" uid="uid://bd83yrvxqyag0" path="res://char/hats/hat12.png" id="1_353yc"]
+[ext_resource type="Texture2D" uid="uid://xg20ea6kfixe" path="res://char/hats/prev/Untitled440_20250916124313.png" id="2_q2gwc"]
+[ext_resource type="Script" uid="uid://dlfl5k543sbco" path="res://scripts/clothingInfo.gd" id="3_qnh71"]
+
+[resource]
+script = ExtResource("3_qnh71")
+itemName = "brownFrogHat"
+displayName = "Brown Frog Hat"
+category = 3
+bought = false
+price = 150
+prevTex = ExtResource("2_q2gwc")
+atlasTex = ExtResource("1_353yc")
+metadata/_custom_type_script = "uid://dlfl5k543sbco"

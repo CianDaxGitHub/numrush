@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ClothingInfo" load_steps=4 format=3 uid="uid://okli3so0hqon"]
+
+[ext_resource type="Texture2D" uid="uid://d0avwjkcn5tqt" path="res://char/hats/hat16.png" id="1_lpja8"]
+[ext_resource type="Texture2D" uid="uid://c4wgbnqkivbyq" path="res://char/hats/prev/Untitled440_20250916123439.png" id="2_woce0"]
+[ext_resource type="Script" uid="uid://dlfl5k543sbco" path="res://scripts/clothingInfo.gd" id="3_hqkff"]
+
+[resource]
+script = ExtResource("3_hqkff")
+itemName = "limeSunhat"
+displayName = "Lime Sunhat"
+category = 3
+bought = false
+price = 160
+prevTex = ExtResource("2_woce0")
+atlasTex = ExtResource("1_lpja8")
+metadata/_custom_type_script = "uid://dlfl5k543sbco"

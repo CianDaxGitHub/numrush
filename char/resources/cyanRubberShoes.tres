@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ClothingInfo" load_steps=4 format=3 uid="uid://dj0wpmy7nva78"]
+
+[ext_resource type="Texture2D" uid="uid://bvs684sv7p585" path="res://char/shoes/shs18.png" id="1_fr2n3"]
+[ext_resource type="Texture2D" uid="uid://dn6lmbbiyf18m" path="res://char/shoes/prev/Untitled440_20250914102406.png" id="2_3sasl"]
+[ext_resource type="Script" uid="uid://dlfl5k543sbco" path="res://scripts/clothingInfo.gd" id="3_k58h8"]
+
+[resource]
+script = ExtResource("3_k58h8")
+itemName = "cyanRubberShoes"
+displayName = "Cyan Rubber Shoes"
+category = 7
+bought = false
+price = 140
+prevTex = ExtResource("2_3sasl")
+atlasTex = ExtResource("1_fr2n3")
+metadata/_custom_type_script = "uid://dlfl5k543sbco"

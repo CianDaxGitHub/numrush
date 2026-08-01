@@ -1,0 +1,155 @@
+[gd_scene load_steps=12 format=3 uid="uid://d1lxoubg8qr1l"]
+
+[ext_resource type="Texture2D" uid="uid://b1mfrmu1isksq" path="res://images/THESIS NUMRUSH (UI).png" id="1_ravkf"]
+[ext_resource type="PackedScene" uid="uid://ytyyl1wkpl14" path="res://scenes/ddBackground.tscn" id="2_10cou"]
+[ext_resource type="PackedScene" uid="uid://c8k28y8dasyxr" path="res://scenes/timer.tscn" id="3_k36m0"]
+[ext_resource type="Texture2D" uid="uid://ba7jsrnrysk46" path="res://images/default_placement.png" id="3_x7lns"]
+[ext_resource type="Texture2D" uid="uid://ckrv1scfhqkmg" path="res://images/pause.png" id="4_8x18n"]
+[ext_resource type="PackedScene" uid="uid://bk1ndtxchi6hn" path="res://scenes/card.tscn" id="6_tobfc"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tobfc"]
+shading_mode = 0
+albedo_color = Color(1, 0.455333, 0.14, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_kh8ph"]
+material = SubResource("StandardMaterial3D_tobfc")
+
+[sub_resource type="Animation" id="Animation_tobfc"]
+resource_name = "movement"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(-2, -2, -2),
+"update": 0,
+"values": [Vector3(0, 2.2437, 1.40521), Vector3(0, 2.667, 0.901992), Vector3(0, 2.2437, 1.40521)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(-2, -2, -2),
+"update": 0,
+"values": [Vector3(-1.03156, 0, 0), Vector3(-1.2352, 0, 0), Vector3(-1.03156, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_kh8ph"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 2.2437, 1.40521)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1.03156, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hujty"]
+_data = {
+&"RESET": SubResource("Animation_kh8ph"),
+&"movement": SubResource("Animation_tobfc")
+}
+
+[node name="MainMenu" type="Control"]
+clip_children = 2
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ThesisNumrush(ui)" type="Sprite2D" parent="."]
+position = Vector2(270, 444)
+scale = Vector2(1.46377, 1.46377)
+texture = ExtResource("1_ravkf")
+
+[node name="Timer" parent="." instance=ExtResource("3_k36m0")]
+layout_mode = 1
+offset_left = 266.0
+offset_top = 62.0
+offset_right = -109.0
+offset_bottom = -837.0
+
+[node name="DefaultPlacement" type="Sprite2D" parent="."]
+position = Vector2(76, 63)
+rotation = -0.203743
+scale = Vector2(0.316838, 0.316838)
+texture = ExtResource("3_x7lns")
+
+[node name="Pause" type="Sprite2D" parent="."]
+position = Vector2(477, 72)
+scale = Vector2(0.343458, 0.343458)
+texture = ExtResource("4_8x18n")
+
+[node name="DdBackground" parent="." instance=ExtResource("2_10cou")]
+visible = false
+layout_mode = 1
+
+[node name="Card" parent="." instance=ExtResource("6_tobfc")]
+layout_mode = 1
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -227.0
+offset_top = 161.0
+offset_right = 228.0
+offset_bottom = 357.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(455, 196)
+render_target_update_mode = 4
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="SubViewportContainer/SubViewport"]
+transform = Transform3D(3.50972, 0, 0, 0, 0.456236, 0, 0, 0, 1.13625, 0, 0, 0)
+mesh = SubResource("BoxMesh_kh8ph")
+skeleton = NodePath("../../..")
+
+[node name="Camera3D" type="Camera3D" parent="SubViewportContainer/SubViewport"]
+transform = Transform3D(1, 0, 0, 0, 0.513481, 0.858101, 0, -0.858101, 0.513481, 0, 2.2437, 1.40521)
+fov = 39.4
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SubViewportContainer/SubViewport"]
+libraries = {
+&"": SubResource("AnimationLibrary_hujty")
+}
+autoplay = "movement"
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="SubViewportContainer/SubViewport"]
+transform = Transform3D(1, 0, 0, 0, 0.555802, 0.831314, 0, -0.831314, 0.555802, 0, 3.89915, 1.43765)
+light_energy = 1.646

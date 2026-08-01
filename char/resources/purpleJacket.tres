@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ClothingInfo" load_steps=4 format=3 uid="uid://dxqnh6v1u0s3j"]
+
+[ext_resource type="Texture2D" uid="uid://cnh114f2irglw" path="res://char/tops/jkt0.png" id="1_8gdod"]
+[ext_resource type="Texture2D" uid="uid://bns0yjn50smlg" path="res://char/tops/prev/Untitled440_20250913215516.png" id="2_ld1jl"]
+[ext_resource type="Script" uid="uid://dlfl5k543sbco" path="res://scripts/clothingInfo.gd" id="3_oqpd8"]
+
+[resource]
+script = ExtResource("3_oqpd8")
+itemName = "purpleJacket"
+displayName = "Purple Jacket"
+category = 2
+bought = false
+price = 150
+prevTex = ExtResource("2_ld1jl")
+atlasTex = ExtResource("1_8gdod")
+metadata/_custom_type_script = "uid://dlfl5k543sbco"

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ClothingInfo" load_steps=4 format=3 uid="uid://dbe6clfe13dmr"]
+
+[ext_resource type="Texture2D" uid="uid://dag1emhdcpj58" path="res://char/hats/hat30.png" id="1_u04vg"]
+[ext_resource type="Texture2D" uid="uid://udpywh3mfd5h" path="res://char/hats/prev/Untitled440_20250915235551.png" id="2_8o7gm"]
+[ext_resource type="Script" uid="uid://dlfl5k543sbco" path="res://scripts/clothingInfo.gd" id="3_8t4cn"]
+
+[resource]
+script = ExtResource("3_8t4cn")
+itemName = "grayCatHat"
+displayName = "Gray Cat Hat"
+category = 3
+price = 160
+prevTex = ExtResource("2_8o7gm")
+atlasTex = ExtResource("1_u04vg")
+metadata/_custom_type_script = "uid://dlfl5k543sbco"

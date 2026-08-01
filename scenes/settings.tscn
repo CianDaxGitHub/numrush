@@ -1,0 +1,911 @@
+[gd_scene load_steps=34 format=3 uid="uid://cj44ntfrnsfsw"]
+
+[ext_resource type="Script" uid="uid://dcurlk6ntti4d" path="res://scripts/settings.gd" id="1_am25x"]
+[ext_resource type="StyleBox" uid="uid://dq7gm13dwepme" path="res://themes/boardTexture2.tres" id="2_4ppmf"]
+[ext_resource type="PackedScene" uid="uid://qkd4tm4yffxp" path="res://scenes/polyAudio.tscn" id="2_7kvyq"]
+[ext_resource type="Script" uid="uid://b7nng4y5xxvbo" path="res://scripts/soundLibrary.gd" id="3_ql1j0"]
+[ext_resource type="StyleBox" uid="uid://dnnyrj0dbbmnh" path="res://themes/cardbtn2.tres" id="3_uhhto"]
+[ext_resource type="Script" uid="uid://4f21oaokgm8i" path="res://scripts/buttons/sizableButton.gd" id="4_1g033"]
+[ext_resource type="Script" uid="uid://y7kgv0a3gc3g" path="res://scripts/soundEffect.gd" id="4_6dbjw"]
+[ext_resource type="FontFile" uid="uid://oy3sagk7od2d" path="res://fonts/TitanOne-Regular.ttf" id="5_01roj"]
+[ext_resource type="AudioStream" uid="uid://bjyf5oq13lthl" path="res://sounds/clicky button 3.wav" id="5_6dbjw"]
+[ext_resource type="AudioStream" uid="uid://b73imdoalko73" path="res://sounds/pop4.wav" id="6_g5y2q"]
+[ext_resource type="LabelSettings" uid="uid://b1k82mwp5tyjn" path="res://themes/boardText.tres" id="6_wqwn7"]
+[ext_resource type="Texture2D" uid="uid://cerstlky7g76l" path="res://images/icons/music-icon.png" id="7_oe2nd"]
+[ext_resource type="Texture2D" uid="uid://ddo5oxo6s0e04" path="res://images/icons/volume-full-icon.png" id="8_7kvyq"]
+[ext_resource type="Texture2D" uid="uid://b46nkh0srf6ib" path="res://images/icons/user-key-icon.png" id="9_ql1j0"]
+[ext_resource type="StyleBox" uid="uid://7hedebrc3ydc" path="res://themes/cardbtn1.tres" id="10_4ppmf"]
+[ext_resource type="FontFile" uid="uid://b3y7klyjp8l0n" path="res://fonts/Pangolin-Regular.ttf" id="11_uhhto"]
+[ext_resource type="FontFile" uid="uid://c1xv8vejetl6c" path="res://fonts/PoetsenOne-Regular.ttf" id="12_01roj"]
+[ext_resource type="StyleBox" uid="uid://c8u2xbpax2v12" path="res://themes/red.tres" id="13_wqwn7"]
+
+[sub_resource type="Resource" id="Resource_k00b3"]
+script = ExtResource("4_6dbjw")
+tag = "click"
+stream = ExtResource("5_6dbjw")
+metadata/_custom_type_script = "uid://y7kgv0a3gc3g"
+
+[sub_resource type="Resource" id="Resource_aisiw"]
+script = ExtResource("4_6dbjw")
+tag = "pop"
+stream = ExtResource("6_g5y2q")
+metadata/_custom_type_script = "uid://y7kgv0a3gc3g"
+
+[sub_resource type="Resource" id="Resource_g5y2q"]
+script = ExtResource("3_ql1j0")
+soundFx = Array[ExtResource("4_6dbjw")]([SubResource("Resource_k00b3"), SubResource("Resource_aisiw")])
+metadata/_custom_type_script = "uid://b7nng4y5xxvbo"
+
+[sub_resource type="LabelSettings" id="LabelSettings_ei4n0"]
+font = ExtResource("5_01roj")
+font_size = 48
+outline_size = 16
+outline_color = Color(0.62832, 0.269837, 0.108442, 1)
+shadow_size = 0
+shadow_color = Color(0, 0, 0, 0.278431)
+shadow_offset = Vector2(2, 6)
+
+[sub_resource type="Animation" id="Animation_ei4n0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel2:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Panel2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Panel:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(-2),
+"update": 0,
+"values": [Vector2(109, 1349)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Panel3:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("logoutSign:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(93, 1372)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Panel3:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("logoutSign:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_am25x"]
+resource_name = "enter_logout"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel3:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("logoutSign:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(-2, 1),
+"update": 0,
+"values": [Vector2(93, 1372), Vector2(93, 446)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Panel3:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("logoutSign:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_01roj"]
+resource_name = "exit_logout"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel3:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("logoutSign:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(-2, 1),
+"update": 0,
+"values": [Vector2(93, 446), Vector2(93, 1372)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Panel3:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("logoutSign:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_3j7ce"]
+resource_name = "on_enter"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel2:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Panel2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Panel:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.8),
+"transitions": PackedFloat32Array(-2, -2, 1),
+"update": 0,
+"values": [Vector2(109, 1349), Vector2(109, 381), Vector2(109, 397)]
+}
+
+[sub_resource type="Animation" id="Animation_n440e"]
+resource_name = "on_exit"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel2:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Panel2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Panel:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(-2, -2),
+"update": 0,
+"values": [Vector2(109, 397), Vector2(109, 1349)]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.8),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vsr5n"]
+_data = {
+&"RESET": SubResource("Animation_ei4n0"),
+&"enter_logout": SubResource("Animation_am25x"),
+&"exit_logout": SubResource("Animation_01roj"),
+&"on_enter": SubResource("Animation_3j7ce"),
+&"on_exit": SubResource("Animation_n440e")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_4ppmf"]
+font = ExtResource("5_01roj")
+font_size = 60
+outline_size = 20
+outline_color = Color(0.62832, 0.269837, 0.108442, 1)
+shadow_size = 0
+shadow_color = Color(0, 0, 0, 0.278431)
+shadow_offset = Vector2(2, 6)
+
+[sub_resource type="LabelSettings" id="LabelSettings_1g033"]
+font = ExtResource("11_uhhto")
+font_size = 36
+outline_size = 16
+outline_color = Color(0.62832, 0.269837, 0.108442, 1)
+shadow_size = 0
+shadow_color = Color(0, 0, 0, 0.278431)
+shadow_offset = Vector2(4, 10)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oe2nd"]
+bg_color = Color(0.254338, 0.651994, 0.327789, 1)
+border_width_left = 12
+border_width_top = 12
+border_width_right = 12
+border_width_bottom = 12
+border_color = Color(0.115771, 0.520395, 0.361691, 1)
+corner_radius_top_left = 42
+corner_radius_top_right = 42
+corner_radius_bottom_right = 42
+corner_radius_bottom_left = 42
+shadow_color = Color(0, 0, 0, 0.226)
+shadow_size = 1
+shadow_offset = Vector2(0, 4)
+
+[sub_resource type="LabelSettings" id="LabelSettings_7kvyq"]
+font = ExtResource("12_01roj")
+font_size = 42
+outline_size = 16
+outline_color = Color(0.0891036, 0.419021, 0.287199, 1)
+shadow_size = 0
+shadow_color = Color(0, 0, 0, 0.443137)
+shadow_offset = Vector2(4, 6)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ql1j0"]
+font = ExtResource("12_01roj")
+font_size = 42
+outline_size = 16
+outline_color = Color(0.785889, 0.166401, 0.167461, 1)
+shadow_size = 0
+shadow_color = Color(0, 0, 0, 0.443137)
+shadow_offset = Vector2(4, 6)
+
+[node name="Settings" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_am25x")
+
+[node name="PolyAudio" parent="." instance=ExtResource("2_7kvyq")]
+bus = &"sfx"
+sfxLib = SubResource("Resource_g5y2q")
+
+[node name="Panel2" type="Panel" parent="."]
+modulate = Color(1, 1, 1, 0)
+z_index = 2
+z_as_relative = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+z_index = 3
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -251.0
+offset_top = 709.0
+offset_right = 252.0
+offset_bottom = 1195.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("2_4ppmf")
+
+[node name="btnBack" type="Button" parent="Panel" node_paths=PackedStringArray("sfx")]
+z_index = 3
+z_as_relative = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.014553
+anchor_top = 0.0338681
+anchor_right = 0.014553
+anchor_bottom = 0.0338681
+offset_left = -29.0
+offset_top = -52.0
+offset_right = 71.0
+offset_bottom = 48.0
+pivot_offset = Vector2(50, 50)
+size_flags_horizontal = 3
+focus_mode = 0
+theme_override_colors/font_color = Color(0.831373, 0.541176, 0.168627, 1)
+theme_override_colors/font_focus_color = Color(0.831373, 0.541176, 0.168627, 1)
+theme_override_colors/font_pressed_color = Color(0.831373, 0.541176, 0.168627, 0.988235)
+theme_override_colors/font_hover_color = Color(0.928097, 0.62672, 0.263669, 1)
+theme_override_constants/h_separation = 0
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = ExtResource("3_uhhto")
+theme_override_styles/pressed = ExtResource("3_uhhto")
+theme_override_styles/hover = ExtResource("3_uhhto")
+theme_override_styles/disabled = ExtResource("3_uhhto")
+script = ExtResource("4_1g033")
+scaleSize = 1.1
+sfx = NodePath("../../PolyAudio")
+sfx_name = Array[String](["click", "pop"])
+sfx_vol = Array[float]([-14.0, -18.0])
+sfx_delay = Array[float]([0.0, 0.05])
+
+[node name="Label" type="Label" parent="Panel/btnBack"]
+z_index = 3
+z_as_relative = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -27.0
+offset_top = -29.0
+offset_right = 26.0
+offset_bottom = 29.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "X"
+label_settings = SubResource("LabelSettings_ei4n0")
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 162
+
+[node name="Label" type="Label" parent="Panel"]
+z_index = 3
+z_as_relative = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -182.5
+offset_top = 52.0
+offset_right = 183.5
+offset_bottom = 160.0
+grow_horizontal = 2
+text = "SETTINGS"
+label_settings = ExtResource("6_wqwn7")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel"]
+z_index = 3
+z_as_relative = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.473251
+anchor_right = 0.5
+anchor_bottom = 0.473251
+offset_left = -180.0
+offset_top = -50.0
+offset_right = 180.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+metadata/_edit_use_anchors_ = true
+
+[node name="Control" type="Control" parent="Panel/HBoxContainer"]
+z_index = 3
+z_as_relative = false
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+
+[node name="btnMusic" type="Button" parent="Panel/HBoxContainer/Control" node_paths=PackedStringArray("sfx")]
+z_index = 3
+z_as_relative = false
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 0
+offset_right = 100.0
+offset_bottom = 100.0
+pivot_offset = Vector2(50, 50)
+size_flags_horizontal = 3
+focus_mode = 0
+theme_override_constants/h_separation = 0
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = ExtResource("3_uhhto")
+theme_override_styles/pressed = ExtResource("3_uhhto")
+theme_override_styles/hover = ExtResource("3_uhhto")
+theme_override_styles/disabled = ExtResource("3_uhhto")
+script = ExtResource("4_1g033")
+scaleSize = 1.1
+sfx = NodePath("../../../../PolyAudio")
+sfx_name = Array[String](["click", "pop"])
+sfx_vol = Array[float]([-14.0, -14.0])
+sfx_delay = Array[float]([0.0, 0.05])
+
+[node name="TextureRect" type="TextureRect" parent="Panel/HBoxContainer/Control/btnMusic"]
+z_index = 3
+z_as_relative = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -28.0
+offset_top = -28.0
+offset_right = 30.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_oe2nd")
+expand_mode = 1
+
+[node name="Control2" type="Control" parent="Panel/HBoxContainer"]
+z_index = 3
+z_as_relative = false
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+
+[node name="btnSound" type="Button" parent="Panel/HBoxContainer/Control2" node_paths=PackedStringArray("sfx")]
+z_index = 3
+z_as_relative = false
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 0
+offset_right = 100.0
+offset_bottom = 100.0
+pivot_offset = Vector2(50, 50)
+size_flags_horizontal = 3
+focus_mode = 0
+theme_override_constants/h_separation = 0
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = ExtResource("3_uhhto")
+theme_override_styles/pressed = ExtResource("3_uhhto")
+theme_override_styles/hover = ExtResource("3_uhhto")
+theme_override_styles/disabled = ExtResource("3_uhhto")
+script = ExtResource("4_1g033")
+scaleSize = 1.1
+sfx = NodePath("../../../../PolyAudio")
+sfx_name = Array[String](["click"])
+sfx_vol = Array[float]([-14.0])
+sfx_delay = Array[float]([0.0])
+
+[node name="TextureRect" type="TextureRect" parent="Panel/HBoxContainer/Control2/btnSound"]
+z_index = 3
+z_as_relative = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -28.0
+offset_top = -28.0
+offset_right = 30.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_7kvyq")
+expand_mode = 1
+
+[node name="Control3" type="Control" parent="Panel/HBoxContainer"]
+z_index = 3
+z_as_relative = false
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+
+[node name="btnAcc" type="Button" parent="Panel/HBoxContainer/Control3" node_paths=PackedStringArray("sfx")]
+z_index = 3
+z_as_relative = false
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 0
+offset_right = 100.0
+offset_bottom = 100.0
+pivot_offset = Vector2(50, 50)
+size_flags_horizontal = 3
+focus_mode = 0
+theme_override_constants/h_separation = 0
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = ExtResource("3_uhhto")
+theme_override_styles/pressed = ExtResource("3_uhhto")
+theme_override_styles/hover = ExtResource("3_uhhto")
+theme_override_styles/disabled = ExtResource("3_uhhto")
+script = ExtResource("4_1g033")
+scaleSize = 1.1
+sfx = NodePath("../../../../PolyAudio")
+sfx_name = Array[String](["click"])
+sfx_vol = Array[float]([-14.0])
+sfx_delay = Array[float]([0.0])
+
+[node name="TextureRect" type="TextureRect" parent="Panel/HBoxContainer/Control3/btnAcc"]
+z_index = 3
+z_as_relative = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -28.0
+offset_top = -28.0
+offset_right = 30.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_ql1j0")
+expand_mode = 1
+
+[node name="btnQuit" type="Button" parent="Panel"]
+z_index = 3
+z_as_relative = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = 79.0
+offset_right = 150.0
+offset_bottom = 195.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(150, 58)
+size_flags_horizontal = 3
+focus_mode = 0
+theme_override_colors/font_color = Color(0.831373, 0.541176, 0.168627, 1)
+theme_override_colors/font_focus_color = Color(0.831373, 0.541176, 0.168627, 1)
+theme_override_colors/font_pressed_color = Color(0.831373, 0.541176, 0.168627, 0.988235)
+theme_override_colors/font_hover_color = Color(0.928097, 0.62672, 0.263669, 1)
+theme_override_constants/h_separation = 0
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = ExtResource("3_uhhto")
+theme_override_styles/pressed = ExtResource("3_uhhto")
+theme_override_styles/hover = ExtResource("3_uhhto")
+script = ExtResource("4_1g033")
+scaleSize = 1.1
+
+[node name="Label" type="Label" parent="Panel/btnQuit"]
+z_index = 3
+z_as_relative = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -91.5
+offset_top = -29.0
+offset_right = 90.5
+offset_bottom = 29.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Exit"
+label_settings = SubResource("LabelSettings_ei4n0")
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 162
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_vsr5n")
+}
+
+[node name="Panel3" type="Panel" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0)
+z_index = 4
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="logoutSign" type="Panel" parent="."]
+z_index = 4
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -267.0
+offset_top = 732.0
+offset_right = 267.0
+offset_bottom = 1119.9999
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(267, 194)
+size_flags_horizontal = 3
+theme_override_styles/panel = ExtResource("10_4ppmf")
+
+[node name="Label" type="Label" parent="logoutSign"]
+z_index = 4
+z_as_relative = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -112.0
+offset_top = 15.0
+offset_right = 112.0
+offset_bottom = 85.0
+grow_horizontal = 2
+text = "Logout"
+label_settings = SubResource("LabelSettings_4ppmf")
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 162
+
+[node name="Label2" type="Label" parent="logoutSign"]
+z_index = 4
+z_as_relative = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -221.5
+offset_top = -89.99963
+offset_right = 221.5
+offset_bottom = 54.000366
+grow_horizontal = 2
+grow_vertical = 2
+text = "Are you sure you want to logout? (this would clear your game history!)"
+label_settings = SubResource("LabelSettings_1g033")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="btnNo" type="Button" parent="logoutSign" node_paths=PackedStringArray("sfx")]
+unique_name_in_owner = true
+z_index = 4
+z_as_relative = false
+custom_minimum_size = Vector2(200, 80)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 14.0
+offset_top = 80.00037
+offset_right = 214.0
+offset_bottom = 160.00037
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(100, 40)
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_oe2nd")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_oe2nd")
+theme_override_styles/hover = SubResource("StyleBoxFlat_oe2nd")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_oe2nd")
+script = ExtResource("4_1g033")
+scaleSize = 1.08
+sfx = NodePath("../../PolyAudio")
+sfx_name = Array[String](["click"])
+sfx_vol = Array[float]([-14.0])
+sfx_delay = Array[float]([0.0])
+
+[node name="Label" type="Label" parent="logoutSign/btnNo"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -84.5
+offset_top = -29.0
+offset_right = 84.5
+offset_bottom = 29.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "NO"
+label_settings = SubResource("LabelSettings_7kvyq")
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 162
+
+[node name="btnYes" type="Button" parent="logoutSign" node_paths=PackedStringArray("sfx")]
+unique_name_in_owner = true
+z_index = 4
+z_as_relative = false
+custom_minimum_size = Vector2(200, 80)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -218.0
+offset_top = 80.00037
+offset_right = -18.0
+offset_bottom = 160.00037
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(100, 40)
+focus_mode = 0
+theme_override_styles/normal = ExtResource("13_wqwn7")
+theme_override_styles/pressed = ExtResource("13_wqwn7")
+theme_override_styles/hover = ExtResource("13_wqwn7")
+theme_override_styles/disabled = ExtResource("13_wqwn7")
+script = ExtResource("4_1g033")
+scaleSize = 1.08
+sfx = NodePath("../../PolyAudio")
+sfx_name = Array[String](["click", "pop"])
+sfx_vol = Array[float]([-14.0, -14.0])
+sfx_delay = Array[float]([0.0, 0.05])
+
+[node name="Label" type="Label" parent="logoutSign/btnYes"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -84.5
+offset_top = -29.0
+offset_right = 84.5
+offset_bottom = 29.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "YES"
+label_settings = SubResource("LabelSettings_ql1j0")
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 162
+
+[connection signal="button_down" from="Panel/btnBack" to="Panel/btnBack" method="button_down"]
+[connection signal="button_up" from="Panel/btnBack" to="Panel/btnBack" method="button_up"]
+[connection signal="pressed" from="Panel/btnBack" to="." method="_on_btn_back_pressed"]
+[connection signal="pressed" from="Panel/btnBack" to="Panel/btnBack" method="_button_pressed"]
+[connection signal="button_down" from="Panel/HBoxContainer/Control/btnMusic" to="Panel/HBoxContainer/Control/btnMusic" method="button_down"]
+[connection signal="button_up" from="Panel/HBoxContainer/Control/btnMusic" to="Panel/HBoxContainer/Control/btnMusic" method="button_up"]
+[connection signal="pressed" from="Panel/HBoxContainer/Control/btnMusic" to="." method="_on_btn_music_pressed"]
+[connection signal="pressed" from="Panel/HBoxContainer/Control/btnMusic" to="Panel/HBoxContainer/Control/btnMusic" method="_button_pressed"]
+[connection signal="button_down" from="Panel/HBoxContainer/Control2/btnSound" to="Panel/HBoxContainer/Control2/btnSound" method="button_down"]
+[connection signal="button_up" from="Panel/HBoxContainer/Control2/btnSound" to="Panel/HBoxContainer/Control2/btnSound" method="button_up"]
+[connection signal="pressed" from="Panel/HBoxContainer/Control2/btnSound" to="." method="_on_btn_sound_pressed"]
+[connection signal="pressed" from="Panel/HBoxContainer/Control2/btnSound" to="Panel/HBoxContainer/Control2/btnSound" method="_button_pressed"]
+[connection signal="button_down" from="Panel/HBoxContainer/Control3/btnAcc" to="Panel/HBoxContainer/Control3/btnAcc" method="button_down"]
+[connection signal="button_up" from="Panel/HBoxContainer/Control3/btnAcc" to="Panel/HBoxContainer/Control3/btnAcc" method="button_up"]
+[connection signal="pressed" from="Panel/HBoxContainer/Control3/btnAcc" to="." method="_on_btn_acc_pressed"]
+[connection signal="pressed" from="Panel/HBoxContainer/Control3/btnAcc" to="Panel/HBoxContainer/Control3/btnAcc" method="_button_pressed"]
+[connection signal="button_down" from="Panel/btnQuit" to="Panel/btnQuit" method="button_down"]
+[connection signal="button_up" from="Panel/btnQuit" to="Panel/btnQuit" method="button_up"]
+[connection signal="pressed" from="Panel/btnQuit" to="." method="_on_btn_quit_pressed"]
+[connection signal="pressed" from="Panel/btnQuit" to="Panel/btnQuit" method="_button_pressed"]
+[connection signal="button_down" from="logoutSign/btnNo" to="logoutSign/btnNo" method="button_down"]
+[connection signal="button_up" from="logoutSign/btnNo" to="logoutSign/btnNo" method="button_up"]
+[connection signal="pressed" from="logoutSign/btnNo" to="." method="_on_btn_no_pressed"]
+[connection signal="button_down" from="logoutSign/btnYes" to="logoutSign/btnYes" method="button_down"]
+[connection signal="button_up" from="logoutSign/btnYes" to="logoutSign/btnYes" method="button_up"]
+[connection signal="pressed" from="logoutSign/btnYes" to="." method="_on_btn_yes_pressed"]
+[connection signal="pressed" from="logoutSign/btnYes" to="logoutSign/btnYes" method="_button_pressed"]

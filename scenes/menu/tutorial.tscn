@@ -1,0 +1,1552 @@
+[gd_scene load_steps=40 format=3 uid="uid://cydesl3p6y5vq"]
+
+[ext_resource type="LabelSettings" uid="uid://b1k82mwp5tyjn" path="res://themes/boardText.tres" id="1_6j0w8"]
+[ext_resource type="PackedScene" uid="uid://qkd4tm4yffxp" path="res://scenes/polyAudio.tscn" id="1_essi4"]
+[ext_resource type="Script" uid="uid://bgqglerkcylxx" path="res://addons/SmoothScroll/SmoothScrollContainer.gd" id="2_8km5a"]
+[ext_resource type="Script" uid="uid://b7nng4y5xxvbo" path="res://scripts/soundLibrary.gd" id="2_tj7tl"]
+[ext_resource type="Script" uid="uid://y7kgv0a3gc3g" path="res://scripts/soundEffect.gd" id="3_cwhy4"]
+[ext_resource type="Script" uid="uid://b7h0k2h2qwlqv" path="res://addons/SmoothScroll/scroll_damper/expo_scroll_damper.gd" id="3_ohigb"]
+[ext_resource type="StyleBox" uid="uid://dq7gm13dwepme" path="res://themes/boardTexture2.tres" id="4_o7lh1"]
+[ext_resource type="AudioStream" uid="uid://bjyf5oq13lthl" path="res://sounds/clicky button 3.wav" id="4_sq6ae"]
+[ext_resource type="AudioStream" uid="uid://b24ifncas70ex" path="res://sounds/metalswish.wav" id="5_j24h6"]
+[ext_resource type="FontFile" uid="uid://b3y7klyjp8l0n" path="res://fonts/Pangolin-Regular.ttf" id="5_qvoft"]
+[ext_resource type="Texture2D" uid="uid://bkpaueet0qaff" path="res://images/CloudBox.png" id="6_ogrr0"]
+[ext_resource type="PackedScene" uid="uid://xg5k2boi46ji" path="res://scenes/charHead.tscn" id="8_gja0q"]
+[ext_resource type="Texture2D" uid="uid://cgb1a0a0gcee4" path="res://images/tutorial/1.png" id="11_tj7tl"]
+[ext_resource type="Texture2D" uid="uid://vtjorbfx7w4c" path="res://images/tutorial/2.png" id="15_sq6ae"]
+[ext_resource type="Texture2D" uid="uid://tjoj4ql70u7y" path="res://images/tutorial/3.png" id="16_j24h6"]
+[ext_resource type="Texture2D" uid="uid://b7acsssfato4v" path="res://images/tutorial/4.png" id="17_alaf7"]
+[ext_resource type="Texture2D" uid="uid://c7sr0lmojkoyo" path="res://images/tutorial/5.png" id="18_s8bm4"]
+[ext_resource type="Texture2D" uid="uid://lmybfg7pwqxr" path="res://images/tutorial/6.png" id="19_aosc5"]
+[ext_resource type="Texture2D" uid="uid://coeb42qd7xk4i" path="res://images/tutorial/7.png" id="20_mtqp4"]
+[ext_resource type="Texture2D" uid="uid://bphnhp3udg5b" path="res://images/tutorial/8.png" id="21_ssu30"]
+[ext_resource type="StyleBox" uid="uid://dnnyrj0dbbmnh" path="res://themes/cardbtn2.tres" id="22_t6oh1"]
+[ext_resource type="Texture2D" uid="uid://bew05bgevp82x" path="res://images/tutorial/9.png" id="22_wsqqj"]
+[ext_resource type="Script" uid="uid://c4q74v6jv7ny2" path="res://scripts/buttons/menuButton.gd" id="23_dq1wx"]
+[ext_resource type="Texture2D" uid="uid://daw457co7vnt7" path="res://images/tutorial/10.png" id="23_u0ben"]
+[ext_resource type="Texture2D" uid="uid://wg7hkdhbqgvc" path="res://images/tutorial/11.png" id="24_axdco"]
+[ext_resource type="FontFile" uid="uid://c1xv8vejetl6c" path="res://fonts/PoetsenOne-Regular.ttf" id="24_fopko"]
+[ext_resource type="Texture2D" uid="uid://cw08vtt4n5pqc" path="res://images/tutorial/12.png" id="25_57hm8"]
+
+[sub_resource type="Resource" id="Resource_alaf7"]
+script = ExtResource("3_cwhy4")
+tag = "click"
+stream = ExtResource("4_sq6ae")
+metadata/_custom_type_script = "uid://y7kgv0a3gc3g"
+
+[sub_resource type="Resource" id="Resource_s8bm4"]
+script = ExtResource("3_cwhy4")
+tag = "confirm"
+stream = ExtResource("5_j24h6")
+metadata/_custom_type_script = "uid://y7kgv0a3gc3g"
+
+[sub_resource type="Resource" id="Resource_aosc5"]
+script = ExtResource("2_tj7tl")
+soundFx = Array[ExtResource("3_cwhy4")]([SubResource("Resource_alaf7"), SubResource("Resource_s8bm4")])
+metadata/_custom_type_script = "uid://b7nng4y5xxvbo"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tj7tl"]
+bg_color = Color(1, 1, 1, 0)
+border_width_left = 20
+border_width_right = 20
+border_color = Color(0.779567, 0.580846, 0.382926, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sgv7o"]
+bg_color = Color(0.404572, 0.558284, 0.374548, 1)
+border_width_left = 16
+border_width_top = 16
+border_width_right = 16
+border_width_bottom = 16
+border_color = Color(0.572494, 0.372777, 0.270028, 1)
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+shadow_color = Color(0, 0, 0, 0.286275)
+shadow_size = 2
+shadow_offset = Vector2(2, 4)
+
+[sub_resource type="Resource" id="Resource_8pwxo"]
+script = ExtResource("3_ohigb")
+
+[sub_resource type="Resource" id="Resource_fs0bv"]
+script = ExtResource("3_ohigb")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n4ihd"]
+content_margin_left = 20.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_bwmw6"]
+font = ExtResource("24_fopko")
+font_size = 48
+outline_size = 16
+outline_color = Color(0.62832, 0.269837, 0.108442, 1)
+shadow_size = 0
+shadow_color = Color(0, 0, 0, 0.443137)
+shadow_offset = Vector2(4, 6)
+
+[sub_resource type="Animation" id="Animation_sq6ae"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Button:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(496, 21)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Ropes:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(108, -190)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ScrollContainer:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 371)]
+}
+
+[sub_resource type="Animation" id="Animation_cwhy4"]
+resource_name = "enter_scene"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Button:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.36666667, 0.8000001, 1),
+"transitions": PackedFloat32Array(-2, -2, 1),
+"update": 0,
+"values": [Vector2(746, 21), Vector2(480, 21), Vector2(496, 21)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Ropes:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.10000001, 0.53333336, 0.7),
+"transitions": PackedFloat32Array(-2, -2, 1),
+"update": 0,
+"values": [Vector2(108, -534), Vector2(108, -174), Vector2(108, -190)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ScrollContainer:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.13333334, 0.6666667, 0.90000004),
+"transitions": PackedFloat32Array(-2, -2, 1),
+"update": 0,
+"values": [Vector2(-778, 371), Vector2(16, 371), Vector2(0, 371)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_j24h6"]
+_data = {
+&"RESET": SubResource("Animation_sq6ae"),
+&"enter_scene": SubResource("Animation_cwhy4")
+}
+
+[node name="Tutorial" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PolyAudio" parent="." instance=ExtResource("1_essi4")]
+sfxLib = SubResource("Resource_aosc5")
+
+[node name="Ropes" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -252.0
+offset_top = -830.0
+offset_right = 252.0
+offset_bottom = -374.00046
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_tj7tl")
+
+[node name="TextureRect" type="Panel" parent="Ropes"]
+custom_minimum_size = Vector2(638, 126)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -319.0
+offset_top = 370.0
+offset_right = 319.0
+offset_bottom = 496.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_sgv7o")
+
+[node name="Label" type="Label" parent="Ropes/TextureRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.134921
+anchor_right = 0.918956
+anchor_bottom = 0.992063
+offset_left = 16.0
+offset_top = -5.78571
+offset_right = 40.2734
+offset_bottom = 1.92857
+grow_horizontal = 2
+grow_vertical = 2
+text = "TUTORIAL"
+label_settings = ExtResource("1_6j0w8")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+clip_contents = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 371.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+script = ExtResource("2_8km5a")
+speed = 500.0
+wheel_scroll_damper = SubResource("Resource_8pwxo")
+dragging_scroll_damper = SubResource("Resource_fs0bv")
+metadata/_custom_type_script = "uid://bgqglerkcylxx"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 20
+
+[node name="Instruction1" type="Panel" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(720, 893)
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 1
+theme_override_styles/panel = ExtResource("4_o7lh1")
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Instruction1"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -284.5
+offset_top = 32.0
+offset_right = 284.5
+offset_bottom = 113.0
+grow_horizontal = 2
+mouse_filter = 1
+theme_override_colors/font_outline_color = Color(0.5083361, 0.25950846, 0.2052142, 1)
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("5_qvoft")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxEmpty_n4ihd")
+text = "1. Pick Your Operation"
+
+[node name="demoShadow" type="TextureRect" parent="ScrollContainer/VBoxContainer/Instruction1"]
+modulate = Color(0, 0, 0, 0.32156864)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.51111114
+anchor_top = 0.51287794
+anchor_right = 0.82361114
+anchor_bottom = 0.96080595
+offset_bottom = 6.1035156e-05
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("11_tj7tl")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="demo" type="TextureRect" parent="ScrollContainer/VBoxContainer/Instruction1"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.505555
+anchor_top = 0.507279
+anchor_right = 0.818055
+anchor_bottom = 0.955207
+offset_bottom = 6.1035156e-05
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("11_tj7tl")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="bubble" type="TextureRect" parent="ScrollContainer/VBoxContainer/Instruction1"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.308333
+anchor_top = -0.0272256
+anchor_right = 1.0375
+anchor_bottom = 0.546239
+offset_left = -1.9449158
+offset_top = 61.31247
+offset_right = 23.05487
+offset_bottom = -50.791443
+grow_horizontal = 0
+grow_vertical = 2
+rotation = 0.120428
+texture = ExtResource("6_ogrr0")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Instruction1/bubble"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.060177
+anchor_top = 0.277936
+anchor_right = 0.916814
+anchor_bottom = 0.71622
+offset_left = -1.8268242
+offset_top = -2.1414948
+offset_right = -1.8268738
+offset_bottom = 15.544891
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0.831373, 0.541176, 0.168627, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.447059)
+theme_override_fonts/font = ExtResource("5_qvoft")
+theme_override_font_sizes/font_size = 36
+text = "Addition, Subtraction, Multiplication, Division, or a Mixed Challenge? Pick your mathematical mood!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="charHead" parent="ScrollContainer/VBoxContainer/Instruction1" instance=ExtResource("8_gja0q")]
+position = Vector2(24, 417)
+rotation = -0.22165681
+scale = Vector2(0.5, 0.5)
+mouthInit = 9
+
+[node name="Instruction2" type="Panel" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(720, 893)
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 1
+theme_override_styles/panel = ExtResource("4_o7lh1")
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Instruction2"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -284.5
+offset_top = 32.0
+offset_right = 284.5
+offset_bottom = 113.0
+grow_horizontal = 2
+mouse_filter = 1
+theme_override_colors/font_outline_color = Color(0.5083361, 0.25950846, 0.2052142, 1)
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("5_qvoft")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxEmpty_n4ihd")
+text = "2. Level Up!"
+
+[node name="demoShadow" type="TextureRect" parent="ScrollContainer/VBoxContainer/Instruction2"]
+self_modulate = Color(0, 0, 0, 0.32156864)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.51111114
+anchor_top = 0.51287806
+anchor_right = 0.82361114
+anchor_bottom = 0.9608061
+offset_top = -0.00012207031
+offset_bottom = -6.1035156e-05
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("15_sq6ae")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="demo" type="TextureRect" parent="ScrollContainer/VBoxContainer/Instruction2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.505555
+anchor_top = 0.507279
+anchor_right = 0.818055
+anchor_bottom = 0.955207
+offset_top = -0.00012207031
+offset_bottom = -6.1035156e-05
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("15_sq6ae")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="bubble" type="TextureRect" parent="ScrollContainer/VBoxContainer/Instruction2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.308333
+anchor_top = -0.0272256
+anchor_right = 1.0375
+anchor_bottom = 0.546239
+offset_left = -1.9449158
+offset_top = 61.31247
+offset_right = 23.05487
+offset_bottom = -50.791443
+grow_horizontal = 0
+grow_vertical = 2
+rotation = 0.120428
+texture = ExtResource("6_ogrr0")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Instruction2/bubble"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.060177
+anchor_top = 0.277936
+anchor_right = 0.916814
+anchor_bottom = 0.71622
+offset_left = 18.059967
+offset_top = -12.606529
+offset_right = -25.267212
+offset_bottom = 54.079865
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0.831373, 0.541176, 0.168627, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.447059)
+theme_override_fonts/font = ExtResource("5_qvoft")
+theme_override_font_sizes/font_size = 36
+text = "Start at Level 1, each level gets harder as you proceed. Complete its set objective to move up to the next level!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="charHead" parent="ScrollContainer/VBoxContainer/Instruction2" instance=ExtResource("8_gja0q")]
+position = Vector2(24, 417)
+rotation = -0.22165681
+scale = Vector2(0.5, 0.5)
+mouthInit = 9
+
+[node name="Instruction3" type="Panel" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(720, 893)
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 1
+theme_override_styles/panel = ExtResource("4_o7lh1")
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Instruction3"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -284.5
+offset_top = 32.0
+offset_right = 284.5
+offset_bottom = 113.0
+grow_horizontal = 2
+mouse_filter = 1
+theme_override_colors/font_outline_color = Color(0.5083361, 0.25950846, 0.2052142, 1)
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("5_qvoft")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxEmpty_n4ihd")
+text = "3. Your Objectives"
+
+[node name="demoShadow" type="TextureRect" parent="ScrollContainer/VBoxContainer/Instruction3"]
+self_modulate = Color(0, 0, 0, 0.54509807)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.51111114
+anchor_top = 0.51287806
+anchor_right = 0.82361114
+anchor_bottom = 0.9608061
+offset_top = -0.00012207031
+offset_bottom = -6.1035156e-05
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("16_j24h6")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="demo" type="TextureRect" parent="ScrollContainer/VBoxContainer/Instruction3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.505555
+anchor_top = 0.507279
+anchor_right = 0.818055
+anchor_bottom = 0.955207
+offset_top = -0.00012207031
+offset_bottom = -6.1035156e-05
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("16_j24h6")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="bubble" type="TextureRect" parent="ScrollContainer/VBoxContainer/Instruction3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.308333
+anchor_top = -0.0272256
+anchor_right = 1.0375
+anchor_bottom = 0.546239
+offset_left = -1.9449158
+offset_top = 61.31247
+offset_right = 23.05487
+offset_bottom = -50.791443
+grow_horizontal = 0
+grow_vertical = 2
+rotation = 0.120428
+texture = ExtResource("6_ogrr0")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Instruction3/bubble"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.060177
+anchor_top = 0.277936
+anchor_right = 0.916814
+anchor_bottom = 0.71622
+offset_left = 16.39124
+offset_top = -18.025475
+offset_right = -34.761414
+offset_bottom = 48.66092
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0.831373, 0.541176, 0.168627, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.447059)
+theme_override_fonts/font = ExtResource("5_qvoft")
+theme_override_font_sizes/font_size = 36
+text = "When selecting a level, a challenge suggests your target number of seconds to pass, 30 questions and a time limit!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="charHead" parent="ScrollContainer/VBoxContainer/Instruction3" instance=ExtResource("8_gja0q")]
+position = Vector2(24, 417)
+rotation = -0.22165681
+scale = Vector2(0.5, 0.5)
+mouthInit = 11
+
+[node name="Instruction4" type="Panel" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(720, 893)
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 1
+theme_override_styles/panel = ExtResource("4_o7lh1")
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Instruction4"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -284.5
+offset_top = 32.0
+offset_right = 284.5
+offset_bottom = 113.0
+grow_horizontal = 2
+mouse_filter = 1
+theme_override_colors/font_outline_color = Color(0.5083361, 0.25950846, 0.2052142, 1)
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("5_qvoft")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxEmpty_n4ihd")
+text = "4. Initial Countdown"
+
+[node name="demoShadow" type="TextureRect" parent="ScrollContainer/VBoxContainer/Instruction4"]
+self_modulate = Color(0, 0, 0, 0.32156864)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.51111114
+anchor_top = 0.51287806
+anchor_right = 0.82361114
+anchor_bottom = 0.9608061
+offset_top = -0.00012207031
+offset_bottom = -6.1035156e-05
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("17_alaf7")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="demo" type="TextureRect" parent="ScrollContainer/VBoxContainer/Instruction4"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.505555
+anchor_top = 0.507279
+anchor_right = 0.818055
+anchor_bottom = 0.955207
+offset_top = -0.00012207031
+offset_bottom = -6.1035156e-05
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("17_alaf7")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="bubble" type="TextureRect" parent="ScrollContainer/VBoxContainer/Instruction4"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.308333
+anchor_top = -0.0272256
+anchor_right = 1.0375
+anchor_bottom = 0.546239
+offset_left = -1.9449158
+offset_top = 61.31247
+offset_right = 23.05487
+offset_bottom = -50.791443
+grow_horizontal = 0
+grow_vertical = 2
+rotation = 0.120428
+texture = ExtResource("6_ogrr0")
+expand_mode = 1
+stretch_mode = 4
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Instruction4/bubble"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.060177
+anchor_top = 0.277936
+anchor_right = 0.916814
+anchor_bottom = 0.71622
+offset_left = 39.872776
+offset_top = 4.001869
+offset_right = -49.881042
+offset_bottom = 21.688263
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0.831373, 0.541176, 0.168627, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.447059)
+theme_override_fonts/font = ExtResource("5_qvoft")
+theme_override_font_sizes/font_size = 36
+text = "Prepare yourselves as the game begins with a countdown: 3… 2… 1… GO!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="charHead" parent="ScrollContainer/VBoxContainer/Instruction4" instance=ExtResource("8_gja0q")]
+position = Vector2(24, 417)
+rotation = -0.22165681
+scale = Vector2(0.5, 0.5)
+eyeInit = 3
+mouthInit = 1
+browInit = 2
+
+[node name="Instruction5" type="Panel" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(720, 893)
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 1
+theme_override_styles/panel = ExtResource("4_o7lh1")
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Instruction5"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -284.5
+offset_top = 32.0
+offset_right = 284.5
+offset_bottom = 113.0
+grow_horizontal = 2
+mouse_filter = 1
+theme_override_colors/font_outline_color = Color(0.5083361, 0.25950846, 0.2052142, 1)
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("5_qvoft")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxEmpty_n4ihd")
+text = "5. DD Card Solving"
+
+[node name="demoShadow" type="TextureRect" parent="ScrollContainer/VBoxContainer/Instruction5"]
+self_modulate = Color(0, 0, 0, 0.32156864)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.51111114
+anchor_top = 0.51287806
+anchor_right = 0.82361114
+anchor_bottom = 0.9608061
+offset_top = -0.00012207031
+offset_bottom = -6.1035156e-05
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("18_s8bm4")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="demo" type="TextureRect" parent="ScrollContainer/VBoxContainer/Instruction5"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.505555
+anchor_top = 0.507279
+anchor_right = 0.818055
+anchor_bottom = 0.955207
+offset_top = -0.00012207031
+offset_bottom = -6.1035156e-05
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("18_s8bm4")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="bubble" type="TextureRect" parent="ScrollContainer/VBoxContainer/Instruction5"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.308333
+anchor_top = -0.0272256
+anchor_right = 1.0375
+anchor_bottom = 0.546239
+offset_left = -1.9449158
+offset_top = 61.31247
+offset_right = 23.05487
+offset_bottom = -50.791443
+grow_horizontal = 0
+grow_vertical = 2
+rotation = 0.120428
+texture = ExtResource("6_ogrr0")
+expand_mode = 1
+stretch_mode = 4
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Instruction5/bubble"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.060177
+anchor_top = 0.277936
+anchor_right = 0.916814
+anchor_bottom = 0.71622
+offset_left = 28.012688
+offset_top = 11.371338
+offset_right = -48.46109
+offset_bottom = 29.05774
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0.831373, 0.541176, 0.168627, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.447059)
+theme_override_fonts/font = ExtResource("5_qvoft")
+theme_override_font_sizes/font_size = 36
+text = "A grid of math problems will appear, and you need to solve each of them at a time."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="charHead" parent="ScrollContainer/VBoxContainer/Instruction5" instance=ExtResource("8_gja0q")]
+position = Vector2(24, 417)
+rotation = -0.22165681
+scale = Vector2(0.5, 0.5)
+mouthInit = 9
+
+[node name="Instruction6" type="Panel" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(720, 893)
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 1
+theme_override_styles/panel = ExtResource("4_o7lh1")
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Instruction6"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -284.5
+offset_top = 32.0
+offset_right = 284.5
+offset_bottom = 113.0
+grow_horizontal = 2
+mouse_filter = 1
+theme_override_colors/font_outline_color = Color(0.5083361, 0.25950846, 0.2052142, 1)
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("5_qvoft")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxEmpty_n4ihd")
+text = "6. A Mysterious Card!"
+
+[node name="demoShadow" type="TextureRect" parent="ScrollContainer/VBoxContainer/Instruction6"]
+self_modulate = Color(0, 0, 0, 0.32156864)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.51111114
+anchor_top = 0.51287806
+anchor_right = 0.82361114
+anchor_bottom = 0.9608061
+offset_top = -0.00012207031
+offset_bottom = -6.1035156e-05
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("19_aosc5")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="demo" type="TextureRect" parent="ScrollContainer/VBoxContainer/Instruction6"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.505555
+anchor_top = 0.507279
+anchor_right = 0.818055
+anchor_bottom = 0.955207
+offset_top = -0.00012207031
+offset_bottom = -6.1035156e-05
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("19_aosc5")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="bubble" type="TextureRect" parent="ScrollContainer/VBoxContainer/Instruction6"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.308333
+anchor_top = -0.0272256
+anchor_right = 1.0375
+anchor_bottom = 0.546239
+offset_left = -1.9449158
+offset_top = 61.31247
+offset_right = 23.05487
+offset_bottom = -50.791443
+grow_horizontal = 0
+grow_vertical = 2
+rotation = 0.120428
+texture = ExtResource("6_ogrr0")
+expand_mode = 1
+stretch_mode = 4
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Instruction6/bubble"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.060177
+anchor_top = 0.277936
+anchor_right = 0.916814
+anchor_bottom = 0.71622
+offset_left = 45.64208
+offset_top = 7.2235184
+offset_right = -56.326202
+offset_bottom = 24.909912
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0.831373, 0.541176, 0.168627, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.447059)
+theme_override_fonts/font = ExtResource("5_qvoft")
+theme_override_font_sizes/font_size = 36
+text = "Tap a question, and a card appears. And as the keyboard comes to your view, you can type in your answers!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="charHead" parent="ScrollContainer/VBoxContainer/Instruction6" instance=ExtResource("8_gja0q")]
+position = Vector2(24, 417)
+rotation = -0.22165681
+scale = Vector2(0.5, 0.5)
+eyeInit = 6
+mouthInit = 7
+
+[node name="Instruction7" type="Panel" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(720, 893)
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 1
+theme_override_styles/panel = ExtResource("4_o7lh1")
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Instruction7"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -284.5
+offset_top = 32.0
+offset_right = 284.5
+offset_bottom = 113.0
+grow_horizontal = 2
+mouse_filter = 1
+theme_override_colors/font_outline_color = Color(0.5083361, 0.25950846, 0.2052142, 1)
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("5_qvoft")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxEmpty_n4ihd")
+text = "7. A Little Helper!"
+
+[node name="demoShadow" type="TextureRect" parent="ScrollContainer/VBoxContainer/Instruction7"]
+self_modulate = Color(0, 0, 0, 0.32156864)
+custom_minimum_size = Vector2(528, 130)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -260.0
+offset_top = 236.5
+offset_right = 268.0
+offset_bottom = 366.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("20_mtqp4")
+expand_mode = 1
+
+[node name="demo" type="TextureRect" parent="ScrollContainer/VBoxContainer/Instruction7"]
+custom_minimum_size = Vector2(528, 130)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -264.0
+offset_top = 231.5
+offset_right = 264.0
+offset_bottom = 361.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("20_mtqp4")
+expand_mode = 1
+
+[node name="bubble" type="TextureRect" parent="ScrollContainer/VBoxContainer/Instruction7"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.30686793
+anchor_top = -0.011548109
+anchor_right = 1.036035
+anchor_bottom = 0.56191653
+offset_left = -1.9449158
+offset_top = 61.31247
+offset_right = 23.05487
+offset_bottom = -50.791443
+grow_horizontal = 0
+grow_vertical = 2
+rotation = 0.120428
+texture = ExtResource("6_ogrr0")
+expand_mode = 1
+stretch_mode = 4
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Instruction7/bubble"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.060177
+anchor_top = 0.277936
+anchor_right = 0.916814
+anchor_bottom = 0.71622
+offset_left = 27.386898
+offset_top = -18.771332
+offset_right = -30.7529
+offset_bottom = 47.91507
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0.831373, 0.541176, 0.168627, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.447059)
+theme_override_fonts/font = ExtResource("5_qvoft")
+theme_override_font_sizes/font_size = 36
+text = "Don’t worry, your avatar will cheer you on this challenge; giving you insightful hints to solve trickier problems!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="charHead" parent="ScrollContainer/VBoxContainer/Instruction7" instance=ExtResource("8_gja0q")]
+position = Vector2(24, 417)
+rotation = -0.22165681
+scale = Vector2(0.5, 0.5)
+eyeInit = 3
+mouthInit = 1
+
+[node name="Instruction8" type="Panel" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(720, 893)
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 1
+theme_override_styles/panel = ExtResource("4_o7lh1")
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Instruction8"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -284.5
+offset_top = 32.0
+offset_right = 284.5
+offset_bottom = 113.0
+grow_horizontal = 2
+mouse_filter = 1
+theme_override_colors/font_outline_color = Color(0.5083361, 0.25950846, 0.2052142, 1)
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("5_qvoft")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxEmpty_n4ihd")
+text = "8. Your Final Answer"
+
+[node name="demoShadow" type="TextureRect" parent="ScrollContainer/VBoxContainer/Instruction8"]
+self_modulate = Color(0, 0, 0, 0.32156864)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.51175797
+anchor_right = 0.8888879
+anchor_bottom = 0.95252556
+offset_top = 0.00015258789
+offset_bottom = 0.00018310547
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("21_ssu30")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="demo" type="TextureRect" parent="ScrollContainer/VBoxContainer/Instruction8"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.49444443
+anchor_top = 0.5061589
+anchor_right = 0.8833323
+anchor_bottom = 0.9469265
+offset_top = 0.00015258789
+offset_bottom = 0.00018310547
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("21_ssu30")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="bubble" type="TextureRect" parent="ScrollContainer/VBoxContainer/Instruction8"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.308333
+anchor_top = -0.0272256
+anchor_right = 1.0375
+anchor_bottom = 0.546239
+offset_left = -1.9449158
+offset_top = 61.31247
+offset_right = 23.05487
+offset_bottom = -50.791443
+grow_horizontal = 0
+grow_vertical = 2
+rotation = 0.120428
+texture = ExtResource("6_ogrr0")
+expand_mode = 1
+stretch_mode = 4
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Instruction8/bubble"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.060177
+anchor_top = 0.277936
+anchor_right = 0.916814
+anchor_bottom = 0.71622
+offset_left = 20.886429
+offset_top = -5.8975525
+offset_right = -37.66916
+offset_bottom = 60.78885
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0.831373, 0.541176, 0.168627, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.447059)
+theme_override_fonts/font = ExtResource("5_qvoft")
+theme_override_font_sizes/font_size = 36
+text = "Press the Check button on your keyboard to submit your answers. You cannot change it once it's locked in!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="charHead" parent="ScrollContainer/VBoxContainer/Instruction8" instance=ExtResource("8_gja0q")]
+position = Vector2(24, 417)
+rotation = -0.22165681
+scale = Vector2(0.5, 0.5)
+mouthInit = 9
+browInit = 2
+
+[node name="Instruction9" type="Panel" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(720, 893)
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 1
+theme_override_styles/panel = ExtResource("4_o7lh1")
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Instruction9"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -284.5
+offset_top = 32.0
+offset_right = 284.5
+offset_bottom = 113.0
+grow_horizontal = 2
+mouse_filter = 1
+theme_override_colors/font_outline_color = Color(0.5083361, 0.25950846, 0.2052142, 1)
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("5_qvoft")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxEmpty_n4ihd")
+text = "9. Pop-Up Navigation"
+
+[node name="demoShadow" type="TextureRect" parent="ScrollContainer/VBoxContainer/Instruction9"]
+self_modulate = Color(0, 0, 0, 0.32156864)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.51111114
+anchor_top = 0.51287806
+anchor_right = 0.82361114
+anchor_bottom = 0.9608061
+offset_top = -0.00012207031
+offset_bottom = -6.1035156e-05
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("22_wsqqj")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="demo" type="TextureRect" parent="ScrollContainer/VBoxContainer/Instruction9"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.505555
+anchor_top = 0.507279
+anchor_right = 0.818055
+anchor_bottom = 0.955207
+offset_top = -0.00012207031
+offset_bottom = -6.1035156e-05
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("22_wsqqj")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="bubble" type="TextureRect" parent="ScrollContainer/VBoxContainer/Instruction9"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.308333
+anchor_top = -0.0272256
+anchor_right = 1.0375
+anchor_bottom = 0.546239
+offset_left = -1.9449158
+offset_top = 61.31247
+offset_right = 23.05487
+offset_bottom = -50.791443
+grow_horizontal = 0
+grow_vertical = 2
+rotation = 0.120428
+texture = ExtResource("6_ogrr0")
+expand_mode = 1
+stretch_mode = 4
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Instruction9/bubble"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.060177
+anchor_top = 0.277936
+anchor_right = 0.916814
+anchor_bottom = 0.71622
+offset_left = 38.29894
+offset_top = 6.047325
+offset_right = -42.82657
+offset_bottom = 23.733734
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0.831373, 0.541176, 0.168627, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.447059)
+theme_override_fonts/font = ExtResource("5_qvoft")
+theme_override_font_sizes/font_size = 36
+text = "Use the Left and Right Buttons to navigate between questions, or the X Button to go back to the grid."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="charHead" parent="ScrollContainer/VBoxContainer/Instruction9" instance=ExtResource("8_gja0q")]
+position = Vector2(24, 417)
+rotation = -0.22165681
+scale = Vector2(0.5, 0.5)
+mouthInit = 9
+
+[node name="Instruction10" type="Panel" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(720, 893)
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 1
+theme_override_styles/panel = ExtResource("4_o7lh1")
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Instruction10"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -284.5
+offset_top = 32.0
+offset_right = 284.5
+offset_bottom = 113.0
+grow_horizontal = 2
+mouse_filter = 1
+theme_override_colors/font_outline_color = Color(0.5083361, 0.25950846, 0.2052142, 1)
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("5_qvoft")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxEmpty_n4ihd")
+text = "10. A No-Pause Game"
+
+[node name="bubble" type="TextureRect" parent="ScrollContainer/VBoxContainer/Instruction10"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.308333
+anchor_top = -0.0272256
+anchor_right = 1.0375
+anchor_bottom = 0.546239
+offset_left = -1.9449158
+offset_top = 61.31247
+offset_right = 23.05487
+offset_bottom = -50.791443
+grow_horizontal = 0
+grow_vertical = 2
+rotation = 0.120428
+texture = ExtResource("6_ogrr0")
+expand_mode = 1
+stretch_mode = 4
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Instruction10/bubble"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.060177
+anchor_top = 0.277936
+anchor_right = 0.916814
+anchor_bottom = 0.71622
+offset_left = 10.4531975
+offset_top = -33.846184
+offset_right = -25.588806
+offset_bottom = 57.84021
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0.831373, 0.541176, 0.168627, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.447059)
+theme_override_fonts/font = ExtResource("5_qvoft")
+theme_override_font_sizes/font_size = 36
+text = "You can only choose to Retry or Exit as you pause the game. A new set of questions will greet you if you wish to continue."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="demoShadow" type="TextureRect" parent="ScrollContainer/VBoxContainer/Instruction10"]
+self_modulate = Color(0, 0, 0, 0.54509807)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.51111114
+anchor_top = 0.51287806
+anchor_right = 0.82361114
+anchor_bottom = 0.9608061
+offset_top = -3.05176e-05
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("23_u0ben")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="demo" type="TextureRect" parent="ScrollContainer/VBoxContainer/Instruction10"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.505555
+anchor_top = 0.507279
+anchor_right = 0.818055
+anchor_bottom = 0.955207
+offset_top = -3.05176e-05
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("23_u0ben")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="charHead" parent="ScrollContainer/VBoxContainer/Instruction10" instance=ExtResource("8_gja0q")]
+position = Vector2(24, 417)
+rotation = -0.22165681
+scale = Vector2(0.5, 0.5)
+eyeInit = 1
+mouthInit = 2
+browInit = 1
+
+[node name="Instruction11" type="Panel" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(720, 893)
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 1
+theme_override_styles/panel = ExtResource("4_o7lh1")
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Instruction11"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -284.5
+offset_top = 32.0
+offset_right = 284.5
+offset_bottom = 113.0
+grow_horizontal = 2
+mouse_filter = 1
+theme_override_colors/font_outline_color = Color(0.5083361, 0.25950846, 0.2052142, 1)
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("5_qvoft")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxEmpty_n4ihd")
+text = "11. Card Submission"
+
+[node name="bubble" type="TextureRect" parent="ScrollContainer/VBoxContainer/Instruction11"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.308333
+anchor_top = -0.0272256
+anchor_right = 1.0375
+anchor_bottom = 0.546239
+offset_left = -1.9449158
+offset_top = 61.31247
+offset_right = 23.05487
+offset_bottom = -50.791443
+grow_horizontal = 0
+grow_vertical = 2
+rotation = 0.120428
+texture = ExtResource("6_ogrr0")
+expand_mode = 1
+stretch_mode = 4
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Instruction11/bubble"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.060177
+anchor_top = 0.277936
+anchor_right = 0.916814
+anchor_bottom = 0.71622
+offset_left = 24.74387
+offset_top = -40.61226
+offset_right = -32.266357
+offset_bottom = 51.074127
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0.831373, 0.541176, 0.168627, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.447059)
+theme_override_fonts/font = ExtResource("5_qvoft")
+theme_override_font_sizes/font_size = 36
+text = "Once all the items are filled as you Check the last item, the Card will be submitted automatically."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="demoShadow" type="TextureRect" parent="ScrollContainer/VBoxContainer/Instruction11"]
+self_modulate = Color(0, 0, 0, 0.32156864)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.51111114
+anchor_top = 0.51287806
+anchor_right = 0.82361114
+anchor_bottom = 0.9608061
+offset_top = -3.05176e-05
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("24_axdco")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="demo" type="TextureRect" parent="ScrollContainer/VBoxContainer/Instruction11"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.505555
+anchor_top = 0.507279
+anchor_right = 0.818055
+anchor_bottom = 0.955207
+offset_top = -3.05176e-05
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("24_axdco")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="charHead" parent="ScrollContainer/VBoxContainer/Instruction11" instance=ExtResource("8_gja0q")]
+position = Vector2(24, 417)
+rotation = -0.22165681
+scale = Vector2(0.5, 0.5)
+mouthInit = 9
+browInit = 3
+
+[node name="Instruction12" type="Panel" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(720, 893)
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 1
+theme_override_styles/panel = ExtResource("4_o7lh1")
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Instruction12"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -284.5
+offset_top = 32.0
+offset_right = 284.5
+offset_bottom = 113.0
+grow_horizontal = 2
+mouse_filter = 1
+theme_override_colors/font_outline_color = Color(0.5083361, 0.25950846, 0.2052142, 1)
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("5_qvoft")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxEmpty_n4ihd")
+text = "12. Final Results"
+
+[node name="bubble" type="TextureRect" parent="ScrollContainer/VBoxContainer/Instruction12"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.308333
+anchor_top = -0.0272256
+anchor_right = 1.0375
+anchor_bottom = 0.546239
+offset_left = -1.9449158
+offset_top = 61.31247
+offset_right = 23.05487
+offset_bottom = -50.791443
+grow_horizontal = 0
+grow_vertical = 2
+rotation = 0.120428
+texture = ExtResource("6_ogrr0")
+expand_mode = 1
+stretch_mode = 4
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Instruction12/bubble"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.060177
+anchor_top = 0.277936
+anchor_right = 0.916814
+anchor_bottom = 0.71622
+offset_left = 11.4459915
+offset_top = -33.966133
+offset_right = -21.315155
+offset_bottom = 57.720276
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0.831373, 0.541176, 0.168627, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.447059)
+theme_override_fonts/font = ExtResource("5_qvoft")
+theme_override_font_sizes/font_size = 40
+text = "After submission, the results will display your score, estimated time, and final remarks. Coins are rewarded too!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="demoShadow" type="TextureRect" parent="ScrollContainer/VBoxContainer/Instruction12"]
+self_modulate = Color(0, 0, 0, 0.32156864)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.51111114
+anchor_top = 0.51287806
+anchor_right = 0.82361114
+anchor_bottom = 0.9608061
+offset_top = -3.05176e-05
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("25_57hm8")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="demo" type="TextureRect" parent="ScrollContainer/VBoxContainer/Instruction12"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.505555
+anchor_top = 0.507279
+anchor_right = 0.818055
+anchor_bottom = 0.955207
+offset_top = -3.05176e-05
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("25_57hm8")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="charHead" parent="ScrollContainer/VBoxContainer/Instruction12" instance=ExtResource("8_gja0q")]
+position = Vector2(24, 417)
+rotation = -0.22165681
+scale = Vector2(0.5, 0.5)
+mouthInit = 11
+
+[node name="Button" type="Button" parent="." node_paths=PackedStringArray("sfx")]
+custom_minimum_size = Vector2(130, 60)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -224.0
+offset_top = 21.0
+offset_right = -21.999268
+offset_bottom = 121.0
+grow_horizontal = 0
+pivot_offset = Vector2(101, 50)
+focus_mode = 0
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = ExtResource("22_t6oh1")
+theme_override_styles/pressed = ExtResource("22_t6oh1")
+theme_override_styles/hover = ExtResource("22_t6oh1")
+script = ExtResource("23_dq1wx")
+toState = "menu"
+scaleSize = 1.1
+sfx = NodePath("../PolyAudio")
+sfx_name = Array[String](["click", "confirm"])
+sfx_vol = Array[float]([-14.0, -18.0])
+sfx_delay = Array[float]([0.0, 0.05])
+
+[node name="Label" type="Label" parent="Button"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -84.5
+offset_top = -29.0
+offset_right = 84.5
+offset_bottom = 29.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Back"
+label_settings = SubResource("LabelSettings_bwmw6")
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 162
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_j24h6")
+}
+autoplay = "enter_scene"
+
+[connection signal="button_down" from="Button" to="Button" method="_on_button_down"]
+[connection signal="button_up" from="Button" to="Button" method="_on_button_up"]
+[connection signal="pressed" from="Button" to="Button" method="_on_button_pressed"]

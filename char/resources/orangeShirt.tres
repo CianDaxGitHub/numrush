@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ClothingInfo" load_steps=4 format=3 uid="uid://dq7u70wu2gdlm"]
+
+[ext_resource type="Texture2D" uid="uid://c5hpc1pdwf78t" path="res://char/tops/sht7.png" id="1_kf3ls"]
+[ext_resource type="Texture2D" uid="uid://belkoxndw367s" path="res://char/tops/prev/Untitled440_20250913204005.png" id="2_dop5i"]
+[ext_resource type="Script" uid="uid://dlfl5k543sbco" path="res://scripts/clothingInfo.gd" id="3_4spq1"]
+
+[resource]
+script = ExtResource("3_4spq1")
+itemName = "orangeShirt"
+displayName = "Orange T-Shirt"
+category = 0
+bought = false
+price = 60
+prevTex = ExtResource("2_dop5i")
+atlasTex = ExtResource("1_kf3ls")
+metadata/_custom_type_script = "uid://dlfl5k543sbco"

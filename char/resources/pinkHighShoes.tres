@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ClothingInfo" load_steps=4 format=3 uid="uid://vkgq51wwuv10"]
+
+[ext_resource type="Texture2D" uid="uid://bjtdvf1fu7wxf" path="res://char/shoes/shs12.png" id="1_60eb6"]
+[ext_resource type="Texture2D" uid="uid://qsbx5tflkl5l" path="res://char/shoes/prev/Untitled440_20250915232830.png" id="2_v1c0e"]
+[ext_resource type="Script" uid="uid://dlfl5k543sbco" path="res://scripts/clothingInfo.gd" id="3_y4gfy"]
+
+[resource]
+script = ExtResource("3_y4gfy")
+itemName = "pinkHighShoes"
+displayName = "Pink High Shoes"
+category = 7
+bought = false
+price = 80
+prevTex = ExtResource("2_v1c0e")
+atlasTex = ExtResource("1_60eb6")
+metadata/_custom_type_script = "uid://dlfl5k543sbco"

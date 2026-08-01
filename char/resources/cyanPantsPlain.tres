@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ClothingInfo" load_steps=4 format=3 uid="uid://bwrgrg5biv63v"]
+
+[ext_resource type="Texture2D" uid="uid://eocbagauut1q" path="res://char/bottoms/pnt0.png" id="1_gta1u"]
+[ext_resource type="Texture2D" uid="uid://dyufcl5pyqakl" path="res://char/bottoms/prev/Untitled440_20250913224201.png" id="2_wkycm"]
+[ext_resource type="Script" uid="uid://dlfl5k543sbco" path="res://scripts/clothingInfo.gd" id="3_gi0e8"]
+
+[resource]
+script = ExtResource("3_gi0e8")
+itemName = "cyanPantsPlain"
+displayName = "Plain Cyan Pants"
+category = 6
+bought = false
+price = 150
+prevTex = ExtResource("2_wkycm")
+atlasTex = ExtResource("1_gta1u")
+metadata/_custom_type_script = "uid://dlfl5k543sbco"

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://chovpkq5uflfj"
+path="res://.godot/imported/button assorted 92.wav-b151b6ed6009fa824eb2e902aa5ffcea.sample"
+
+[deps]
+
+source_file="res://sounds/button assorted 92.wav"
+dest_files=["res://.godot/imported/button assorted 92.wav-b151b6ed6009fa824eb2e902aa5ffcea.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

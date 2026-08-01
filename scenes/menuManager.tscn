@@ -1,0 +1,111 @@
+[gd_scene load_steps=7 format=3 uid="uid://fj0sppa2wrnq"]
+
+[ext_resource type="Script" uid="uid://08ir4r2njjrl" path="res://scripts/menuManager.gd" id="1_loidh"]
+[ext_resource type="Texture2D" uid="uid://rkxelgip5kh3" path="res://images/NumRushMural.jpg" id="2_loidh"]
+[ext_resource type="AudioStream" uid="uid://bg0af5rf2j0hp" path="res://sounds/bgm/main_loop.mp3" id="3_kq75g"]
+[ext_resource type="AudioStream" uid="uid://bq3osq4o57a42" path="res://sounds/bgm/silence.mp3" id="3_q6xwv"]
+[ext_resource type="AudioStream" uid="uid://bjramr4no68un" path="res://sounds/bgm/about.mp3" id="4_q6xwv"]
+
+[sub_resource type="AudioStreamInteractive" id="AudioStreamInteractive_hr7li"]
+clip_count = 3
+clip_0/name = &"empty"
+clip_0/stream = ExtResource("3_q6xwv")
+clip_0/auto_advance = 0
+clip_1/name = &"main"
+clip_1/stream = ExtResource("3_kq75g")
+clip_1/auto_advance = 0
+clip_2/name = &"about"
+clip_2/stream = ExtResource("4_q6xwv")
+clip_2/auto_advance = 0
+_transitions = {
+Vector2i(1, 0): {
+"fade_beats": 0.6,
+"fade_mode": 2,
+"from_time": 0,
+"to_time": 0
+},
+Vector2i(1, 2): {
+"fade_beats": 1.0,
+"fade_mode": 2,
+"filler_clip": 0,
+"from_time": 0,
+"to_time": 1,
+"use_filler_clip": true
+},
+Vector2i(2, 1): {
+"fade_beats": 1.0,
+"fade_mode": 2,
+"filler_clip": 0,
+"from_time": 0,
+"to_time": 1,
+"use_filler_clip": true
+}
+}
+
+[node name="MenuManager" type="Control"]
+clip_children = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_loidh")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1536.0
+offset_top = -2048.0
+offset_right = 1536.0
+offset_bottom = 2048.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(1536, 2048)
+texture = ExtResource("2_loidh")
+
+[node name="Label" type="Label" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -104.0
+offset_top = -352.0
+offset_right = 104.0
+offset_bottom = -307.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "Current State"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -104.0
+offset_top = -452.0
+offset_right = 104.0
+offset_bottom = -407.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "Current State"
+horizontal_alignment = 1
+
+[node name="menuBGM" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamInteractive_hr7li")
+volume_db = -10.0
+autoplay = true
+bus = &"bgm"

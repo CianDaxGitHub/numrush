@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ClothingInfo" load_steps=4 format=3 uid="uid://ca1fjb7l876ri"]
+
+[ext_resource type="Texture2D" uid="uid://cu11j2hu4jdro" path="res://char/tops/sht4.png" id="1_11ymi"]
+[ext_resource type="Texture2D" uid="uid://dg3nleleyo8gq" path="res://char/tops/prev/Untitled440_20250913204128.png" id="2_llrv5"]
+[ext_resource type="Script" uid="uid://dlfl5k543sbco" path="res://scripts/clothingInfo.gd" id="3_qlxql"]
+
+[resource]
+script = ExtResource("3_qlxql")
+itemName = "pinkShirt"
+displayName = "Pink T-Shirt"
+price = 60
+prevTex = ExtResource("2_llrv5")
+atlasTex = ExtResource("1_11ymi")
+metadata/_custom_type_script = "uid://dlfl5k543sbco"

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ClothingInfo" load_steps=4 format=3 uid="uid://d34uw0yx5dk2a"]
+
+[ext_resource type="Texture2D" uid="uid://cdtxtrd7vq2xk" path="res://char/hats/hat7.png" id="1_o4ujp"]
+[ext_resource type="Texture2D" uid="uid://dxd10bux61kkc" path="res://char/hats/prev/Untitled440_20250916125739.png" id="2_pa5qk"]
+[ext_resource type="Script" uid="uid://dlfl5k543sbco" path="res://scripts/clothingInfo.gd" id="3_mia8v"]
+
+[resource]
+script = ExtResource("3_mia8v")
+itemName = "cyanSalokot"
+displayName = "Cyan Anahaw Hat"
+category = 3
+bought = false
+price = 80
+prevTex = ExtResource("2_pa5qk")
+atlasTex = ExtResource("1_o4ujp")
+metadata/_custom_type_script = "uid://dlfl5k543sbco"

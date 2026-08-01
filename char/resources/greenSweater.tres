@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ClothingInfo" load_steps=4 format=3 uid="uid://7bf3kb08ma4m"]
+
+[ext_resource type="Texture2D" uid="uid://dq34t02ct7a61" path="res://char/tops/slv3.png" id="1_5ckgn"]
+[ext_resource type="Texture2D" uid="uid://c6vx5ykto6npc" path="res://char/tops/prev/Untitled440_20250913210234.png" id="2_058wy"]
+[ext_resource type="Script" uid="uid://dlfl5k543sbco" path="res://scripts/clothingInfo.gd" id="3_qc1d3"]
+
+[resource]
+script = ExtResource("3_qc1d3")
+itemName = "greenSweater"
+displayName = "Green Sweater"
+category = 1
+price = 150
+prevTex = ExtResource("2_058wy")
+atlasTex = ExtResource("1_5ckgn")
+metadata/_custom_type_script = "uid://dlfl5k543sbco"

@@ -1,0 +1,57 @@
+[gd_scene load_steps=4 format=3 uid="uid://op78i6c86iiq"]
+
+[ext_resource type="PackedScene" uid="uid://b57asyn7mhfl7" path="res://models/keyboardv3b.glb" id="1_kjofl"]
+[ext_resource type="Material" uid="uid://dmb6x7iptbfho" path="res://scenes/keyboardOutline.tres" id="2_kjofl"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kjofl"]
+shading_mode = 0
+
+[node name="keyboard" instance=ExtResource("1_kjofl")]
+
+[node name="base_001" parent="base" index="0"]
+surface_material_override/0 = ExtResource("2_kjofl")
+
+[node name="stalk_001" parent="stalk" index="0"]
+surface_material_override/0 = ExtResource("2_kjofl")
+
+[node name="light" parent="." index="2"]
+surface_material_override/0 = SubResource("StandardMaterial3D_kjofl")
+
+[node name="light_001" parent="light" index="0"]
+surface_material_override/0 = ExtResource("2_kjofl")
+
+[node name="btn12_001" parent="btn12" index="0"]
+surface_material_override/0 = ExtResource("2_kjofl")
+
+[node name="btn1_001" parent="btn1" index="0"]
+surface_material_override/0 = ExtResource("2_kjofl")
+
+[node name="btn2_001" parent="btn2" index="0"]
+surface_material_override/0 = ExtResource("2_kjofl")
+
+[node name="btn3_001" parent="btn3" index="0"]
+surface_material_override/0 = ExtResource("2_kjofl")
+
+[node name="btn4_001" parent="btn4" index="0"]
+surface_material_override/0 = ExtResource("2_kjofl")
+
+[node name="btn5_001" parent="btn5" index="0"]
+surface_material_override/0 = ExtResource("2_kjofl")
+
+[node name="btn6_001" parent="btn6" index="0"]
+surface_material_override/0 = ExtResource("2_kjofl")
+
+[node name="btn7_001" parent="btn7" index="0"]
+surface_material_override/0 = ExtResource("2_kjofl")
+
+[node name="btn8_001" parent="btn8" index="0"]
+surface_material_override/0 = ExtResource("2_kjofl")
+
+[node name="btn9_001" parent="btn9" index="0"]
+surface_material_override/0 = ExtResource("2_kjofl")
+
+[node name="btn10_001" parent="btn10" index="0"]
+surface_material_override/0 = ExtResource("2_kjofl")
+
+[node name="btn11_001" parent="btn11" index="0"]
+surface_material_override/0 = ExtResource("2_kjofl")

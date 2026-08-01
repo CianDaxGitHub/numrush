@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ClothingInfo" load_steps=4 format=3 uid="uid://bad4ql7j0pipq"]
+
+[ext_resource type="Texture2D" uid="uid://qp7a1rweoy67" path="res://char/hats/hat32.png" id="1_2kgot"]
+[ext_resource type="Texture2D" uid="uid://bum7gxue3tfcf" path="res://char/hats/prev/Untitled440_20250915235018.png" id="2_nh0ny"]
+[ext_resource type="Script" uid="uid://dlfl5k543sbco" path="res://scripts/clothingInfo.gd" id="3_4uhsi"]
+
+[resource]
+script = ExtResource("3_4uhsi")
+itemName = "cyanCap"
+displayName = "Cyan Cap"
+category = 3
+price = 50
+prevTex = ExtResource("2_nh0ny")
+atlasTex = ExtResource("1_2kgot")
+metadata/_custom_type_script = "uid://dlfl5k543sbco"

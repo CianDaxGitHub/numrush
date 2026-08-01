@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ClothingInfo" load_steps=4 format=3 uid="uid://cusuxx2vajifw"]
+
+[ext_resource type="Texture2D" uid="uid://b3q5fpcloonv8" path="res://char/hats/hat24.png" id="1_pjbtp"]
+[ext_resource type="Texture2D" uid="uid://c2lghl8sq53av" path="res://char/hats/prev/Untitled440_20250916122633.png" id="2_qj8lo"]
+[ext_resource type="Script" uid="uid://dlfl5k543sbco" path="res://scripts/clothingInfo.gd" id="3_kvuxs"]
+
+[resource]
+script = ExtResource("3_kvuxs")
+itemName = "blueDogHat"
+displayName = "Blue Dog Hat"
+category = 3
+bought = false
+price = 160
+prevTex = ExtResource("2_qj8lo")
+atlasTex = ExtResource("1_pjbtp")
+metadata/_custom_type_script = "uid://dlfl5k543sbco"

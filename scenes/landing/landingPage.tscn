@@ -1,0 +1,299 @@
+[gd_scene load_steps=18 format=3 uid="uid://ws2evqqoxcow"]
+
+[ext_resource type="Script" uid="uid://c3tudby1cu7bn" path="res://scripts/landing/landing_page.gd" id="1_mcfek"]
+[ext_resource type="Texture2D" uid="uid://dsttby0mtx81v" path="res://images/logo.png" id="2_8fgj1"]
+[ext_resource type="PackedScene" uid="uid://qkd4tm4yffxp" path="res://scenes/polyAudio.tscn" id="2_sg0o1"]
+[ext_resource type="Script" uid="uid://b7nng4y5xxvbo" path="res://scripts/soundLibrary.gd" id="3_dxr6r"]
+[ext_resource type="StyleBox" uid="uid://dnnyrj0dbbmnh" path="res://themes/cardbtn2.tres" id="3_iqc1u"]
+[ext_resource type="Script" uid="uid://c4q74v6jv7ny2" path="res://scripts/buttons/menuButton.gd" id="4_3644s"]
+[ext_resource type="FontFile" uid="uid://c1xv8vejetl6c" path="res://fonts/PoetsenOne-Regular.ttf" id="4_cdq0h"]
+[ext_resource type="Script" uid="uid://y7kgv0a3gc3g" path="res://scripts/soundEffect.gd" id="4_mtrqa"]
+[ext_resource type="AudioStream" uid="uid://bjyf5oq13lthl" path="res://sounds/clicky button 3.wav" id="5_2aq61"]
+[ext_resource type="StyleBox" uid="uid://7hedebrc3ydc" path="res://themes/cardbtn1.tres" id="6_wnirf"]
+[ext_resource type="FontFile" uid="uid://b3y7klyjp8l0n" path="res://fonts/Pangolin-Regular.ttf" id="7_sg0o1"]
+
+[sub_resource type="Resource" id="Resource_06jws"]
+script = ExtResource("4_mtrqa")
+tag = "click"
+stream = ExtResource("5_2aq61")
+metadata/_custom_type_script = "uid://y7kgv0a3gc3g"
+
+[sub_resource type="Resource" id="Resource_chver"]
+script = ExtResource("3_dxr6r")
+soundFx = Array[ExtResource("4_mtrqa")]([SubResource("Resource_06jws")])
+metadata/_custom_type_script = "uid://b7nng4y5xxvbo"
+
+[sub_resource type="LabelSettings" id="LabelSettings_3644s"]
+font = ExtResource("4_cdq0h")
+font_size = 48
+outline_size = 16
+outline_color = Color(0.62832, 0.269837, 0.108442, 1)
+shadow_size = 0
+shadow_color = Color(0, 0, 0, 0.443137)
+shadow_offset = Vector2(4, 6)
+
+[sub_resource type="LabelSettings" id="LabelSettings_uxfbg"]
+font = ExtResource("4_cdq0h")
+font_size = 52
+outline_size = 32
+outline_color = Color(0.62832, 0.269837, 0.108442, 1)
+shadow_size = 0
+shadow_offset = Vector2(0, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wnirf"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.807843, 0.368627, 0.176471, 1)
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+
+[sub_resource type="LabelSettings" id="LabelSettings_dxr6r"]
+font = ExtResource("7_sg0o1")
+font_size = 28
+font_color = Color(0.627451, 0.270588, 0.109804, 1)
+shadow_size = 0
+shadow_offset = Vector2(0, 0)
+
+[node name="LandingPage" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mcfek")
+
+[node name="PolyAudio" parent="." instance=ExtResource("2_sg0o1")]
+bus = &"sfx"
+sfxLib = SubResource("Resource_chver")
+
+[node name="Logo" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -225.0
+offset_top = 147.0
+offset_right = 237.0
+offset_bottom = 609.0
+grow_horizontal = 2
+pivot_offset = Vector2(231, 231)
+
+[node name="LogoShadow" type="TextureRect" parent="Logo"]
+self_modulate = Color(0, 0, 0, 0.223529)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -268.0
+offset_top = -268.0
+offset_right = 268.0
+offset_bottom = 268.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(231, 231)
+mouse_filter = 2
+texture = ExtResource("2_8fgj1")
+expand_mode = 1
+
+[node name="Logo" type="TextureRect" parent="Logo"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -274.0
+offset_top = -45.0
+offset_right = 262.0
+offset_bottom = 491.0
+grow_horizontal = 2
+mouse_filter = 2
+texture = ExtResource("2_8fgj1")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = 11.0
+offset_right = 250.0
+offset_bottom = 261.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="Control" type="Control" parent="VBoxContainer"]
+custom_minimum_size = Vector2(500, 110)
+layout_mode = 2
+
+[node name="btnCreate" type="Button" parent="VBoxContainer/Control" node_paths=PackedStringArray("sfx")]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(500, 110)
+layout_mode = 0
+offset_right = 500.0
+offset_bottom = 110.0
+pivot_offset = Vector2(250, 55)
+size_flags_vertical = 3
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("3_iqc1u")
+theme_override_styles/pressed = ExtResource("3_iqc1u")
+theme_override_styles/hover = ExtResource("3_iqc1u")
+script = ExtResource("4_3644s")
+toState = "signup"
+scaleSize = 1.08
+sfx = NodePath("../../../PolyAudio")
+sfx_name = Array[String](["click"])
+sfx_vol = Array[float]([-14.0])
+sfx_delay = Array[float]([0.0])
+
+[node name="Label" type="Label" parent="VBoxContainer/Control/btnCreate"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -84.5
+offset_top = -29.0
+offset_right = 84.5
+offset_bottom = 29.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Create Account"
+label_settings = SubResource("LabelSettings_3644s")
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 162
+
+[node name="Control2" type="Control" parent="VBoxContainer"]
+custom_minimum_size = Vector2(500, 110)
+layout_mode = 2
+
+[node name="btnLogin" type="Button" parent="VBoxContainer/Control2" node_paths=PackedStringArray("sfx")]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(500, 110)
+layout_mode = 0
+offset_right = 500.0
+offset_bottom = 110.0
+pivot_offset = Vector2(250, 55)
+size_flags_vertical = 3
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("3_iqc1u")
+theme_override_styles/pressed = ExtResource("3_iqc1u")
+theme_override_styles/hover = ExtResource("3_iqc1u")
+script = ExtResource("4_3644s")
+toState = "signin"
+scaleSize = 1.08
+sfx = NodePath("../../../PolyAudio")
+sfx_name = Array[String](["click"])
+sfx_vol = Array[float]([-14.0])
+sfx_delay = Array[float]([0.0])
+
+[node name="Label" type="Label" parent="VBoxContainer/Control2/btnLogin"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -84.5
+offset_top = -29.0
+offset_right = 84.5
+offset_bottom = 29.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Sign In"
+label_settings = SubResource("LabelSettings_3644s")
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 162
+
+[node name="warningSign" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -281.0
+offset_top = 328.0
+offset_right = 281.0
+offset_bottom = 592.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("6_wnirf")
+
+[node name="Label" type="Label" parent="warningSign"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -163.0
+offset_top = -112.0
+offset_right = 166.0
+offset_bottom = -35.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Note"
+label_settings = SubResource("LabelSettings_uxfbg")
+horizontal_alignment = 1
+
+[node name="goal" type="Panel" parent="warningSign"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -257.0
+offset_top = -42.0
+offset_right = 257.0
+offset_bottom = 105.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wnirf")
+
+[node name="goalText" type="Label" parent="warningSign/goal"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -55.0
+offset_right = 253.0
+offset_bottom = 59.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "NumRush requires an internet connection first for the purpose of identification. You can play offline once you're logged in."
+label_settings = SubResource("LabelSettings_dxr6r")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[connection signal="button_down" from="VBoxContainer/Control/btnCreate" to="VBoxContainer/Control/btnCreate" method="_on_button_down"]
+[connection signal="button_up" from="VBoxContainer/Control/btnCreate" to="VBoxContainer/Control/btnCreate" method="_on_button_up"]
+[connection signal="pressed" from="VBoxContainer/Control/btnCreate" to="VBoxContainer/Control/btnCreate" method="_on_button_pressed"]
+[connection signal="button_down" from="VBoxContainer/Control2/btnLogin" to="VBoxContainer/Control2/btnLogin" method="_on_button_down"]
+[connection signal="button_up" from="VBoxContainer/Control2/btnLogin" to="VBoxContainer/Control2/btnLogin" method="_on_button_up"]
+[connection signal="pressed" from="VBoxContainer/Control2/btnLogin" to="VBoxContainer/Control2/btnLogin" method="_on_button_pressed"]

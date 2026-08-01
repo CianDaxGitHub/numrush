@@ -1,0 +1,355 @@
+[gd_scene load_steps=18 format=3 uid="uid://cfekq5aiksdyy"]
+
+[ext_resource type="Script" uid="uid://b2afri4w0ukoj" path="res://scripts/buyPopup.gd" id="1_axc8d"]
+[ext_resource type="PackedScene" uid="uid://qkd4tm4yffxp" path="res://scenes/polyAudio.tscn" id="2_dkada"]
+[ext_resource type="Texture2D" uid="uid://bkpaueet0qaff" path="res://images/CloudBox.png" id="2_e3bil"]
+[ext_resource type="Script" uid="uid://b7nng4y5xxvbo" path="res://scripts/soundLibrary.gd" id="3_58b06"]
+[ext_resource type="FontFile" uid="uid://b3y7klyjp8l0n" path="res://fonts/Pangolin-Regular.ttf" id="3_iy8yn"]
+[ext_resource type="FontFile" uid="uid://c1xv8vejetl6c" path="res://fonts/PoetsenOne-Regular.ttf" id="3_p77u6"]
+[ext_resource type="Script" uid="uid://y7kgv0a3gc3g" path="res://scripts/soundEffect.gd" id="4_btyql"]
+[ext_resource type="Script" uid="uid://4f21oaokgm8i" path="res://scripts/buttons/sizableButton.gd" id="4_jb0qg"]
+[ext_resource type="AudioStream" uid="uid://bjyf5oq13lthl" path="res://sounds/clicky button 3.wav" id="5_lkq4o"]
+
+[sub_resource type="Resource" id="Resource_cxpcc"]
+script = ExtResource("4_btyql")
+tag = "click"
+stream = ExtResource("5_lkq4o")
+metadata/_custom_type_script = "uid://y7kgv0a3gc3g"
+
+[sub_resource type="Resource" id="Resource_kj7qn"]
+script = ExtResource("3_58b06")
+soundFx = Array[ExtResource("4_btyql")]([SubResource("Resource_cxpcc")])
+metadata/_custom_type_script = "uid://b7nng4y5xxvbo"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hiho3"]
+bg_color = Color(0.956452, 0.942513, 0.597557, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.829922, 0.542149, 0.167069, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+corner_detail = 9
+shadow_color = Color(0.212305, 0.212305, 0.212305, 0.6)
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="LabelSettings" id="LabelSettings_axc8d"]
+font = ExtResource("3_p77u6")
+font_size = 48
+outline_size = 16
+outline_color = Color(0.63, 0.40340996, 0.10710001, 1)
+shadow_size = 0
+shadow_color = Color(0, 0, 0, 0.443137)
+shadow_offset = Vector2(4, 6)
+
+[sub_resource type="Animation" id="Animation_jb0qg"]
+resource_name = "enter_scene"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel2:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Cloud:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.26666668, 0.46666667),
+"transitions": PackedFloat32Array(-2, -2, 1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05), Vector2(1.08, 1.08), Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Cloud:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(5, 374)]
+}
+
+[sub_resource type="Animation" id="Animation_ucmk3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel2:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Cloud:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Cloud:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(5, 374)]
+}
+
+[sub_resource type="Animation" id="Animation_8wsfn"]
+resource_name = "exit_scene"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel2:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Cloud:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(-2, 1),
+"update": 0,
+"values": [Vector2(5, 374), Vector2(5, 1336)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.6),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8wsfn"]
+_data = {
+&"RESET": SubResource("Animation_ucmk3"),
+&"enter_scene": SubResource("Animation_jb0qg"),
+&"exit_scene": SubResource("Animation_8wsfn")
+}
+
+[node name="buyPopup" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_axc8d")
+
+[node name="PolyAudio" parent="." instance=ExtResource("2_dkada")]
+bus = &"sfx"
+sfxLib = SubResource("Resource_kj7qn")
+
+[node name="Panel2" type="Panel" parent="."]
+modulate = Color(1, 1, 1, 0)
+z_index = 3
+z_as_relative = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Cloud" type="TextureRect" parent="."]
+z_index = 4
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -355.0
+offset_top = -266.0
+offset_right = 355.0
+offset_bottom = 266.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1e-05, 1e-05)
+pivot_offset = Vector2(355, 266)
+texture = ExtResource("2_e3bil")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="popupText" type="Label" parent="Cloud"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -297.0
+offset_top = -115.5
+offset_right = 292.0
+offset_bottom = 18.199463
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.831373, 0.541176, 0.168627, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.447059)
+theme_override_fonts/font = ExtResource("3_iy8yn")
+theme_override_font_sizes/font_size = 50
+text = "Do you want to buy this item for {no} coins?"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="btnYes" type="Button" parent="Cloud"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -207.0
+offset_top = 43.0
+offset_right = -27.0
+offset_bottom = 143.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(90, 50)
+size_flags_horizontal = 3
+focus_mode = 0
+theme_override_colors/font_color = Color(0.831373, 0.541176, 0.168627, 1)
+theme_override_colors/font_focus_color = Color(0.831373, 0.541176, 0.168627, 1)
+theme_override_colors/font_pressed_color = Color(0.831373, 0.541176, 0.168627, 0.988235)
+theme_override_colors/font_hover_color = Color(0.928097, 0.62672, 0.263669, 1)
+theme_override_constants/h_separation = 0
+theme_override_fonts/font = ExtResource("3_iy8yn")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_hiho3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hiho3")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hiho3")
+script = ExtResource("4_jb0qg")
+scaleSize = 1.1
+
+[node name="Label" type="Label" parent="Cloud/btnYes"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -84.5
+offset_top = -29.0
+offset_right = 84.5
+offset_bottom = 29.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "YES"
+label_settings = SubResource("LabelSettings_axc8d")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="btnNo" type="Button" parent="Cloud" node_paths=PackedStringArray("sfx")]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 24.0
+offset_top = 43.0
+offset_right = 204.0
+offset_bottom = 143.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(90, 50)
+size_flags_horizontal = 3
+focus_mode = 0
+theme_override_colors/font_color = Color(0.831373, 0.541176, 0.168627, 1)
+theme_override_colors/font_focus_color = Color(0.831373, 0.541176, 0.168627, 1)
+theme_override_colors/font_pressed_color = Color(0.831373, 0.541176, 0.168627, 0.988235)
+theme_override_colors/font_hover_color = Color(0.928097, 0.62672, 0.263669, 1)
+theme_override_constants/h_separation = 0
+theme_override_fonts/font = ExtResource("3_iy8yn")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_hiho3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hiho3")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hiho3")
+script = ExtResource("4_jb0qg")
+scaleSize = 1.1
+sfx = NodePath("../../PolyAudio")
+sfx_name = Array[String](["click"])
+sfx_vol = Array[float]([-12.0])
+sfx_delay = Array[float]([0.0])
+
+[node name="Label" type="Label" parent="Cloud/btnNo"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -84.5
+offset_top = -29.0
+offset_right = 84.5
+offset_bottom = 29.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "NO"
+label_settings = SubResource("LabelSettings_axc8d")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_8wsfn")
+}
+autoplay = "enter_scene"
+
+[connection signal="button_down" from="Cloud/btnYes" to="Cloud/btnYes" method="button_down"]
+[connection signal="button_up" from="Cloud/btnYes" to="Cloud/btnYes" method="button_up"]
+[connection signal="pressed" from="Cloud/btnYes" to="." method="_on_btn_yes_pressed"]
+[connection signal="button_down" from="Cloud/btnNo" to="Cloud/btnNo" method="button_down"]
+[connection signal="button_up" from="Cloud/btnNo" to="Cloud/btnNo" method="button_up"]
+[connection signal="pressed" from="Cloud/btnNo" to="." method="_on_btn_no_pressed"]

@@ -1,0 +1,93 @@
+[gd_scene load_steps=9 format=3 uid="uid://bc4uwkdx0oei1"]
+
+[ext_resource type="Script" uid="uid://dl4j6gbc656h" path="res://scenes/gameManager.gd" id="1_83k1r"]
+[ext_resource type="Script" uid="uid://bc45eteateix2" path="res://scripts/levelProgress.gd" id="2_x7fn8"]
+[ext_resource type="Script" uid="uid://c06rubw7gd3jr" path="res://scripts/clothingStatus.gd" id="3_bbeu6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bb4tu"]
+bg_color = Color(1, 1, 1, 0)
+shadow_color = Color(0.01, 0, 0, 1)
+shadow_size = 360
+
+[sub_resource type="Animation" id="Animation_bb4tu"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PanelBlack:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 1800)]
+}
+
+[sub_resource type="Animation" id="Animation_bbeu6"]
+resource_name = "up_to_black_in"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PanelBlack:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(-2, 1),
+"update": 0,
+"values": [Vector2(0, 1800), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_7baw1"]
+resource_name = "up_to_black_out"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PanelBlack:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -1800)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bb4tu"]
+_data = {
+&"RESET": SubResource("Animation_bb4tu"),
+&"up_to_black_in": SubResource("Animation_bbeu6"),
+&"up_to_black_out": SubResource("Animation_7baw1")
+}
+
+[node name="GameManager" type="Node"]
+script = ExtResource("1_83k1r")
+
+[node name="PanelBlack" type="Panel" parent="."]
+z_index = 5
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 1800.0
+offset_bottom = 1800.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_bb4tu")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_bb4tu")
+}
+
+[node name="levelProgress" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("2_x7fn8")
+id = "lvl"
+
+[node name="clothingStatus" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("3_bbeu6")
+id = "clothing"

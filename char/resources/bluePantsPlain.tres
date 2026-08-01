@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ClothingInfo" load_steps=4 format=3 uid="uid://ddvqi2p0ojs71"]
+
+[ext_resource type="Texture2D" uid="uid://dlrysbme5y1ib" path="res://char/bottoms/pnt6.png" id="1_wjr2g"]
+[ext_resource type="Texture2D" uid="uid://38hbrlpw2dwc" path="res://char/bottoms/prev/Untitled440_20250913224221.png" id="2_20o7b"]
+[ext_resource type="Script" uid="uid://dlfl5k543sbco" path="res://scripts/clothingInfo.gd" id="3_p6eqt"]
+
+[resource]
+script = ExtResource("3_p6eqt")
+itemName = "bluePantsPlain"
+displayName = "Plain Blue Pants"
+category = 6
+price = 150
+prevTex = ExtResource("2_20o7b")
+atlasTex = ExtResource("1_wjr2g")
+metadata/_custom_type_script = "uid://dlfl5k543sbco"

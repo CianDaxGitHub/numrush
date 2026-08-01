@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ClothingInfo" load_steps=4 format=3 uid="uid://7yi2msidp2lf"]
+
+[ext_resource type="Texture2D" uid="uid://ch36jegpsnxif" path="res://char/shoes/shs16.png" id="1_m2uej"]
+[ext_resource type="Texture2D" uid="uid://6dbua8b6gkhd" path="res://char/shoes/prev/Untitled440_20250915233009.png" id="2_qc8bv"]
+[ext_resource type="Script" uid="uid://dlfl5k543sbco" path="res://scripts/clothingInfo.gd" id="3_0ya2b"]
+
+[resource]
+script = ExtResource("3_0ya2b")
+itemName = "limeHighShoes"
+displayName = "Lime High Shoes"
+category = 7
+bought = false
+price = 80
+prevTex = ExtResource("2_qc8bv")
+atlasTex = ExtResource("1_m2uej")
+metadata/_custom_type_script = "uid://dlfl5k543sbco"

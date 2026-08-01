@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ClothingInfo" load_steps=4 format=3 uid="uid://8wv5n6tj5hp5"]
+
+[ext_resource type="Texture2D" uid="uid://wgnut76venct" path="res://char/shoes/shs19.png" id="1_k2h07"]
+[ext_resource type="Texture2D" uid="uid://dgbbvbi20t4jo" path="res://char/shoes/prev/Untitled440_20250914102346.png" id="2_ivihw"]
+[ext_resource type="Script" uid="uid://dlfl5k543sbco" path="res://scripts/clothingInfo.gd" id="3_kw8un"]
+
+[resource]
+script = ExtResource("3_kw8un")
+itemName = "pinkRubberShoes"
+displayName = "Pink Rubber Shoes"
+category = 7
+bought = false
+price = 140
+prevTex = ExtResource("2_ivihw")
+atlasTex = ExtResource("1_k2h07")
+metadata/_custom_type_script = "uid://dlfl5k543sbco"

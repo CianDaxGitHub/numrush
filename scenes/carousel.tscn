@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://d22sgef6pxhwl"]
+
+[ext_resource type="Script" uid="uid://baw0nvcyp82je" path="res://scripts/carousel.gd" id="1_80t8l"]
+
+[node name="Carousel" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_80t8l")
+spacing = 20.0
+wraparound_enabled = true
+wraparound_radius = 300.0
+wraparound_height = 300.0
+opacity_strength = 0.35
+scale_strength = 0.24
+scale_min = 0.1
+smoothing_speed = 6.5

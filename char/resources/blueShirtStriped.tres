@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ClothingInfo" load_steps=4 format=3 uid="uid://nem81pxgkypg"]
+
+[ext_resource type="Texture2D" uid="uid://ddq3c74hwxdwv" path="res://char/tops/slv7.png" id="1_jjx0t"]
+[ext_resource type="Texture2D" uid="uid://b4s61fb8f7nio" path="res://char/tops/prev/Untitled440_20250913205611.png" id="2_qbb6a"]
+[ext_resource type="Script" uid="uid://dlfl5k543sbco" path="res://scripts/clothingInfo.gd" id="3_unwl8"]
+
+[resource]
+script = ExtResource("3_unwl8")
+itemName = "blueShirtStriped"
+displayName = "Blue Striped Shirt"
+category = 1
+bought = false
+price = 90
+prevTex = ExtResource("2_qbb6a")
+atlasTex = ExtResource("1_jjx0t")
+metadata/_custom_type_script = "uid://dlfl5k543sbco"

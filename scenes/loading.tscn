@@ -1,0 +1,441 @@
+[gd_scene load_steps=17 format=3 uid="uid://6s2cnauiovw7"]
+
+[ext_resource type="Script" uid="uid://do1j20ur2kqfh" path="res://scenes/loading.gd" id="1_101rs"]
+[ext_resource type="Texture2D" uid="uid://dsttby0mtx81v" path="res://images/logo.png" id="2_101rs"]
+[ext_resource type="Texture2D" uid="uid://cw3jcj4dcrnb6" path="res://images/bg/bg_main.png" id="2_yt702"]
+[ext_resource type="FontFile" uid="uid://c1xv8vejetl6c" path="res://fonts/PoetsenOne-Regular.ttf" id="3_dhqfv"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_yc7uc"]
+blend_mode = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yt702"]
+bg_color = Color(1, 1, 1, 0)
+shadow_color = Color(1, 1, 1, 1)
+shadow_size = 100
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_2ytni"]
+blend_mode = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2ytni"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 12
+border_width_top = 12
+border_width_right = 12
+border_width_bottom = 12
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dhqfv"]
+content_margin_left = 2.0
+content_margin_top = 2.0
+content_margin_right = 2.0
+content_margin_bottom = 2.0
+bg_color = Color(0.097431056, 0.26914266, 0.22714648, 0.65882355)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+corner_detail = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_101rs"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+corner_detail = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yc7uc"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+draw_center = false
+border_width_left = 12
+border_width_top = 12
+border_width_right = 12
+border_width_bottom = 12
+border_color = Color(0.7019608, 0.33333334, 0.16078432, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+corner_detail = 5
+
+[sub_resource type="Animation" id="Animation_dhqfv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Logo:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.2, 1.2)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Logo/CanvasGroup/Logo/Panel2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(705, 114.000015)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("loadingText:visible_ratio")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("loadingText:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(116, 773)]
+}
+
+[sub_resource type="Animation" id="Animation_yc7uc"]
+resource_name = "intro"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Logo:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.26666668, 0.46666667, 0.73333335),
+"transitions": PackedFloat32Array(-2, -2, -2, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1.26, 1.26), Vector2(1.18, 1.18), Vector2(1.2, 1.2)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Logo/CanvasGroup/Logo/Panel2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.1, 1),
+"transitions": PackedFloat32Array(-2, 1),
+"update": 0,
+"values": [Vector2(51, -182), Vector2(705, 114.000015)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("loadingText:visible_ratio")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.23333333, 1),
+"transitions": PackedFloat32Array(-2, 1),
+"update": 0,
+"values": [0.0, 0.795]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("loadingText:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.3, 0.73333335, 1),
+"transitions": PackedFloat32Array(-2, -2, 1),
+"update": 0,
+"values": [Vector2(375, 773), Vector2(100, 773), Vector2(116, 773)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("progressClip:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.73333335),
+"transitions": PackedFloat32Array(-2, -2, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1.15, 1.15), Vector2(1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("progressClip:pivot_offset")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.33333334, 0.6333333),
+"transitions": PackedFloat32Array(-2, 1),
+"update": 0,
+"values": [Vector2(275, 0), Vector2(275, 42)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("ProgressBar2:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.73333335),
+"transitions": PackedFloat32Array(-2, -2, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1.15, 1.15), Vector2(1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("ProgressBar2:pivot_offset")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.33333334, 0.6333333),
+"transitions": PackedFloat32Array(-2, 1),
+"update": 0,
+"values": [Vector2(275, 0), Vector2(275, 42)]
+}
+
+[sub_resource type="Animation" id="Animation_101rs"]
+resource_name = "loop"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("loadingText:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.795, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dhqfv"]
+_data = {
+&"RESET": SubResource("Animation_dhqfv"),
+&"intro": SubResource("Animation_yc7uc"),
+&"loop": SubResource("Animation_101rs")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_dhqfv"]
+font = ExtResource("3_dhqfv")
+font_size = 72
+outline_size = 22
+outline_color = Color(0.62832, 0.269837, 0.108442, 1)
+shadow_color = Color(0, 0, 0, 0.278431)
+shadow_offset = Vector2(6, 12)
+stacked_outline_count = 1
+stacked_outline_0/size = 16
+stacked_outline_0/color = Color(0.44705883, 0.12156863, 0.078431375, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_101rs")
+
+[node name="bg" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -24.0
+offset_top = -42.666626
+offset_right = 24.0
+offset_bottom = 42.666626
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_yt702")
+expand_mode = 1
+
+[node name="Logo" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -231.0
+offset_top = -451.0
+offset_right = 231.0
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.2, 1.2)
+pivot_offset = Vector2(231, 231)
+
+[node name="LogoShadow" type="TextureRect" parent="Logo"]
+self_modulate = Color(0, 0, 0, 0.223529)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -231.0
+offset_top = -231.0
+offset_right = 231.0
+offset_bottom = 231.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(231, 231)
+mouse_filter = 2
+texture = ExtResource("2_101rs")
+expand_mode = 1
+
+[node name="CanvasGroup" type="CanvasGroup" parent="Logo"]
+fit_margin = 110.0
+
+[node name="Logo" type="TextureRect" parent="Logo/CanvasGroup"]
+clip_contents = true
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -6.0
+offset_top = -8.0
+offset_right = 456.0
+offset_bottom = 454.0
+grow_horizontal = 2
+mouse_filter = 2
+texture = ExtResource("2_101rs")
+expand_mode = 1
+
+[node name="Panel2" type="Panel" parent="Logo/CanvasGroup/Logo"]
+self_modulate = Color(1, 1, 1, 0.249)
+material = SubResource("CanvasItemMaterial_yc7uc")
+layout_mode = 0
+offset_left = 705.0
+offset_top = 114.000015
+offset_right = 739.00024
+offset_bottom = 714.0
+rotation = 0.580843
+theme_override_styles/panel = SubResource("StyleBoxFlat_yt702")
+
+[node name="LogoMask" type="TextureRect" parent="Logo/CanvasGroup"]
+self_modulate = Color(4, 4, 4, 1)
+material = SubResource("CanvasItemMaterial_2ytni")
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -6.0
+offset_top = -8.0
+offset_right = 456.0
+offset_bottom = 454.0
+grow_horizontal = 2
+mouse_filter = 2
+texture = ExtResource("2_101rs")
+expand_mode = 1
+
+[node name="progressClip" type="Panel" parent="."]
+clip_children = 1
+clip_contents = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -277.0
+offset_top = 238.0
+offset_right = 277.0
+offset_bottom = 338.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1e-05, 1e-05)
+pivot_offset = Vector2(275, 0)
+theme_override_styles/panel = SubResource("StyleBoxFlat_2ytni")
+
+[node name="ProgressBar" type="ProgressBar" parent="progressClip"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -270.0
+offset_top = -42.0
+offset_right = 270.0
+offset_bottom = 42.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(275, 0)
+theme_override_styles/background = SubResource("StyleBoxFlat_dhqfv")
+theme_override_styles/fill = SubResource("StyleBoxFlat_101rs")
+step = 1.0
+show_percentage = false
+
+[node name="ProgressBar2" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -277.0
+offset_top = 238.0
+offset_right = 277.0
+offset_bottom = 338.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1e-05, 1e-05)
+pivot_offset = Vector2(275, 0)
+theme_override_styles/panel = SubResource("StyleBoxFlat_yc7uc")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_dhqfv")
+}
+autoplay = "intro"
+
+[node name="loadingText" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -244.0
+offset_top = 133.0
+offset_right = 244.00061
+offset_bottom = 220.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Now Loading..."
+label_settings = SubResource("LabelSettings_dhqfv")
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 162
+visible_characters = 0
+visible_characters_behavior = 2
+visible_ratio = 0.0

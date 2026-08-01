@@ -1,0 +1,647 @@
+[gd_scene load_steps=52 format=3 uid="uid://xg5k2boi46ji"]
+
+[ext_resource type="Script" uid="uid://brpam4hr5iv1u" path="res://scenes/charHead.gd" id="1_1kg3m"]
+[ext_resource type="Texture2D" uid="uid://gjyvhcgwlry" path="res://char/CharFinalAtlas.png" id="2_5j2oo"]
+[ext_resource type="Texture2D" uid="uid://cjhxsvik6kpmd" path="res://char/expressions/eyes/eyes0.png" id="7_brcyh"]
+[ext_resource type="Texture2D" uid="uid://4yfytpl47rws" path="res://char/expressions/mouth/mouth0.png" id="8_bmp2m"]
+[ext_resource type="Texture2D" uid="uid://cawr2b6we87uo" path="res://char/expressions/brows/brow0.png" id="10_ofgtm"]
+
+[sub_resource type="Animation" id="Animation_l2bgk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Polygons:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Polygons:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_t8q1i"]
+resource_name = "bob"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Polygons:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.33333334, 0.5, 0.7),
+"transitions": PackedFloat32Array(-2, -2, -2, -2, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(14, -4), Vector2(1, -12), Vector2(1, 3), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Polygons:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.3, 0.6666667),
+"transitions": PackedFloat32Array(-2, -2, -2, 1),
+"update": 0,
+"values": [0.0, 0.03490658503988659, -0.03490658503988659, 0.0]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.1, 0.3, 0.5, 0.6333333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"values": [{
+"args": [2, 0, 0],
+"method": &"_switch_expression"
+}, {
+"args": [0, 9, 0],
+"method": &"_switch_expression"
+}, {
+"args": [2, 0, 0],
+"method": &"_switch_expression"
+}, {
+"args": [0, 0, 0],
+"method": &"_switch_expression"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_nuiig"]
+resource_name = "bob_hurry"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Polygons:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.33333334, 0.5, 0.7),
+"transitions": PackedFloat32Array(-2, -2, -2, -2, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(14, -4), Vector2(1, -12), Vector2(1, 3), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Polygons:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.3, 0.6666667),
+"transitions": PackedFloat32Array(-2, -2, -2, 1),
+"update": 0,
+"values": [0.0, 0.03490658503988659, -0.03490658503988659, 0.0]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.1, 0.3, 0.5, 0.6333333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"values": [{
+"args": [2, 2, 0],
+"method": &"_switch_expression"
+}, {
+"args": [0, 10, 0],
+"method": &"_switch_expression"
+}, {
+"args": [2, 2, 0],
+"method": &"_switch_expression"
+}, {
+"args": [0, 0, 0],
+"method": &"_switch_expression"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_y42op"]
+resource_name = "completed"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Polygons:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.06666668, 0.36666667, 0.53333336),
+"transitions": PackedFloat32Array(-2, -2, -2, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-8, 3), Vector2(77, -66), Vector2(77, -58)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.033333335, 0.26666668),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [2, 2, 4],
+"method": &"_switch_expression"
+}, {
+"args": [0, 1, 0],
+"method": &"_switch_expression"
+}]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Polygons:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.033333335, 0.26666668),
+"transitions": PackedFloat32Array(-2, -2, 1),
+"update": 0,
+"values": [0.0, -0.017453292, 0.24434609527920617]
+}
+
+[sub_resource type="Animation" id="Animation_5j2oo"]
+resource_name = "finished"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Polygons:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.13333334, 0.26666668, 0.5, 0.6666667),
+"transitions": PackedFloat32Array(-2, -2, -2, -2, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(14, -9), Vector2(8, -40), Vector2(0, 4), Vector2(0, 0)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [2, 2, 4],
+"method": &"_switch_expression"
+}, {
+"args": [6, 5, 1],
+"method": &"_switch_expression"
+}]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Polygons:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.33333334),
+"transitions": PackedFloat32Array(-2, 0.16493855, 1),
+"update": 0,
+"values": [0.0, 0.05235987755982989, -0.08726646259971647]
+}
+
+[sub_resource type="Animation" id="Animation_jc3gs"]
+resource_name = "hurry"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Polygons:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.33333334, 0.56666666, 0.8666667),
+"transitions": PackedFloat32Array(0.5, 2, 0.5, -2, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-5, -24), Vector2(-4, 10), Vector2(4, -6), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Polygons:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.13333334, 0.43333334, 0.73333335),
+"transitions": PackedFloat32Array(0.5, -2, -2, 1),
+"update": 0,
+"values": [0.0, -0.06981317007977318, 0.03490658503988659, 0.0]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.13333334, 0.3, 0.73333335),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"values": [{
+"args": [2, 0, 4],
+"method": &"_switch_expression"
+}, {
+"args": [6, 7, 1],
+"method": &"_switch_expression"
+}, {
+"args": [6, 6, 1],
+"method": &"_switch_expression"
+}, {
+"args": [2, 2, 4],
+"method": &"_switch_expression"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_7riyb"]
+resource_name = "idle"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Polygons:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 3, 4),
+"transitions": PackedFloat32Array(0.5, -2, 2, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 8), Vector2(0, -8), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_1kg3m"]
+resource_name = "idle_hurry"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Polygons:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.73333335, 2.1666667, 2.9666667),
+"transitions": PackedFloat32Array(0.5, -2, 2, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 8), Vector2(0, -8), Vector2(0, 0)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0, 6, 0],
+"method": &"_switch_expression"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_pe7oj"]
+resource_name = "talk"
+length = 0.2333
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Polygons:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.06666667, 0.23333333),
+"transitions": PackedFloat32Array(0.5, 2, 0.5),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -14), Vector2(0, 0)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.16666667),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"talk_sprite1"
+}, {
+"args": [],
+"method": &"talk_sprite2"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_qm6li"]
+resource_name = "talk_end"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Polygons:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.4),
+"transitions": PackedFloat32Array(0.5, -2, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 4), Vector2(0, 0)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.13333334),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"talk_sprite2"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_cpef2"]
+resource_name = "timer"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Polygons:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4000001, 1.6, 1.8000001, 2),
+"transitions": PackedFloat32Array(0.5, 2, 0.5, 2, 0.5, 2, 0.5, 2, 0.5, 2, 0.5),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -20), Vector2(0, 0), Vector2(0, -20), Vector2(0, 0), Vector2(0, -20), Vector2(0, 0), Vector2(0, -20), Vector2(0, 0), Vector2(0, -20), Vector2(0, 0)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.7, 0.8333333, 1.8666668),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"values": [{
+"args": [0, 5, 1],
+"method": &"_switch_expression"
+}, {
+"args": [0, 6, 1],
+"method": &"_switch_expression"
+}, {
+"args": [0, 7, 1],
+"method": &"_switch_expression"
+}, {
+"args": [2, 6, 1],
+"method": &"_switch_expression"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_t8q1i"]
+_data = {
+&"RESET": SubResource("Animation_l2bgk"),
+&"bob": SubResource("Animation_t8q1i"),
+&"bob_hurry": SubResource("Animation_nuiig"),
+&"completed": SubResource("Animation_y42op"),
+&"finished": SubResource("Animation_5j2oo"),
+&"hurry": SubResource("Animation_jc3gs"),
+&"idle": SubResource("Animation_7riyb"),
+&"idle_hurry": SubResource("Animation_1kg3m"),
+&"talk": SubResource("Animation_pe7oj"),
+&"talk_end": SubResource("Animation_qm6li"),
+&"timer": SubResource("Animation_cpef2")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_7riyb"]
+animation = &"bob"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_cpef2"]
+animation = &"bob_hurry"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_jlx3c"]
+animation = &"completed"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_jc3gs"]
+animation = &"finished"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_l2bgk"]
+animation = &"hurry"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_t8q1i"]
+animation = &"idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_5j2oo"]
+animation = &"idle_hurry"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_nuiig"]
+animation = &"talk"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_1kg3m"]
+animation = &"talk_end"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_y42op"]
+animation = &"timer"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_jc3gs"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_qm6li"]
+xfade_time = 0.2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_5j2oo"]
+xfade_time = 0.2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_y42op"]
+break_loop_at_end = true
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_7riyb"]
+xfade_time = 0.2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_l2bgk"]
+xfade_time = 0.2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_cpef2"]
+xfade_time = 0.1
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_mvgew"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_gw25d"]
+xfade_time = 0.2
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_brcyh"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_bmp2m"]
+xfade_time = 0.2
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_t8q1i"]
+xfade_time = 0.2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_pe7oj"]
+xfade_time = 0.1
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_nuiig"]
+xfade_time = 0.2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_1kg3m"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_8mkhw"]
+xfade_time = 0.1
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ofgtm"]
+xfade_time = 0.1
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_x4ni3"]
+xfade_time = 0.1
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_uk7cv"]
+xfade_time = 0.1
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_2pl31"]
+xfade_time = 0.1
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ek5kj"]
+xfade_time = 0.1
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_0w5mq"]
+xfade_time = 0.1
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_hdm0y"]
+xfade_time = 0.1
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_1kg3m"]
+states/End/position = Vector2(1088, 94)
+states/bob/node = SubResource("AnimationNodeAnimation_7riyb")
+states/bob/position = Vector2(588, 94)
+states/bob_hurry/node = SubResource("AnimationNodeAnimation_cpef2")
+states/bob_hurry/position = Vector2(538, 185)
+states/completed/node = SubResource("AnimationNodeAnimation_jlx3c")
+states/completed/position = Vector2(516, 16)
+states/finished/node = SubResource("AnimationNodeAnimation_jc3gs")
+states/finished/position = Vector2(559, 372)
+states/hurry/node = SubResource("AnimationNodeAnimation_l2bgk")
+states/hurry/position = Vector2(353, 229)
+states/idle/node = SubResource("AnimationNodeAnimation_t8q1i")
+states/idle/position = Vector2(311, 65)
+states/idle_hurry/node = SubResource("AnimationNodeAnimation_5j2oo")
+states/idle_hurry/position = Vector2(473, 270)
+states/talk/node = SubResource("AnimationNodeAnimation_nuiig")
+states/talk/position = Vector2(740, 100)
+states/talk_end/node = SubResource("AnimationNodeAnimation_1kg3m")
+states/talk_end/position = Vector2(748, 235)
+states/timer/node = SubResource("AnimationNodeAnimation_y42op")
+states/timer/position = Vector2(353, 317)
+transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_jc3gs"), "idle", "bob", SubResource("AnimationNodeStateMachineTransition_qm6li"), "idle", "hurry", SubResource("AnimationNodeStateMachineTransition_5j2oo"), "talk", "talk_end", SubResource("AnimationNodeStateMachineTransition_y42op"), "talk_end", "idle", SubResource("AnimationNodeStateMachineTransition_7riyb"), "talk_end", "talk", SubResource("AnimationNodeStateMachineTransition_l2bgk"), "bob", "talk", SubResource("AnimationNodeStateMachineTransition_cpef2"), "bob_hurry", "talk", SubResource("AnimationNodeStateMachineTransition_mvgew"), "hurry", "idle_hurry", SubResource("AnimationNodeStateMachineTransition_gw25d"), "idle_hurry", "bob_hurry", SubResource("AnimationNodeStateMachineTransition_brcyh"), "hurry", "timer", SubResource("AnimationNodeStateMachineTransition_bmp2m"), "idle_hurry", "timer", SubResource("AnimationNodeStateMachineTransition_t8q1i"), "timer", "finished", SubResource("AnimationNodeStateMachineTransition_pe7oj"), "talk", "finished", SubResource("AnimationNodeStateMachineTransition_nuiig"), "talk_end", "finished", SubResource("AnimationNodeStateMachineTransition_1kg3m"), "idle", "completed", SubResource("AnimationNodeStateMachineTransition_8mkhw"), "hurry", "completed", SubResource("AnimationNodeStateMachineTransition_ofgtm"), "timer", "completed", SubResource("AnimationNodeStateMachineTransition_x4ni3"), "idle_hurry", "completed", SubResource("AnimationNodeStateMachineTransition_uk7cv"), "talk_end", "completed", SubResource("AnimationNodeStateMachineTransition_2pl31"), "talk", "completed", SubResource("AnimationNodeStateMachineTransition_ek5kj"), "bob_hurry", "completed", SubResource("AnimationNodeStateMachineTransition_0w5mq"), "bob", "completed", SubResource("AnimationNodeStateMachineTransition_hdm0y")]
+graph_offset = Vector2(221.875, 49)
+
+[node name="charHead" type="Node2D"]
+script = ExtResource("1_1kg3m")
+
+[node name="Polygons" type="Node2D" parent="."]
+
+[node name="headSide" type="Polygon2D" parent="Polygons"]
+position = Vector2(-529.202, 108.121704)
+antialiased = true
+texture = ExtResource("2_5j2oo")
+polygon = PackedVector2Array(669.293, 334.647, 719.15, 396.968, 647.332, 382.723, 587.979, 334.647, 556.514, 199.914, 548.202, 144.121, 598.653, 59.8396, 640.203, 42.6231, 633.081, 90.6994, 638.422, 181.511, 653.858, 290.134)
+uv = PackedVector2Array(669.293, 334.647, 719.15, 396.968, 647.332, 382.723, 587.979, 334.647, 556.514, 199.914, 548.202, 144.121, 598.653, 59.8396, 640.203, 42.6231, 633.081, 90.6994, 638.422, 181.511, 653.858, 290.134)
+polygons = [PackedInt32Array(3, 0, 1, 2), PackedInt32Array(3, 10, 0), PackedInt32Array(3, 4, 9, 10), PackedInt32Array(4, 5, 8, 9), PackedInt32Array(8, 7, 6, 5)]
+bones = ["hip", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "hip/torso", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "hip/torso/head", PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "hip/torso/upperArmL", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "hip/torso/upperArmL/foreArmL", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "hip/torso/upperArmR", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "hip/torso/upperArmR/foreArmR", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "hip/thighL", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "hip/thighL/calfL", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "hip/thighL/calfL/footL", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "hip/thighR", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "hip/thighR/calfR", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "hip/thighR/calfR/footR", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
+metadata/_edit_lock_ = true
+
+[node name="headFront" type="Polygon2D" parent="Polygons"]
+position = Vector2(-572.202, 115.121704)
+antialiased = true
+texture = ExtResource("2_5j2oo")
+polygon = PackedVector2Array(1096.28, 23.8766, 919.63, -0.30751, 753.496, 2.84694, 649.399, 42.8032, 639.936, 81.7081, 642.043, 162.669, 660.97, 298.306, 681.324, 344.854, 712.869, 381.178, 762.585, 399.344, 888.763, 408.903, 1023.54, 406.035, 1075.16, 384.05, 1101.94, 338.163, 1122.01, 209.11, 1129.66, 93.4369)
+uv = PackedVector2Array(1096.28, 23.8766, 919.63, -0.30751, 753.496, 2.84694, 649.399, 42.8032, 639.936, 81.7081, 642.043, 162.669, 660.97, 298.306, 681.324, 344.854, 712.869, 381.178, 762.585, 399.344, 888.763, 408.903, 1023.54, 406.035, 1075.16, 384.05, 1101.94, 338.163, 1122.01, 209.11, 1129.66, 93.4369)
+polygons = [PackedInt32Array(12, 13, 10, 11), PackedInt32Array(13, 14, 9, 10), PackedInt32Array(9, 8, 15, 14), PackedInt32Array(7, 0, 15, 8), PackedInt32Array(7, 6, 1, 0), PackedInt32Array(5, 2, 1, 6), PackedInt32Array(5, 4, 3, 2)]
+bones = ["hip", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "hip/torso", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "hip/torso/head", PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "hip/torso/upperArmL", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "hip/torso/upperArmL/foreArmL", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "hip/torso/upperArmR", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "hip/torso/upperArmR/foreArmR", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "hip/thighL", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "hip/thighL/calfL", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "hip/thighL/calfL/footL", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "hip/thighR", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "hip/thighR/calfR", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "hip/thighR/calfR/footR", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
+metadata/_edit_lock_ = true
+
+[node name="eyes" type="Polygon2D" parent="Polygons/headFront"]
+unique_name_in_owner = true
+position = Vector2(739.202, 89.692)
+antialiased = true
+texture = ExtResource("7_brcyh")
+polygon = PackedVector2Array(-37.2875, -28.243, 350.366, -21.588, 347.039, 266.241, -42.2787, 256.258)
+uv = PackedVector2Array(-37.2875, -28.243, 350.366, -21.588, 347.039, 266.241, -42.2787, 256.258)
+polygons = [PackedInt32Array(0, 1, 2, 3)]
+bones = ["hip", PackedFloat32Array(0, 0, 0, 0), "hip/torso", PackedFloat32Array(0, 0, 0, 0), "hip/torso/head", PackedFloat32Array(1, 1, 1, 1), "hip/torso/upperArmL", PackedFloat32Array(0, 0, 0, 0), "hip/torso/upperArmL/foreArmL", PackedFloat32Array(0, 0, 0, 0), "hip/torso/upperArmR", PackedFloat32Array(0, 0, 0, 0), "hip/torso/upperArmR/foreArmR", PackedFloat32Array(0, 0, 0, 0), "hip/thighL", PackedFloat32Array(0, 0, 0, 0), "hip/thighL/calfL", PackedFloat32Array(0, 0, 0, 0), "hip/thighL/calfL/footL", PackedFloat32Array(0, 0, 0, 0), "hip/thighR", PackedFloat32Array(0, 0, 0, 0), "hip/thighR/calfR", PackedFloat32Array(0, 0, 0, 0), "hip/thighR/calfR/footR", PackedFloat32Array(0, 0, 0, 0)]
+metadata/_edit_lock_ = true
+
+[node name="mouth" type="Polygon2D" parent="Polygons/headFront"]
+unique_name_in_owner = true
+position = Vector2(763.202, 287.69202)
+antialiased = true
+texture = ExtResource("8_bmp2m")
+polygon = PackedVector2Array(-64.3748, 1.24999, -68.1248, 103.75, 255.625, 118.75, 256.875, -2.50001)
+uv = PackedVector2Array(-64.3748, 1.24999, -68.1248, 103.75, 255.625, 118.75, 256.875, -2.50001)
+polygons = [PackedInt32Array(0, 1, 2, 3)]
+bones = ["hip", PackedFloat32Array(0, 0, 0, 0), "hip/torso", PackedFloat32Array(0, 0, 0, 0), "hip/torso/head", PackedFloat32Array(1, 1, 1, 1), "hip/torso/upperArmL", PackedFloat32Array(0, 0, 0, 0), "hip/torso/upperArmL/foreArmL", PackedFloat32Array(0, 0, 0, 0), "hip/torso/upperArmR", PackedFloat32Array(0, 0, 0, 0), "hip/torso/upperArmR/foreArmR", PackedFloat32Array(0, 0, 0, 0), "hip/thighL", PackedFloat32Array(0, 0, 0, 0), "hip/thighL/calfL", PackedFloat32Array(0, 0, 0, 0), "hip/thighL/calfL/footL", PackedFloat32Array(0, 0, 0, 0), "hip/thighR", PackedFloat32Array(0, 0, 0, 0), "hip/thighR/calfR", PackedFloat32Array(0, 0, 0, 0), "hip/thighR/calfR/footR", PackedFloat32Array(0, 0, 0, 0)]
+metadata/_edit_lock_ = true
+
+[node name="hat" type="Polygon2D" parent="Polygons/headFront"]
+unique_name_in_owner = true
+visible = false
+position = Vector2(531.202, -237.1217)
+antialiased = true
+polygon = PackedVector2Array(-76.9189, 561.715, 813.164, 561.715, 813.162, 1.38635, -74.4413, 6.34502)
+uv = PackedVector2Array(-76.9189, 561.715, 813.164, 561.715, 813.162, 1.38635, -74.4413, 6.34502)
+polygons = [PackedInt32Array(0, 1, 2, 3)]
+bones = ["hip", PackedFloat32Array(0, 0, 0, 0), "hip/torso", PackedFloat32Array(0, 0, 0, 0), "hip/torso/head", PackedFloat32Array(1, 1, 1, 1), "hip/torso/upperArmL", PackedFloat32Array(0, 0, 0, 0), "hip/torso/upperArmL/foreArmL", PackedFloat32Array(0, 0, 0, 0), "hip/torso/upperArmR", PackedFloat32Array(0, 0, 0, 0), "hip/torso/upperArmR/foreArmR", PackedFloat32Array(0, 0, 0, 0), "hip/thighL", PackedFloat32Array(0, 0, 0, 0), "hip/thighL/calfL", PackedFloat32Array(0, 0, 0, 0), "hip/thighL/calfL/footL", PackedFloat32Array(0, 0, 0, 0), "hip/thighR", PackedFloat32Array(0, 0, 0, 0), "hip/thighR/calfR", PackedFloat32Array(0, 0, 0, 0), "hip/thighR/calfR/footR", PackedFloat32Array(0, 0, 0, 0)]
+metadata/_edit_lock_ = true
+
+[node name="brows" type="Polygon2D" parent="Polygons/headFront"]
+unique_name_in_owner = true
+position = Vector2(721.202, -12.307999)
+antialiased = true
+texture = ExtResource("10_ofgtm")
+polygon = PackedVector2Array(-55.183, -9.7366, -57.4028, 154.528, 386.556, 141.209, 384.336, -40.8137, 384.336, -40.8137)
+uv = PackedVector2Array(-55.183, -9.7366, -57.4028, 154.528, 386.556, 141.209, 384.336, -40.8137, 384.336, -40.8137)
+polygons = [PackedInt32Array(0, 1, 2, 3)]
+bones = ["hip", PackedFloat32Array(0, 0, 0, 0, 0), "hip/torso", PackedFloat32Array(0, 0, 0, 0, 0), "hip/torso/head", PackedFloat32Array(1, 1, 1, 1, 1), "hip/torso/upperArmL", PackedFloat32Array(0, 0, 0, 0, 0), "hip/torso/upperArmL/foreArmL", PackedFloat32Array(0, 0, 0, 0, 0), "hip/torso/upperArmR", PackedFloat32Array(0, 0, 0, 0, 0), "hip/torso/upperArmR/foreArmR", PackedFloat32Array(0, 0, 0, 0, 0), "hip/thighL", PackedFloat32Array(0, 0, 0, 0, 0), "hip/thighL/calfL", PackedFloat32Array(0, 0, 0, 0, 0), "hip/thighL/calfL/footL", PackedFloat32Array(0, 0, 0, 0, 0), "hip/thighR", PackedFloat32Array(0, 0, 0, 0, 0), "hip/thighR/calfR", PackedFloat32Array(0, 0, 0, 0, 0), "hip/thighR/calfR/footR", PackedFloat32Array(0, 0, 0, 0, 0)]
+metadata/_edit_lock_ = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+deterministic = true
+libraries = {
+&"": SubResource("AnimationLibrary_t8q1i")
+}
+autoplay = "idle"
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+active = false
+tree_root = SubResource("AnimationNodeStateMachine_1kg3m")
+anim_player = NodePath("../AnimationPlayer")

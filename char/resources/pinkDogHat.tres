@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ClothingInfo" load_steps=4 format=3 uid="uid://eh0nalfh80w1"]
+
+[ext_resource type="Texture2D" uid="uid://b3gdlficqprl1" path="res://char/hats/hat22.png" id="1_62t50"]
+[ext_resource type="Texture2D" uid="uid://c2f67i55ge7yh" path="res://char/hats/prev/Untitled440_20250916121913.png" id="2_383sa"]
+[ext_resource type="Script" uid="uid://dlfl5k543sbco" path="res://scripts/clothingInfo.gd" id="3_ggrf8"]
+
+[resource]
+script = ExtResource("3_ggrf8")
+itemName = "pinkDogHat"
+displayName = "Pink Dog Hat"
+category = 3
+price = 160
+prevTex = ExtResource("2_383sa")
+atlasTex = ExtResource("1_62t50")
+metadata/_custom_type_script = "uid://dlfl5k543sbco"

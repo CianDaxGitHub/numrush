@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ClothingInfo" load_steps=4 format=3 uid="uid://ccpkbsgs83fwu"]
+
+[ext_resource type="Texture2D" uid="uid://wqhjilygn38i" path="res://char/bottoms/sk2.png" id="1_61kap"]
+[ext_resource type="Texture2D" uid="uid://bgd6d4m6m3eyv" path="res://char/bottoms/prev/Untitled440_20250913222111.png" id="2_61kap"]
+[ext_resource type="Script" uid="uid://dlfl5k543sbco" path="res://scripts/clothingInfo.gd" id="3_slsej"]
+
+[resource]
+script = ExtResource("3_slsej")
+itemName = "pinkMiniskirt"
+displayName = "Pink Miniskirt"
+category = 5
+bought = false
+price = 120
+prevTex = ExtResource("2_61kap")
+atlasTex = ExtResource("1_61kap")
+metadata/_custom_type_script = "uid://dlfl5k543sbco"

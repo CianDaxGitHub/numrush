@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ClothingInfo" load_steps=4 format=3 uid="uid://06dhigehlrqm"]
+
+[ext_resource type="Texture2D" uid="uid://b2qpb220p5ilx" path="res://char/bottoms/pnt11.png" id="1_y6ned"]
+[ext_resource type="Texture2D" uid="uid://0idv55nxxtl5" path="res://char/bottoms/prev/Untitled440_20250913230526.png" id="2_14iul"]
+[ext_resource type="Script" uid="uid://dlfl5k543sbco" path="res://scripts/clothingInfo.gd" id="3_arawb"]
+
+[resource]
+script = ExtResource("3_arawb")
+itemName = "bluePantsDenim"
+displayName = "Denim Blue Pants"
+category = 6
+price = 150
+prevTex = ExtResource("2_14iul")
+atlasTex = ExtResource("1_y6ned")
+metadata/_custom_type_script = "uid://dlfl5k543sbco"

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ClothingInfo" load_steps=4 format=3 uid="uid://dxnclnjjd15yu"]
+
+[ext_resource type="Texture2D" uid="uid://6v7jjwxsaf6v" path="res://char/hats/hat27.png" id="1_cs43g"]
+[ext_resource type="Texture2D" uid="uid://j7ytmcphlwpj" path="res://char/hats/prev/Untitled440_20250915235441.png" id="2_6fw2p"]
+[ext_resource type="Script" uid="uid://dlfl5k543sbco" path="res://scripts/clothingInfo.gd" id="3_5yevr"]
+
+[resource]
+script = ExtResource("3_5yevr")
+itemName = "blueCatHat"
+displayName = "Blue Cat Hat"
+category = 3
+bought = false
+price = 160
+prevTex = ExtResource("2_6fw2p")
+atlasTex = ExtResource("1_cs43g")
+metadata/_custom_type_script = "uid://dlfl5k543sbco"

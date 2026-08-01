@@ -1,0 +1,9 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://bb1m73quur0wg"]
+
+[ext_resource type="FontFile" uid="uid://c1xv8vejetl6c" path="res://fonts/PoetsenOne-Regular.ttf" id="1_4rnpv"]
+
+[resource]
+font = ExtResource("1_4rnpv")
+font_size = 28
+outline_size = 8
+outline_color = Color(0.86947393, 0, 0.21602905, 1)

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ClothingInfo" load_steps=4 format=3 uid="uid://dws7p4l7vymj3"]
+
+[ext_resource type="Texture2D" uid="uid://dl71ubkpspavh" path="res://char/hats/hat41.png" id="1_kh5lt"]
+[ext_resource type="Texture2D" uid="uid://b3wt8xg3y6m2o" path="res://char/hats/prev/Untitled440_20250915234352.png" id="2_biavs"]
+[ext_resource type="Script" uid="uid://dlfl5k543sbco" path="res://scripts/clothingInfo.gd" id="3_2h8l2"]
+
+[resource]
+script = ExtResource("3_2h8l2")
+itemName = "yellowBeanie"
+displayName = "Yellow Beanie"
+category = 3
+price = 95
+prevTex = ExtResource("2_biavs")
+atlasTex = ExtResource("1_kh5lt")
+metadata/_custom_type_script = "uid://dlfl5k543sbco"

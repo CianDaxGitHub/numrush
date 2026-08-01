@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ClothingInfo" load_steps=4 format=3 uid="uid://c28kyqh1w04rp"]
+
+[ext_resource type="Texture2D" uid="uid://bu1i25ergcpa0" path="res://char/shoes/shs2.png" id="1_08svq"]
+[ext_resource type="Texture2D" uid="uid://ohaftbpidia7" path="res://char/shoes/prev/Untitled440_20250915233736.png" id="2_it7pb"]
+[ext_resource type="Script" uid="uid://dlfl5k543sbco" path="res://scripts/clothingInfo.gd" id="3_4kqob"]
+
+[resource]
+script = ExtResource("3_4kqob")
+itemName = "redDollShoes"
+displayName = "Red Doll Shoes"
+category = 7
+bought = false
+price = 80
+prevTex = ExtResource("2_it7pb")
+atlasTex = ExtResource("1_08svq")
+metadata/_custom_type_script = "uid://dlfl5k543sbco"

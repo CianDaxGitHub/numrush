@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ClothingInfo" load_steps=4 format=3 uid="uid://0nde6udwwd3a"]
+
+[ext_resource type="Texture2D" uid="uid://dlc8xyyxxnsd6" path="res://char/tops/slv10.png" id="1_gpygc"]
+[ext_resource type="Texture2D" uid="uid://b0g5lvghnmb3v" path="res://char/tops/prev/Untitled440_20250913205043.png" id="2_td6hx"]
+[ext_resource type="Script" uid="uid://dlfl5k543sbco" path="res://scripts/clothingInfo.gd" id="3_2t6df"]
+
+[resource]
+script = ExtResource("3_2t6df")
+itemName = "violetShirtFloral"
+displayName = "Violet Floral Shirt"
+category = 1
+bought = false
+price = 100
+prevTex = ExtResource("2_td6hx")
+atlasTex = ExtResource("1_gpygc")
+metadata/_custom_type_script = "uid://dlfl5k543sbco"

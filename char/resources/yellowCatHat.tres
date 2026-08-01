@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ClothingInfo" load_steps=4 format=3 uid="uid://b8juj8f8l7uuj"]
+
+[ext_resource type="Texture2D" uid="uid://dibov7xnwsnwp" path="res://char/hats/hat31.png" id="1_cqeef"]
+[ext_resource type="Texture2D" uid="uid://bou13y8htaaeg" path="res://char/hats/prev/Untitled440_20250915235524.png" id="2_3ef8y"]
+[ext_resource type="Script" uid="uid://dlfl5k543sbco" path="res://scripts/clothingInfo.gd" id="3_wxac8"]
+
+[resource]
+script = ExtResource("3_wxac8")
+itemName = "yellowCatHat"
+displayName = "Yellow Cat Hat"
+category = 3
+price = 160
+prevTex = ExtResource("2_3ef8y")
+atlasTex = ExtResource("1_cqeef")
+metadata/_custom_type_script = "uid://dlfl5k543sbco"

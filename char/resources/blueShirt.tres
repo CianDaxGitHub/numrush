@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ClothingInfo" load_steps=4 format=3 uid="uid://gi6n56d07f0y"]
+
+[ext_resource type="Texture2D" uid="uid://cy013w3t062n4" path="res://char/tops/sht8.png" id="1_ep4et"]
+[ext_resource type="Texture2D" uid="uid://b7id6bi8s6bg7" path="res://char/tops/prev/Untitled440_20250913204037.png" id="2_mm32o"]
+[ext_resource type="Script" uid="uid://dlfl5k543sbco" path="res://scripts/clothingInfo.gd" id="3_bl56u"]
+
+[resource]
+script = ExtResource("3_bl56u")
+itemName = "blueShirt"
+displayName = "Blue T-Shirt"
+price = 60
+prevTex = ExtResource("2_mm32o")
+atlasTex = ExtResource("1_ep4et")
+metadata/_custom_type_script = "uid://dlfl5k543sbco"

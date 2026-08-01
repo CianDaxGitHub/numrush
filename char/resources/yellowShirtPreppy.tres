@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ClothingInfo" load_steps=4 format=3 uid="uid://bydcxe8pylu4g"]
+
+[ext_resource type="Script" uid="uid://dlfl5k543sbco" path="res://scripts/clothingInfo.gd" id="1_b41iy"]
+[ext_resource type="Texture2D" uid="uid://cgoxcfqbds7ix" path="res://char/tops/sht1.png" id="1_mdwtp"]
+[ext_resource type="Texture2D" uid="uid://m548m5eyc8xv" path="res://char/tops/prev/Untitled440_20250913203428.png" id="2_yxcjf"]
+
+[resource]
+script = ExtResource("1_b41iy")
+itemName = "yellowShirtPreppy"
+displayName = "Preppy Yellow Shirt"
+category = 0
+bought = false
+price = 100
+prevTex = ExtResource("2_yxcjf")
+atlasTex = ExtResource("1_mdwtp")
+metadata/_custom_type_script = "uid://dlfl5k543sbco"

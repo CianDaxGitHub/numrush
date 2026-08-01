@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ClothingInfo" load_steps=4 format=3 uid="uid://dqhgg0ruwes75"]
+
+[ext_resource type="Texture2D" uid="uid://udl1cbrqib8k" path="res://char/hats/prev/Untitled75_20250917003915.png" id="1_0etea"]
+[ext_resource type="Texture2D" uid="uid://4iwlxcrngtwr" path="res://char/hats/hat0.png" id="2_r75r1"]
+[ext_resource type="Script" uid="uid://dlfl5k543sbco" path="res://scripts/clothingInfo.gd" id="3_o05lq"]
+
+[resource]
+script = ExtResource("3_o05lq")
+itemName = "doubleAntenna"
+displayName = "Double Antenna"
+category = 3
+price = 30
+prevTex = ExtResource("1_0etea")
+atlasTex = ExtResource("2_r75r1")
+metadata/_custom_type_script = "uid://dlfl5k543sbco"

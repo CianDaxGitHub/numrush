@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ClothingInfo" load_steps=4 format=3 uid="uid://dubh8ypq4aofq"]
+
+[ext_resource type="Texture2D" uid="uid://8eotea0h8vqk" path="res://char/hats/hat9.png" id="1_4rs4m"]
+[ext_resource type="Texture2D" uid="uid://brrcoavlw7drn" path="res://char/hats/prev/Untitled440_20250916124226.png" id="2_sanhn"]
+[ext_resource type="Script" uid="uid://dlfl5k543sbco" path="res://scripts/clothingInfo.gd" id="3_b8h1x"]
+
+[resource]
+script = ExtResource("3_b8h1x")
+itemName = "blueFrogHat"
+displayName = "Blue Frog Hat"
+category = 3
+price = 150
+prevTex = ExtResource("2_sanhn")
+atlasTex = ExtResource("1_4rs4m")
+metadata/_custom_type_script = "uid://dlfl5k543sbco"

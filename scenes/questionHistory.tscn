@@ -1,0 +1,151 @@
+[gd_scene load_steps=5 format=3 uid="uid://qy61bxkin71y"]
+
+[ext_resource type="Script" uid="uid://by7r706skot4m" path="res://scenes/questionHistory.gd" id="1_x6sha"]
+[ext_resource type="FontFile" uid="uid://cra6e443qhmdm" path="res://fonts/Oswald-Regular.ttf" id="2_8euqg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uyt6k"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lk18j"]
+bg_color = Color(1, 1, 1, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.699653, 0.699654, 0.699653, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[node name="question" type="PanelContainer"]
+custom_minimum_size = Vector2(112, 120)
+anchors_preset = -1
+anchor_right = 0.157
+anchor_bottom = 0.094
+offset_right = -1.04
+offset_bottom = -0.319992
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(56, 60)
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxEmpty_uyt6k")
+script = ExtResource("1_x6sha")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_right = 4
+
+[node name="firstOp" type="Label" parent="VBoxContainer/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_8euqg")
+theme_override_font_sizes/font_size = 26
+text = "9"
+horizontal_alignment = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_right = 4
+
+[node name="secondOp" type="Label" parent="VBoxContainer/MarginContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_8euqg")
+theme_override_font_sizes/font_size = 26
+text = "10"
+horizontal_alignment = 2
+
+[node name="ansLabel" type="Panel" parent="VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 36)
+layout_mode = 2
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_lk18j")
+
+[node name="ansText" type="Label" parent="VBoxContainer/ansLabel"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 4.0
+offset_top = -4.0
+offset_right = 109.0
+offset_bottom = 36.0
+mouse_filter = 1
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_8euqg")
+theme_override_font_sizes/font_size = 26
+text = "0"
+horizontal_alignment = 2
+
+[node name="Operators" type="Control" parent="."]
+layout_mode = 2
+mouse_filter = 1
+
+[node name="opAdd" type="Label" parent="Operators"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_left = 5.0
+offset_top = 29.0
+offset_right = 20.0
+offset_bottom = 83.0
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_8euqg")
+theme_override_font_sizes/font_size = 36
+text = "+"
+horizontal_alignment = 2
+
+[node name="opSub" type="Label" parent="Operators"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_left = 5.0
+offset_top = 26.0
+offset_right = 16.0
+offset_bottom = 80.0
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_8euqg")
+theme_override_font_sizes/font_size = 36
+text = "-"
+horizontal_alignment = 2
+
+[node name="opMul" type="Label" parent="Operators"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_left = 6.0
+offset_top = 29.0
+offset_right = 20.0
+offset_bottom = 83.0
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_8euqg")
+theme_override_font_sizes/font_size = 36
+text = "×"
+horizontal_alignment = 2
+
+[node name="opDiv" type="Label" parent="Operators"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_left = 7.0
+offset_top = 29.0
+offset_right = 19.0
+offset_bottom = 83.0
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_8euqg")
+theme_override_font_sizes/font_size = 36
+text = "÷"
+horizontal_alignment = 2
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]

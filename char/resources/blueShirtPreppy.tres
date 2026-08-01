@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ClothingInfo" load_steps=4 format=3 uid="uid://cabyompuj25xq"]
+
+[ext_resource type="Texture2D" uid="uid://cr6qmren17gjy" path="res://char/tops/sht9.png" id="1_jooup"]
+[ext_resource type="Script" uid="uid://dlfl5k543sbco" path="res://scripts/clothingInfo.gd" id="1_ox303"]
+[ext_resource type="Texture2D" uid="uid://beh7ebcvgy2ew" path="res://char/tops/prev/Untitled440_20250913203512.png" id="2_dw6e3"]
+
+[resource]
+script = ExtResource("1_ox303")
+itemName = "blueShirtPreppy"
+displayName = "Preppy Blue Shirt"
+category = 0
+bought = false
+price = 100
+prevTex = ExtResource("2_dw6e3")
+atlasTex = ExtResource("1_jooup")
+metadata/_custom_type_script = "uid://dlfl5k543sbco"

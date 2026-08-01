@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="LevelInfo" load_steps=2 format=3 uid="uid://d0ofhhn6ht7m2"]
+
+[ext_resource type="Script" uid="uid://ddkxevkcwknqw" path="res://scripts/levelInfo.gd" id="1_m67my"]
+
+[resource]
+script = ExtResource("1_m67my")
+time = 180.0
+firstMax = "50"
+secondMax = "9"
+target = 150.0
+probability = "[0.9, 0.6, 0]"
+metadata/_custom_type_script = "uid://ddkxevkcwknqw"

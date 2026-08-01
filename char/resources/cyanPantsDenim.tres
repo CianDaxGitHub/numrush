@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ClothingInfo" load_steps=4 format=3 uid="uid://bwf8v41e5jqxb"]
+
+[ext_resource type="Texture2D" uid="uid://dv3vo2go03cxu" path="res://char/bottoms/pnt9.png" id="1_ltih2"]
+[ext_resource type="Texture2D" uid="uid://c0d8q181e1w74" path="res://char/bottoms/prev/Untitled440_20250913225454.png" id="2_cejem"]
+[ext_resource type="Script" uid="uid://dlfl5k543sbco" path="res://scripts/clothingInfo.gd" id="3_8aus3"]
+
+[resource]
+script = ExtResource("3_8aus3")
+itemName = "cyanPantsDenim"
+displayName = "Denim Cyan Pants"
+category = 6
+bought = false
+price = 165
+prevTex = ExtResource("2_cejem")
+atlasTex = ExtResource("1_ltih2")
+metadata/_custom_type_script = "uid://dlfl5k543sbco"

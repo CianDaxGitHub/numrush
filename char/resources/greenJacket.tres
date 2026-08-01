@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ClothingInfo" load_steps=4 format=3 uid="uid://hfc2i1x7f1a0"]
+
+[ext_resource type="Texture2D" uid="uid://cwtm8b3j0hml" path="res://char/tops/jkt4.png" id="1_iltot"]
+[ext_resource type="Texture2D" uid="uid://curcubn76j5pm" path="res://char/tops/prev/Untitled440_20250913215428.png" id="2_cwe7h"]
+[ext_resource type="Script" uid="uid://dlfl5k543sbco" path="res://scripts/clothingInfo.gd" id="3_o8hmg"]
+
+[resource]
+script = ExtResource("3_o8hmg")
+itemName = "greenJacket"
+displayName = "Green Jacket"
+category = 2
+price = 150
+prevTex = ExtResource("2_cwe7h")
+atlasTex = ExtResource("1_iltot")
+metadata/_custom_type_script = "uid://dlfl5k543sbco"

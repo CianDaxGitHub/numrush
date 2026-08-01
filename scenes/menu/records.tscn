@@ -1,0 +1,400 @@
+[gd_scene load_steps=27 format=3 uid="uid://cq8omv12mv65f"]
+
+[ext_resource type="Script" uid="uid://xxx04nswxq7u" path="res://scenes/menu/records.gd" id="1_53p20"]
+[ext_resource type="Script" uid="uid://c4q74v6jv7ny2" path="res://scripts/buttons/menuButton.gd" id="1_l4eay"]
+[ext_resource type="PackedScene" uid="uid://qkd4tm4yffxp" path="res://scenes/polyAudio.tscn" id="2_451bj"]
+[ext_resource type="StyleBox" uid="uid://7hedebrc3ydc" path="res://themes/cardbtn1.tres" id="2_l4eay"]
+[ext_resource type="Script" uid="uid://b7nng4y5xxvbo" path="res://scripts/soundLibrary.gd" id="3_4vaih"]
+[ext_resource type="Script" uid="uid://y7kgv0a3gc3g" path="res://scripts/soundEffect.gd" id="4_d5hwu"]
+[ext_resource type="Script" uid="uid://bgqglerkcylxx" path="res://addons/SmoothScroll/SmoothScrollContainer.gd" id="4_i71mr"]
+[ext_resource type="Script" uid="uid://b7h0k2h2qwlqv" path="res://addons/SmoothScroll/scroll_damper/expo_scroll_damper.gd" id="5_53p20"]
+[ext_resource type="AudioStream" uid="uid://bjyf5oq13lthl" path="res://sounds/clicky button 3.wav" id="5_lf0e7"]
+[ext_resource type="AudioStream" uid="uid://b24ifncas70ex" path="res://sounds/metalswish.wav" id="6_blmam"]
+[ext_resource type="FontFile" uid="uid://b3y7klyjp8l0n" path="res://fonts/Pangolin-Regular.ttf" id="6_i71mr"]
+[ext_resource type="StyleBox" uid="uid://dnnyrj0dbbmnh" path="res://themes/cardbtn2.tres" id="7_i71mr"]
+[ext_resource type="FontFile" uid="uid://c1xv8vejetl6c" path="res://fonts/PoetsenOne-Regular.ttf" id="8_53p20"]
+
+[sub_resource type="Resource" id="Resource_0mk4v"]
+script = ExtResource("4_d5hwu")
+tag = "click"
+stream = ExtResource("5_lf0e7")
+metadata/_custom_type_script = "uid://y7kgv0a3gc3g"
+
+[sub_resource type="Resource" id="Resource_iqode"]
+script = ExtResource("4_d5hwu")
+tag = "confirm"
+stream = ExtResource("6_blmam")
+metadata/_custom_type_script = "uid://y7kgv0a3gc3g"
+
+[sub_resource type="Resource" id="Resource_ovy8y"]
+script = ExtResource("3_4vaih")
+soundFx = Array[ExtResource("4_d5hwu")]([SubResource("Resource_0mk4v"), SubResource("Resource_iqode")])
+metadata/_custom_type_script = "uid://b7nng4y5xxvbo"
+
+[sub_resource type="LabelSettings" id="LabelSettings_ggrpn"]
+font = ExtResource("8_53p20")
+font_size = 54
+outline_size = 28
+outline_color = Color(0.62832, 0.269837, 0.108442, 1)
+shadow_size = 0
+shadow_color = Color(0, 0, 0, 0.278431)
+shadow_offset = Vector2(4, 10)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m55kj"]
+bg_color = Color(0.404572, 0.558284, 0.374548, 1)
+border_width_left = 16
+border_width_top = 16
+border_width_right = 16
+border_width_bottom = 16
+border_color = Color(0.572494, 0.372777, 0.270028, 1)
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+shadow_color = Color(0, 0, 0, 0.286275)
+shadow_size = 4
+shadow_offset = Vector2(6, 10)
+
+[sub_resource type="Resource" id="Resource_h2g1m"]
+script = ExtResource("5_53p20")
+
+[sub_resource type="Resource" id="Resource_w8eck"]
+script = ExtResource("5_53p20")
+
+[sub_resource type="LabelSettings" id="LabelSettings_53p20"]
+font = ExtResource("6_i71mr")
+font_size = 64
+outline_size = 16
+outline_color = Color(0.62832, 0.269837, 0.108442, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_m55kj"]
+font = ExtResource("8_53p20")
+font_size = 48
+outline_size = 16
+outline_color = Color(0.62832, 0.269837, 0.108442, 1)
+shadow_size = 0
+shadow_color = Color(0, 0, 0, 0.443137)
+shadow_offset = Vector2(4, 6)
+
+[sub_resource type="LabelSettings" id="LabelSettings_4pmf8"]
+font = ExtResource("8_53p20")
+font_size = 48
+outline_size = 16
+outline_color = Color(0.62832, 0.269837, 0.108442, 1)
+shadow_size = 0
+shadow_color = Color(0, 0, 0, 0.278431)
+shadow_offset = Vector2(2, 6)
+
+[sub_resource type="Animation" id="Animation_4pmf8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("btnBack:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(27, 19)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sign:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(44, 132)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("btnBoards:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(37, 1163)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("PanelRanking:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(20, 362)]
+}
+
+[sub_resource type="Animation" id="Animation_53p20"]
+resource_name = "enter_scene"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("btnBack:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 0.633333, 1),
+"transitions": PackedFloat32Array(-2, -2, 1),
+"update": 0,
+"values": [Vector2(-300, 19), Vector2(43, 19), Vector2(27, 19)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sign:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.466667, 0.866667),
+"transitions": PackedFloat32Array(-2, -2, 1),
+"update": 0,
+"values": [Vector2(44, -200), Vector2(44, 152), Vector2(44, 132)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("btnBoards:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.166667, 0.733333),
+"transitions": PackedFloat32Array(-2, 1),
+"update": 0,
+"values": [Vector2(37, 1339), Vector2(37, 1139)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("PanelRanking:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.666667, 1),
+"transitions": PackedFloat32Array(-2, -2, 1),
+"update": 0,
+"values": [Vector2(800, 362), Vector2(8, 362), Vector2(20, 362)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_h2g1m"]
+_data = {
+&"RESET": SubResource("Animation_4pmf8"),
+&"enter_scene": SubResource("Animation_53p20")
+}
+
+[node name="Records" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_53p20")
+
+[node name="PolyAudio" parent="." instance=ExtResource("2_451bj")]
+bus = &"sfx"
+sfxLib = SubResource("Resource_ovy8y")
+
+[node name="Sign" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0611111
+anchor_top = -0.1875
+anchor_right = 0.94583297
+anchor_bottom = -0.1234375
+offset_top = 372.0
+offset_bottom = 497.99976
+grow_horizontal = 2
+theme_override_styles/panel = ExtResource("2_l4eay")
+metadata/_edit_use_anchors_ = true
+
+[node name="userLabel" type="Label" parent="Sign"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -293.5
+offset_top = -78.0
+offset_right = 293.5
+offset_bottom = 78.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "[user]'s
+Game History"
+label_settings = SubResource("LabelSettings_ggrpn")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="PanelRanking" type="Panel" parent="."]
+custom_minimum_size = Vector2(680, 720)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -340.0
+offset_top = -278.0
+offset_right = 340.00073
+offset_bottom = 472.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_m55kj")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="PanelRanking"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -310.0
+offset_top = -339.0
+offset_right = 310.0
+offset_bottom = 337.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+script = ExtResource("4_i71mr")
+speed = 600.0
+wheel_scroll_damper = SubResource("Resource_h2g1m")
+dragging_scroll_damper = SubResource("Resource_w8eck")
+metadata/_custom_type_script = "uid://bgqglerkcylxx"
+
+[node name="recordHolder" type="VBoxContainer" parent="PanelRanking/ScrollContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="warning" type="Label" parent="PanelRanking"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -293.5
+offset_top = -48.0
+offset_right = 293.5
+offset_bottom = 48.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "No games have been played so far!"
+label_settings = SubResource("LabelSettings_53p20")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="btnBack" type="Button" parent="." node_paths=PackedStringArray("sfx")]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 19.0
+offset_right = 229.0
+offset_bottom = 109.0
+pivot_offset = Vector2(101, 50)
+focus_mode = 0
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = ExtResource("7_i71mr")
+theme_override_styles/pressed = ExtResource("7_i71mr")
+theme_override_styles/hover = ExtResource("7_i71mr")
+script = ExtResource("1_l4eay")
+toState = "menu"
+scaleSize = 1.1
+sfx = NodePath("../PolyAudio")
+sfx_name = Array[String](["click", "confirm"])
+sfx_vol = Array[float]([-12.0, -18.0])
+sfx_delay = Array[float]([0.0, 0.05])
+
+[node name="Label" type="Label" parent="btnBack"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -84.5
+offset_top = -29.0
+offset_right = 84.5
+offset_bottom = 29.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Back"
+label_settings = SubResource("LabelSettings_m55kj")
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 162
+
+[node name="btnBoards" type="Button" parent="." node_paths=PackedStringArray("sfx")]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -323.0
+offset_top = -117.0
+offset_right = 323.0
+offset_bottom = -25.0
+grow_horizontal = 2
+grow_vertical = 0
+pivot_offset = Vector2(323, 46)
+focus_mode = 0
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = ExtResource("7_i71mr")
+theme_override_styles/pressed = ExtResource("7_i71mr")
+theme_override_styles/hover = ExtResource("7_i71mr")
+script = ExtResource("1_l4eay")
+toState = "boards"
+scaleSize = 1.08
+sfx = NodePath("../PolyAudio")
+sfx_name = Array[String](["click", "confirm"])
+sfx_vol = Array[float]([-12.0, -18.0])
+sfx_delay = Array[float]([0.0, 0.05])
+
+[node name="Label" type="Label" parent="btnBoards"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -113.5
+offset_top = -29.0
+offset_right = 113.5
+offset_bottom = 29.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Online Leaderboards"
+label_settings = SubResource("LabelSettings_4pmf8")
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 162
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_h2g1m")
+}
+autoplay = "enter_scene"
+
+[connection signal="button_down" from="btnBack" to="btnBack" method="_on_button_down"]
+[connection signal="button_up" from="btnBack" to="btnBack" method="_on_button_up"]
+[connection signal="pressed" from="btnBack" to="btnBack" method="_on_button_pressed"]
+[connection signal="button_down" from="btnBoards" to="btnBoards" method="_on_button_down"]
+[connection signal="button_up" from="btnBoards" to="btnBoards" method="_on_button_up"]
+[connection signal="pressed" from="btnBoards" to="btnBoards" method="_on_button_pressed"]

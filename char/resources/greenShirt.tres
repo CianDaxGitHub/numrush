@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ClothingInfo" load_steps=4 format=3 uid="uid://br2a2316omfay"]
+
+[ext_resource type="Texture2D" uid="uid://bpcoqu2n11qpg" path="res://char/tops/sht3.png" id="1_gyg1x"]
+[ext_resource type="Texture2D" uid="uid://b3qc5a7uyhxmr" path="res://char/tops/prev/Untitled440_20250913204146.png" id="2_vpgu8"]
+[ext_resource type="Script" uid="uid://dlfl5k543sbco" path="res://scripts/clothingInfo.gd" id="3_7eson"]
+
+[resource]
+script = ExtResource("3_7eson")
+itemName = "greenShirt"
+displayName = "Green T-Shirt"
+category = 0
+bought = false
+price = 60
+prevTex = ExtResource("2_vpgu8")
+atlasTex = ExtResource("1_gyg1x")
+metadata/_custom_type_script = "uid://dlfl5k543sbco"

@@ -1,0 +1,198 @@
+[gd_scene load_steps=17 format=3 uid="uid://c8k28y8dasyxr"]
+
+[ext_resource type="Script" uid="uid://kvsjhj7owjp4" path="res://scripts/timer.gd" id="1_5lxq6"]
+[ext_resource type="Texture2D" uid="uid://be64yjwshke82" path="res://images/sand-clock-empty-icon.png" id="2_g5y8c"]
+[ext_resource type="FontFile" uid="uid://oy3sagk7od2d" path="res://fonts/TitanOne-Regular.ttf" id="3_g5y8c"]
+[ext_resource type="PackedScene" uid="uid://qkd4tm4yffxp" path="res://scenes/polyAudio.tscn" id="4_dtxrw"]
+[ext_resource type="Script" uid="uid://b7nng4y5xxvbo" path="res://scripts/soundLibrary.gd" id="5_sa7gq"]
+[ext_resource type="Script" uid="uid://y7kgv0a3gc3g" path="res://scripts/soundEffect.gd" id="6_03p6j"]
+[ext_resource type="AudioStream" uid="uid://dr57dvdoqy2nd" path="res://sounds/time.wav" id="7_dtxrw"]
+[ext_resource type="AudioStream" uid="uid://00ec00ro2rbp" path="res://sounds/alert.wav" id="8_u5bqm"]
+[ext_resource type="AudioStream" uid="uid://dttprftnmh5bq" path="res://sounds/timeUp.mp3" id="9_sa7gq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bi5oq"]
+bg_color = Color(0.927784, 0.587606, 0.304506, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.679786, 0.310339, 0.264189, 1)
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uktcg"]
+bg_color = Color(0.602506, 0.317323, 0.236435, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.889017, 0.411953, 0.213313, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qso1l"]
+bg_color = Color(0.603922, 0.317647, 0.235294, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.890196, 0.411765, 0.211765, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="Resource" id="Resource_rva15"]
+script = ExtResource("6_03p6j")
+tag = "alert"
+stream = ExtResource("7_dtxrw")
+metadata/_custom_type_script = "uid://y7kgv0a3gc3g"
+
+[sub_resource type="Resource" id="Resource_251mu"]
+script = ExtResource("6_03p6j")
+tag = "tick"
+stream = ExtResource("8_u5bqm")
+metadata/_custom_type_script = "uid://y7kgv0a3gc3g"
+
+[sub_resource type="Resource" id="Resource_03p6j"]
+script = ExtResource("6_03p6j")
+tag = "timeUp"
+stream = ExtResource("9_sa7gq")
+metadata/_custom_type_script = "uid://y7kgv0a3gc3g"
+
+[sub_resource type="Resource" id="Resource_8ol2a"]
+script = ExtResource("5_sa7gq")
+soundFx = Array[ExtResource("6_03p6j")]([SubResource("Resource_rva15"), SubResource("Resource_251mu"), SubResource("Resource_03p6j")])
+metadata/_custom_type_script = "uid://b7nng4y5xxvbo"
+
+[node name="Timer" type="Control"]
+custom_minimum_size = Vector2(195, 56)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -433.0
+offset_bottom = -1181.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5lxq6")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -143.5
+offset_right = 143.5
+offset_bottom = 98.55
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_bi5oq")
+
+[node name="Panel2" type="Panel" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.5
+offset_top = -38.275
+offset_right = -52.5
+offset_bottom = 37.725
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_uktcg")
+
+[node name="HourglassShadow" type="TextureRect" parent="Panel/Panel2"]
+modulate = Color(0, 0, 0, 0.404)
+texture_filter = 2
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -23.0
+offset_top = -22.0
+offset_right = 25.0
+offset_bottom = 26.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(24, 24)
+texture = ExtResource("2_g5y8c")
+expand_mode = 1
+
+[node name="Hourglass" type="TextureRect" parent="Panel/Panel2"]
+texture_filter = 2
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.0
+offset_top = -24.0
+offset_right = 24.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(24, 24)
+texture = ExtResource("2_g5y8c")
+expand_mode = 1
+
+[node name="Panel3" type="Panel" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -44.5
+offset_top = -38.275
+offset_right = 130.5
+offset_bottom = 37.725
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_qso1l")
+
+[node name="Time" type="Label" parent="Panel/Panel3"]
+custom_minimum_size = Vector2(100, 42)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -58.5
+offset_top = -24.0
+offset_right = 58.5
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.404)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 2
+theme_override_fonts/font = ExtResource("3_g5y8c")
+theme_override_font_sizes/font_size = 50
+text = "01:00"
+horizontal_alignment = 1
+
+[node name="PolyAudio" parent="." instance=ExtResource("4_dtxrw")]
+bus = &"sfx"
+sfxLib = SubResource("Resource_8ol2a")
+maxPoly = 8
+
+[node name="timerAlert" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 300.0
+one_shot = true
+
+[node name="flipWatch" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="timerAlert" to="." method="_on_timer_alert_timeout"]
+[connection signal="timeout" from="flipWatch" to="." method="_flip_watch"]

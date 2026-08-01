@@ -1,0 +1,1387 @@
+[gd_scene load_steps=75 format=3 uid="uid://debu4autpup2t"]
+
+[ext_resource type="Script" uid="uid://bd5hfi2x48hw5" path="res://scenes/menu/levels.gd" id="1_0vynu"]
+[ext_resource type="Script" uid="uid://ukd810vytccs" path="res://scripts/buttons/levelButton.gd" id="1_l6dln"]
+[ext_resource type="Script" uid="uid://c4q74v6jv7ny2" path="res://scripts/buttons/menuButton.gd" id="1_prgp8"]
+[ext_resource type="StyleBox" uid="uid://carbyra0tl73j" path="res://themes/btnDisabled.tres" id="2_vo6u2"]
+[ext_resource type="StyleBox" uid="uid://chi8u1xnteg8i" path="res://themes/mixSmall.tres" id="3_7bdmg"]
+[ext_resource type="Script" uid="uid://ddkxevkcwknqw" path="res://scripts/levelInfo.gd" id="5_47d0s"]
+[ext_resource type="Resource" uid="uid://bkb6wc0jr1ffl" path="res://level_parameters/add/1.tres" id="6_f8yln"]
+[ext_resource type="Resource" uid="uid://bo5sl76q7dlmv" path="res://level_parameters/sub/1.tres" id="7_4lhdp"]
+[ext_resource type="Resource" uid="uid://lf3rbwaxlr5h" path="res://level_parameters/mul/1.tres" id="8_b38fw"]
+[ext_resource type="Resource" uid="uid://kssbtvwgjpxy" path="res://level_parameters/div/1.tres" id="9_7fn82"]
+[ext_resource type="LabelSettings" uid="uid://rahat3v4gx6l" path="res://themes/mixText.tres" id="9_fwawl"]
+[ext_resource type="Texture2D" uid="uid://0yuccppr1lq5" path="res://images/icons/padlock-icon.png" id="10_c2eb7"]
+[ext_resource type="Resource" uid="uid://d0oig3mvnrc2i" path="res://level_parameters/mix/1.tres" id="10_pd157"]
+[ext_resource type="Resource" uid="uid://8urefpb1lxp" path="res://level_parameters/add/2.tres" id="13_04l7c"]
+[ext_resource type="Resource" uid="uid://c5mjve3s8fqj5" path="res://level_parameters/sub/2.tres" id="14_cbrnb"]
+[ext_resource type="Resource" uid="uid://cofsbvlunu3c5" path="res://level_parameters/mul/2.tres" id="15_qhx44"]
+[ext_resource type="Resource" uid="uid://c3aei2c5lpmjl" path="res://level_parameters/div/2.tres" id="16_rml3d"]
+[ext_resource type="Resource" uid="uid://d3heowdruo3pq" path="res://level_parameters/mix/2.tres" id="17_vr88l"]
+[ext_resource type="Resource" uid="uid://bcmwt31c2ih6g" path="res://level_parameters/add/3.tres" id="18_sdrwq"]
+[ext_resource type="Resource" uid="uid://b6k5j6pho2tla" path="res://level_parameters/sub/3.tres" id="19_m8y8u"]
+[ext_resource type="Resource" uid="uid://df6kyq111ucau" path="res://level_parameters/mul/3.tres" id="20_qalvg"]
+[ext_resource type="Resource" uid="uid://1ywk7lfbviyy" path="res://level_parameters/div/3.tres" id="21_83tk1"]
+[ext_resource type="Resource" uid="uid://d2ja0u5xp1k0i" path="res://level_parameters/mix/3.tres" id="22_go631"]
+[ext_resource type="Resource" uid="uid://dc87o5e0gij7g" path="res://level_parameters/add/4.tres" id="23_45odb"]
+[ext_resource type="Resource" uid="uid://d30r4edn5hxuu" path="res://level_parameters/sub/4.tres" id="24_0cshn"]
+[ext_resource type="Resource" uid="uid://da55o2suwp4tu" path="res://level_parameters/mul/4.tres" id="25_o2pwd"]
+[ext_resource type="Resource" uid="uid://d0ofhhn6ht7m2" path="res://level_parameters/div/4.tres" id="26_i5i6s"]
+[ext_resource type="Resource" uid="uid://ddb2t7aw11ofo" path="res://level_parameters/mix/4.tres" id="27_1vh86"]
+[ext_resource type="Resource" uid="uid://b0u0s2ifgmhog" path="res://level_parameters/add/5.tres" id="28_kp5r6"]
+[ext_resource type="Resource" uid="uid://dxvkfla74xspx" path="res://level_parameters/sub/5.tres" id="29_hh3sv"]
+[ext_resource type="Resource" uid="uid://cxjdysvjhie5o" path="res://level_parameters/mul/5.tres" id="30_pn6pw"]
+[ext_resource type="Resource" uid="uid://ip43bqy5878e" path="res://level_parameters/div/5.tres" id="31_pty1v"]
+[ext_resource type="Resource" uid="uid://di7lhjb53mv0r" path="res://level_parameters/mix/5.tres" id="32_n57of"]
+[ext_resource type="Resource" uid="uid://cvcvc3fgw353n" path="res://level_parameters/add/6.tres" id="33_kbo8w"]
+[ext_resource type="Resource" uid="uid://cc24ay6pqxr8s" path="res://level_parameters/sub/6.tres" id="34_12tcg"]
+[ext_resource type="Resource" uid="uid://b8xlifjou8m7m" path="res://level_parameters/mul/6.tres" id="35_dw428"]
+[ext_resource type="Resource" uid="uid://c6q12r01yy6iw" path="res://level_parameters/div/6.tres" id="36_r8smq"]
+[ext_resource type="Resource" uid="uid://biet31dy0hvs1" path="res://level_parameters/mix/6.tres" id="37_3a8hv"]
+[ext_resource type="Resource" uid="uid://drofhhgm1qly7" path="res://level_parameters/add/7.tres" id="38_ramgn"]
+[ext_resource type="Resource" uid="uid://ci327w8mpw8rd" path="res://level_parameters/sub/7.tres" id="39_yn7hv"]
+[ext_resource type="Resource" uid="uid://bccvslrj5cbee" path="res://level_parameters/mul/7.tres" id="40_gupjx"]
+[ext_resource type="Resource" uid="uid://cme1500t15ofh" path="res://level_parameters/div/7.tres" id="41_j0l05"]
+[ext_resource type="Resource" uid="uid://bgj83ben0e14j" path="res://level_parameters/mix/7.tres" id="42_v805f"]
+[ext_resource type="Resource" uid="uid://sd1gx5162jca" path="res://level_parameters/add/8.tres" id="43_lctpc"]
+[ext_resource type="Resource" uid="uid://dqrhv60m47jp0" path="res://level_parameters/sub/8.tres" id="44_u3m88"]
+[ext_resource type="Resource" uid="uid://mxq3nho1thvh" path="res://level_parameters/mul/8.tres" id="45_8xeud"]
+[ext_resource type="Resource" uid="uid://3c3hpmwrx1gb" path="res://level_parameters/div/8.tres" id="46_442rh"]
+[ext_resource type="PackedScene" uid="uid://qkd4tm4yffxp" path="res://scenes/polyAudio.tscn" id="46_g8401"]
+[ext_resource type="Resource" uid="uid://diae7d1c18nay" path="res://level_parameters/mix/8.tres" id="47_ruwsb"]
+[ext_resource type="Script" uid="uid://b7nng4y5xxvbo" path="res://scripts/soundLibrary.gd" id="47_vo6u2"]
+[ext_resource type="Script" uid="uid://y7kgv0a3gc3g" path="res://scripts/soundEffect.gd" id="48_c2eb7"]
+[ext_resource type="Resource" uid="uid://csxqlo86ra737" path="res://level_parameters/add/9.tres" id="48_lnq3t"]
+[ext_resource type="AudioStream" uid="uid://bjyf5oq13lthl" path="res://sounds/clicky button 3.wav" id="49_7fpbu"]
+[ext_resource type="Resource" uid="uid://bp3ugpm10qtus" path="res://level_parameters/sub/9.tres" id="49_meqy1"]
+[ext_resource type="StyleBox" uid="uid://dnnyrj0dbbmnh" path="res://themes/cardbtn2.tres" id="49_osbxk"]
+[ext_resource type="Resource" uid="uid://56p86lmhgqrj" path="res://level_parameters/mul/9.tres" id="50_gd37j"]
+[ext_resource type="AudioStream" uid="uid://dift2ed11uqk6" path="res://sounds/allDone.mp3" id="50_rjian"]
+[ext_resource type="Resource" uid="uid://dk6ajhlrj7fs0" path="res://level_parameters/div/9.tres" id="51_21dfr"]
+[ext_resource type="FontFile" uid="uid://c1xv8vejetl6c" path="res://fonts/PoetsenOne-Regular.ttf" id="51_g8401"]
+[ext_resource type="AudioStream" uid="uid://b24ifncas70ex" path="res://sounds/metalswish.wav" id="51_r6u0b"]
+[ext_resource type="Resource" uid="uid://cjvf8ltxxgcql" path="res://level_parameters/mix/9.tres" id="52_dcbpu"]
+[ext_resource type="Resource" uid="uid://c8q0fgjijbiis" path="res://level_parameters/add/10.tres" id="53_oyt2i"]
+[ext_resource type="Resource" uid="uid://davusrwspvdx1" path="res://level_parameters/sub/10.tres" id="54_45fyg"]
+[ext_resource type="Resource" uid="uid://dagnus20yphkt" path="res://level_parameters/mul/10.tres" id="55_8sgxm"]
+[ext_resource type="Resource" uid="uid://hnjxtr1vqrip" path="res://level_parameters/div/10.tres" id="56_pq1tx"]
+[ext_resource type="Resource" uid="uid://bo16jbgkwxnrk" path="res://level_parameters/mix/10.tres" id="57_7wia8"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_vo6u2"]
+font = ExtResource("51_g8401")
+font_size = 48
+outline_size = 16
+outline_color = Color(0.62832, 0.269837, 0.108442, 1)
+shadow_size = 0
+shadow_color = Color(0, 0, 0, 0.443137)
+shadow_offset = Vector2(4, 6)
+
+[sub_resource type="Animation" id="Animation_7fpbu"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("lvlGroup/lvlContainer1/level1:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("lvlGroup/lvlContainer2/level2:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("lvlGroup/lvlContainer3/level3:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("lvlGroup/lvlContainer4/level4:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("lvlGroup/lvlContainer5/level5:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("lvlGroup/lvlContainer6/level6:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("lvlGroup/lvlContainer7/level7:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("lvlGroup/lvlContainer8/level8:scale")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("lvlGroup/lvlContainer9/level9:scale")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("lvlGroup/lvlContainer10/level10:scale")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Button:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(40, 50)]
+}
+
+[sub_resource type="Animation" id="Animation_c2eb7"]
+resource_name = "enter_scene"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("lvlGroup/lvlContainer1/level1:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0666667, 0.266667, 0.533333),
+"transitions": PackedFloat32Array(-2, -2, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1.1, 1.1), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("lvlGroup/lvlContainer2/level2:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.1, 0.3, 0.566667),
+"transitions": PackedFloat32Array(-2, -2, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1.1, 1.1), Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("lvlGroup/lvlContainer3/level3:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.133333, 0.333333, 0.6),
+"transitions": PackedFloat32Array(-2, -2, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1.1, 1.1), Vector2(1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("lvlGroup/lvlContainer4/level4:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.166667, 0.366667, 0.633333),
+"transitions": PackedFloat32Array(-2, -2, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1.1, 1.1), Vector2(1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("lvlGroup/lvlContainer5/level5:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.2, 0.4, 0.666667),
+"transitions": PackedFloat32Array(-2, -2, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1.1, 1.1), Vector2(1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("lvlGroup/lvlContainer6/level6:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.233333, 0.433333, 0.7),
+"transitions": PackedFloat32Array(-2, -2, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1.1, 1.1), Vector2(1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("lvlGroup/lvlContainer7/level7:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.266667, 0.466667, 0.733333),
+"transitions": PackedFloat32Array(-2, -2, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1.1, 1.1), Vector2(1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("lvlGroup/lvlContainer8/level8:scale")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.3, 0.5, 0.766667),
+"transitions": PackedFloat32Array(-2, -2, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1.1, 1.1), Vector2(1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("lvlGroup/lvlContainer9/level9:scale")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0.333333, 0.533333, 0.8),
+"transitions": PackedFloat32Array(-2, -2, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1.1, 1.1), Vector2(1, 1)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("lvlGroup/lvlContainer10/level10:scale")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0.366667, 0.566667, 0.833333),
+"transitions": PackedFloat32Array(-2, -2, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1.1, 1.1), Vector2(1, 1)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Button:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 0.433333, 0.766667),
+"transitions": PackedFloat32Array(-2, -2, 1),
+"update": 0,
+"values": [Vector2(-332, 50), Vector2(56, 50), Vector2(40, 50)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rjian"]
+_data = {
+&"RESET": SubResource("Animation_7fpbu"),
+&"enter_scene": SubResource("Animation_c2eb7")
+}
+
+[sub_resource type="Resource" id="Resource_02wpe"]
+script = ExtResource("48_c2eb7")
+tag = "click"
+stream = ExtResource("49_7fpbu")
+metadata/_custom_type_script = "uid://y7kgv0a3gc3g"
+
+[sub_resource type="Resource" id="Resource_4xbh2"]
+script = ExtResource("48_c2eb7")
+tag = "mainChoice"
+stream = ExtResource("50_rjian")
+metadata/_custom_type_script = "uid://y7kgv0a3gc3g"
+
+[sub_resource type="Resource" id="Resource_gxxro"]
+script = ExtResource("48_c2eb7")
+tag = "confirm"
+stream = ExtResource("51_r6u0b")
+metadata/_custom_type_script = "uid://y7kgv0a3gc3g"
+
+[sub_resource type="Resource" id="Resource_1hgw3"]
+script = ExtResource("47_vo6u2")
+soundFx = Array[ExtResource("48_c2eb7")]([SubResource("Resource_02wpe"), SubResource("Resource_4xbh2"), SubResource("Resource_gxxro")])
+metadata/_custom_type_script = "uid://b7nng4y5xxvbo"
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0vynu")
+
+[node name="lvlGroup" type="HFlowContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -290.0
+offset_top = -350.0
+offset_right = 290.0
+offset_bottom = 358.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 24
+theme_override_constants/v_separation = 24
+alignment = 1
+
+[node name="lvlContainer1" type="Control" parent="lvlGroup"]
+custom_minimum_size = Vector2(150, 140)
+layout_mode = 2
+
+[node name="level1" type="Button" parent="lvlGroup/lvlContainer1" node_paths=PackedStringArray("label", "lock", "sfx")]
+custom_minimum_size = Vector2(150, 140)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.0
+offset_top = -70.0
+offset_right = 75.0
+offset_bottom = 70.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(75, 70)
+focus_mode = 0
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = ExtResource("3_7bdmg")
+theme_override_styles/pressed = ExtResource("3_7bdmg")
+theme_override_styles/hover = ExtResource("3_7bdmg")
+theme_override_styles/disabled = ExtResource("2_vo6u2")
+disabled = true
+script = ExtResource("1_l6dln")
+label = NodePath("Label")
+lock = NodePath("Lock")
+levelList = Array[ExtResource("5_47d0s")]([ExtResource("6_f8yln"), ExtResource("7_4lhdp"), ExtResource("8_b38fw"), ExtResource("9_7fn82"), ExtResource("10_pd157")])
+toState = "info"
+scaleSize = 1.1
+sfx = NodePath("../../../PolyAudio")
+sfx_name = Array[String](["click", "confirm"])
+sfx_vol = Array[float]([-14.0, -18.0])
+sfx_delay = Array[float]([0.0, 0.05])
+
+[node name="Label" type="Label" parent="lvlGroup/lvlContainer1/level1"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -42.0
+offset_top = -36.0
+offset_right = 42.0
+offset_bottom = 36.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "1"
+label_settings = ExtResource("9_fwawl")
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 162
+
+[node name="Lock" type="TextureRect" parent="lvlGroup/lvlContainer1/level1"]
+visible = false
+self_modulate = Color(0, 0, 0, 0.337255)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -39.0
+offset_top = -38.0
+offset_right = 43.0
+offset_bottom = 44.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_c2eb7")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="lvlGroup/lvlContainer1/level1/Lock"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -43.0
+offset_top = -44.0
+offset_right = 39.0
+offset_bottom = 38.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_c2eb7")
+expand_mode = 1
+
+[node name="lvlContainer2" type="Control" parent="lvlGroup"]
+custom_minimum_size = Vector2(150, 140)
+layout_mode = 2
+
+[node name="level2" type="Button" parent="lvlGroup/lvlContainer2" node_paths=PackedStringArray("label", "lock", "sfx")]
+custom_minimum_size = Vector2(150, 140)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.0
+offset_top = -70.0
+offset_right = 75.0
+offset_bottom = 70.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(75, 70)
+focus_mode = 0
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = ExtResource("3_7bdmg")
+theme_override_styles/pressed = ExtResource("3_7bdmg")
+theme_override_styles/hover = ExtResource("3_7bdmg")
+theme_override_styles/disabled = ExtResource("2_vo6u2")
+disabled = true
+script = ExtResource("1_l6dln")
+label = NodePath("Label")
+lock = NodePath("Lock")
+levelList = Array[ExtResource("5_47d0s")]([ExtResource("13_04l7c"), ExtResource("14_cbrnb"), ExtResource("15_qhx44"), ExtResource("16_rml3d"), ExtResource("17_vr88l")])
+toState = "info"
+scaleSize = 1.1
+sfx = NodePath("../../../PolyAudio")
+sfx_name = Array[String](["click", "confirm"])
+sfx_vol = Array[float]([-14.0, -18.0])
+sfx_delay = Array[float]([0.0, 0.05])
+
+[node name="Label" type="Label" parent="lvlGroup/lvlContainer2/level2"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -42.0
+offset_top = -36.0
+offset_right = 42.0
+offset_bottom = 36.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "2"
+label_settings = ExtResource("9_fwawl")
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 162
+
+[node name="Lock" type="TextureRect" parent="lvlGroup/lvlContainer2/level2"]
+self_modulate = Color(0, 0, 0, 0.337255)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -39.0
+offset_top = -38.0
+offset_right = 43.0
+offset_bottom = 44.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_c2eb7")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="lvlGroup/lvlContainer2/level2/Lock"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -43.0
+offset_top = -44.0
+offset_right = 39.0
+offset_bottom = 38.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_c2eb7")
+expand_mode = 1
+
+[node name="lvlContainer3" type="Control" parent="lvlGroup"]
+custom_minimum_size = Vector2(150, 140)
+layout_mode = 2
+
+[node name="level3" type="Button" parent="lvlGroup/lvlContainer3" node_paths=PackedStringArray("label", "lock", "sfx")]
+custom_minimum_size = Vector2(150, 140)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.0
+offset_top = -70.0
+offset_right = 75.0
+offset_bottom = 70.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(75, 70)
+focus_mode = 0
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = ExtResource("3_7bdmg")
+theme_override_styles/pressed = ExtResource("3_7bdmg")
+theme_override_styles/hover = ExtResource("3_7bdmg")
+theme_override_styles/disabled = ExtResource("2_vo6u2")
+disabled = true
+script = ExtResource("1_l6dln")
+label = NodePath("Label")
+lock = NodePath("Lock")
+levelList = Array[ExtResource("5_47d0s")]([ExtResource("18_sdrwq"), ExtResource("19_m8y8u"), ExtResource("20_qalvg"), ExtResource("21_83tk1"), ExtResource("22_go631")])
+toState = "info"
+scaleSize = 1.1
+sfx = NodePath("../../../PolyAudio")
+sfx_name = Array[String](["click", "confirm"])
+sfx_vol = Array[float]([-14.0, -18.0])
+sfx_delay = Array[float]([0.0, 0.05])
+
+[node name="Label" type="Label" parent="lvlGroup/lvlContainer3/level3"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -42.0
+offset_top = -36.0
+offset_right = 42.0
+offset_bottom = 36.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "3"
+label_settings = ExtResource("9_fwawl")
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 162
+
+[node name="Lock" type="TextureRect" parent="lvlGroup/lvlContainer3/level3"]
+self_modulate = Color(0, 0, 0, 0.337255)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -39.0
+offset_top = -38.0
+offset_right = 43.0
+offset_bottom = 44.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_c2eb7")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="lvlGroup/lvlContainer3/level3/Lock"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -43.0
+offset_top = -44.0
+offset_right = 39.0
+offset_bottom = 38.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_c2eb7")
+expand_mode = 1
+
+[node name="lvlContainer4" type="Control" parent="lvlGroup"]
+custom_minimum_size = Vector2(150, 140)
+layout_mode = 2
+
+[node name="level4" type="Button" parent="lvlGroup/lvlContainer4" node_paths=PackedStringArray("label", "lock", "sfx")]
+custom_minimum_size = Vector2(150, 140)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.0
+offset_top = -70.0
+offset_right = 75.0
+offset_bottom = 70.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(75, 70)
+focus_mode = 0
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = ExtResource("3_7bdmg")
+theme_override_styles/pressed = ExtResource("3_7bdmg")
+theme_override_styles/hover = ExtResource("3_7bdmg")
+theme_override_styles/disabled = ExtResource("2_vo6u2")
+disabled = true
+script = ExtResource("1_l6dln")
+label = NodePath("Label")
+lock = NodePath("Lock")
+levelList = Array[ExtResource("5_47d0s")]([ExtResource("23_45odb"), ExtResource("24_0cshn"), ExtResource("25_o2pwd"), ExtResource("26_i5i6s"), ExtResource("27_1vh86")])
+toState = "info"
+scaleSize = 1.1
+sfx = NodePath("../../../PolyAudio")
+sfx_name = Array[String](["click", "confirm"])
+sfx_vol = Array[float]([-14.0, -18.0])
+sfx_delay = Array[float]([0.0, 0.05])
+
+[node name="Label" type="Label" parent="lvlGroup/lvlContainer4/level4"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -42.0
+offset_top = -36.0
+offset_right = 42.0
+offset_bottom = 36.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "4"
+label_settings = ExtResource("9_fwawl")
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 162
+
+[node name="Lock" type="TextureRect" parent="lvlGroup/lvlContainer4/level4"]
+self_modulate = Color(0, 0, 0, 0.337255)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -39.0
+offset_top = -38.0
+offset_right = 43.0
+offset_bottom = 44.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_c2eb7")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="lvlGroup/lvlContainer4/level4/Lock"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -43.0
+offset_top = -44.0
+offset_right = 39.0
+offset_bottom = 38.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_c2eb7")
+expand_mode = 1
+
+[node name="lvlContainer5" type="Control" parent="lvlGroup"]
+custom_minimum_size = Vector2(150, 140)
+layout_mode = 2
+
+[node name="level5" type="Button" parent="lvlGroup/lvlContainer5" node_paths=PackedStringArray("label", "lock", "sfx")]
+custom_minimum_size = Vector2(150, 140)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.0
+offset_top = -70.0
+offset_right = 75.0
+offset_bottom = 70.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(75, 70)
+focus_mode = 0
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = ExtResource("3_7bdmg")
+theme_override_styles/pressed = ExtResource("3_7bdmg")
+theme_override_styles/hover = ExtResource("3_7bdmg")
+theme_override_styles/disabled = ExtResource("2_vo6u2")
+disabled = true
+script = ExtResource("1_l6dln")
+label = NodePath("Label")
+lock = NodePath("Lock")
+levelList = Array[ExtResource("5_47d0s")]([ExtResource("28_kp5r6"), ExtResource("29_hh3sv"), ExtResource("30_pn6pw"), ExtResource("31_pty1v"), ExtResource("32_n57of")])
+toState = "info"
+scaleSize = 1.1
+sfx = NodePath("../../../PolyAudio")
+sfx_name = Array[String](["click", "confirm"])
+sfx_vol = Array[float]([-14.0, -18.0])
+sfx_delay = Array[float]([0.0, 0.05])
+
+[node name="Label" type="Label" parent="lvlGroup/lvlContainer5/level5"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -42.0
+offset_top = -36.0
+offset_right = 42.0
+offset_bottom = 36.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "5"
+label_settings = ExtResource("9_fwawl")
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 162
+
+[node name="Lock" type="TextureRect" parent="lvlGroup/lvlContainer5/level5"]
+self_modulate = Color(0, 0, 0, 0.337255)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -39.0
+offset_top = -38.0
+offset_right = 43.0
+offset_bottom = 44.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_c2eb7")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="lvlGroup/lvlContainer5/level5/Lock"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -43.0
+offset_top = -44.0
+offset_right = 39.0
+offset_bottom = 38.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_c2eb7")
+expand_mode = 1
+
+[node name="lvlContainer6" type="Control" parent="lvlGroup"]
+custom_minimum_size = Vector2(150, 140)
+layout_mode = 2
+
+[node name="level6" type="Button" parent="lvlGroup/lvlContainer6" node_paths=PackedStringArray("label", "lock", "sfx")]
+custom_minimum_size = Vector2(150, 140)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.0
+offset_top = -70.0
+offset_right = 75.0
+offset_bottom = 70.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(75, 70)
+focus_mode = 0
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = ExtResource("3_7bdmg")
+theme_override_styles/pressed = ExtResource("3_7bdmg")
+theme_override_styles/hover = ExtResource("3_7bdmg")
+theme_override_styles/disabled = ExtResource("2_vo6u2")
+disabled = true
+script = ExtResource("1_l6dln")
+label = NodePath("Label")
+lock = NodePath("Lock")
+levelList = Array[ExtResource("5_47d0s")]([ExtResource("33_kbo8w"), ExtResource("34_12tcg"), ExtResource("35_dw428"), ExtResource("36_r8smq"), ExtResource("37_3a8hv")])
+toState = "info"
+scaleSize = 1.1
+sfx = NodePath("../../../PolyAudio")
+sfx_name = Array[String](["click", "confirm"])
+sfx_vol = Array[float]([-14.0, -18.0])
+sfx_delay = Array[float]([0.0, 0.05])
+
+[node name="Label" type="Label" parent="lvlGroup/lvlContainer6/level6"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -42.0
+offset_top = -36.0
+offset_right = 42.0
+offset_bottom = 36.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "6"
+label_settings = ExtResource("9_fwawl")
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 162
+
+[node name="Lock" type="TextureRect" parent="lvlGroup/lvlContainer6/level6"]
+self_modulate = Color(0, 0, 0, 0.337255)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -39.0
+offset_top = -38.0
+offset_right = 43.0
+offset_bottom = 44.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_c2eb7")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="lvlGroup/lvlContainer6/level6/Lock"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -43.0
+offset_top = -44.0
+offset_right = 39.0
+offset_bottom = 38.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_c2eb7")
+expand_mode = 1
+
+[node name="lvlContainer7" type="Control" parent="lvlGroup"]
+custom_minimum_size = Vector2(150, 140)
+layout_mode = 2
+
+[node name="level7" type="Button" parent="lvlGroup/lvlContainer7" node_paths=PackedStringArray("label", "lock", "sfx")]
+custom_minimum_size = Vector2(150, 140)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.0
+offset_top = -70.0
+offset_right = 75.0
+offset_bottom = 70.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(75, 70)
+focus_mode = 0
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = ExtResource("3_7bdmg")
+theme_override_styles/pressed = ExtResource("3_7bdmg")
+theme_override_styles/hover = ExtResource("3_7bdmg")
+theme_override_styles/disabled = ExtResource("2_vo6u2")
+disabled = true
+script = ExtResource("1_l6dln")
+label = NodePath("Label")
+lock = NodePath("Lock")
+levelList = Array[ExtResource("5_47d0s")]([ExtResource("38_ramgn"), ExtResource("39_yn7hv"), ExtResource("40_gupjx"), ExtResource("41_j0l05"), ExtResource("42_v805f")])
+toState = "info"
+scaleSize = 1.1
+sfx = NodePath("../../../PolyAudio")
+sfx_name = Array[String](["click", "confirm"])
+sfx_vol = Array[float]([-14.0, -18.0])
+sfx_delay = Array[float]([0.0, 0.05])
+
+[node name="Label" type="Label" parent="lvlGroup/lvlContainer7/level7"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -42.0
+offset_top = -36.0
+offset_right = 42.0
+offset_bottom = 36.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "7"
+label_settings = ExtResource("9_fwawl")
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 162
+
+[node name="Lock" type="TextureRect" parent="lvlGroup/lvlContainer7/level7"]
+self_modulate = Color(0, 0, 0, 0.337255)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -39.0
+offset_top = -38.0
+offset_right = 43.0
+offset_bottom = 44.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_c2eb7")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="lvlGroup/lvlContainer7/level7/Lock"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -43.0
+offset_top = -44.0
+offset_right = 39.0
+offset_bottom = 38.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_c2eb7")
+expand_mode = 1
+
+[node name="lvlContainer8" type="Control" parent="lvlGroup"]
+custom_minimum_size = Vector2(150, 140)
+layout_mode = 2
+
+[node name="level8" type="Button" parent="lvlGroup/lvlContainer8" node_paths=PackedStringArray("label", "lock", "sfx")]
+custom_minimum_size = Vector2(150, 140)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.0
+offset_top = -70.0
+offset_right = 75.0
+offset_bottom = 70.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(75, 70)
+focus_mode = 0
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = ExtResource("3_7bdmg")
+theme_override_styles/pressed = ExtResource("3_7bdmg")
+theme_override_styles/hover = ExtResource("3_7bdmg")
+theme_override_styles/disabled = ExtResource("2_vo6u2")
+disabled = true
+script = ExtResource("1_l6dln")
+label = NodePath("Label")
+lock = NodePath("Lock")
+levelList = Array[ExtResource("5_47d0s")]([ExtResource("43_lctpc"), ExtResource("44_u3m88"), ExtResource("45_8xeud"), ExtResource("46_442rh"), ExtResource("47_ruwsb")])
+toState = "info"
+scaleSize = 1.1
+sfx = NodePath("../../../PolyAudio")
+sfx_name = Array[String](["click", "confirm"])
+sfx_vol = Array[float]([-14.0, -18.0])
+sfx_delay = Array[float]([0.0, 0.05])
+
+[node name="Label" type="Label" parent="lvlGroup/lvlContainer8/level8"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -42.0
+offset_top = -36.0
+offset_right = 42.0
+offset_bottom = 36.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "8"
+label_settings = ExtResource("9_fwawl")
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 162
+
+[node name="Lock" type="TextureRect" parent="lvlGroup/lvlContainer8/level8"]
+self_modulate = Color(0, 0, 0, 0.337255)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -39.0
+offset_top = -38.0
+offset_right = 43.0
+offset_bottom = 44.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_c2eb7")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="lvlGroup/lvlContainer8/level8/Lock"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -43.0
+offset_top = -44.0
+offset_right = 39.0
+offset_bottom = 38.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_c2eb7")
+expand_mode = 1
+
+[node name="lvlContainer9" type="Control" parent="lvlGroup"]
+custom_minimum_size = Vector2(150, 140)
+layout_mode = 2
+
+[node name="level9" type="Button" parent="lvlGroup/lvlContainer9" node_paths=PackedStringArray("label", "lock", "sfx")]
+custom_minimum_size = Vector2(150, 140)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.0
+offset_top = -70.0
+offset_right = 75.0
+offset_bottom = 70.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(75, 70)
+focus_mode = 0
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = ExtResource("3_7bdmg")
+theme_override_styles/pressed = ExtResource("3_7bdmg")
+theme_override_styles/hover = ExtResource("3_7bdmg")
+theme_override_styles/disabled = ExtResource("2_vo6u2")
+disabled = true
+script = ExtResource("1_l6dln")
+label = NodePath("Label")
+lock = NodePath("Lock")
+levelList = Array[ExtResource("5_47d0s")]([ExtResource("48_lnq3t"), ExtResource("49_meqy1"), ExtResource("50_gd37j"), ExtResource("51_21dfr"), ExtResource("52_dcbpu")])
+toState = "info"
+scaleSize = 1.1
+sfx = NodePath("../../../PolyAudio")
+sfx_name = Array[String](["click", "confirm"])
+sfx_vol = Array[float]([-14.0, -18.0])
+sfx_delay = Array[float]([0.0, 0.05])
+
+[node name="Label" type="Label" parent="lvlGroup/lvlContainer9/level9"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -42.0
+offset_top = -36.0
+offset_right = 42.0
+offset_bottom = 36.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "9"
+label_settings = ExtResource("9_fwawl")
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 162
+
+[node name="Lock" type="TextureRect" parent="lvlGroup/lvlContainer9/level9"]
+self_modulate = Color(0, 0, 0, 0.337255)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -39.0
+offset_top = -38.0
+offset_right = 43.0
+offset_bottom = 44.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_c2eb7")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="lvlGroup/lvlContainer9/level9/Lock"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -43.0
+offset_top = -44.0
+offset_right = 39.0
+offset_bottom = 38.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_c2eb7")
+expand_mode = 1
+
+[node name="lvlContainer10" type="Control" parent="lvlGroup"]
+custom_minimum_size = Vector2(150, 140)
+layout_mode = 2
+
+[node name="level10" type="Button" parent="lvlGroup/lvlContainer10" node_paths=PackedStringArray("label", "lock", "sfx")]
+custom_minimum_size = Vector2(150, 140)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.0
+offset_top = -70.0
+offset_right = 75.0
+offset_bottom = 70.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(75, 70)
+focus_mode = 0
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = ExtResource("3_7bdmg")
+theme_override_styles/pressed = ExtResource("3_7bdmg")
+theme_override_styles/hover = ExtResource("3_7bdmg")
+theme_override_styles/disabled = ExtResource("2_vo6u2")
+disabled = true
+script = ExtResource("1_l6dln")
+label = NodePath("Label")
+lock = NodePath("Lock")
+levelList = Array[ExtResource("5_47d0s")]([ExtResource("53_oyt2i"), ExtResource("54_45fyg"), ExtResource("55_8sgxm"), ExtResource("56_pq1tx"), ExtResource("57_7wia8")])
+toState = "info"
+scaleSize = 1.1
+sfx = NodePath("../../../PolyAudio")
+sfx_name = Array[String](["click", "confirm"])
+sfx_vol = Array[float]([-14.0, -18.0])
+sfx_delay = Array[float]([0.0, 0.05])
+
+[node name="Label" type="Label" parent="lvlGroup/lvlContainer10/level10"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -42.0
+offset_top = -36.0
+offset_right = 42.0
+offset_bottom = 36.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "10"
+label_settings = ExtResource("9_fwawl")
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 162
+
+[node name="Lock" type="TextureRect" parent="lvlGroup/lvlContainer10/level10"]
+self_modulate = Color(0, 0, 0, 0.337255)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -39.0
+offset_top = -38.0
+offset_right = 43.0
+offset_bottom = 44.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_c2eb7")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="lvlGroup/lvlContainer10/level10/Lock"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -43.0
+offset_top = -44.0
+offset_right = 39.0
+offset_bottom = 38.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_c2eb7")
+expand_mode = 1
+
+[node name="Button" type="Button" parent="." node_paths=PackedStringArray("sfx")]
+custom_minimum_size = Vector2(130, 100)
+layout_mode = 0
+offset_left = 40.0
+offset_top = 50.0
+offset_right = 241.99997
+offset_bottom = 150.0
+pivot_offset = Vector2(101, 50)
+focus_mode = 0
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = ExtResource("49_osbxk")
+theme_override_styles/pressed = ExtResource("49_osbxk")
+theme_override_styles/hover = ExtResource("49_osbxk")
+script = ExtResource("1_prgp8")
+toState = "menu"
+scaleSize = 1.1
+sfx = NodePath("../PolyAudio")
+sfx_name = Array[String](["click", "confirm"])
+sfx_vol = Array[float]([-14.0, -18.0])
+sfx_delay = Array[float]([0.0, 0.05])
+
+[node name="Label" type="Label" parent="Button"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -84.5
+offset_top = -29.0
+offset_right = 84.5
+offset_bottom = 29.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Back"
+label_settings = SubResource("LabelSettings_vo6u2")
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 162
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_rjian")
+}
+autoplay = "enter_scene"
+
+[node name="PolyAudio" parent="." instance=ExtResource("46_g8401")]
+bus = &"sfx"
+sfxLib = SubResource("Resource_1hgw3")
+
+[connection signal="button_down" from="lvlGroup/lvlContainer1/level1" to="lvlGroup/lvlContainer1/level1" method="_on_button_down"]
+[connection signal="button_up" from="lvlGroup/lvlContainer1/level1" to="lvlGroup/lvlContainer1/level1" method="_on_button_up"]
+[connection signal="pressed" from="lvlGroup/lvlContainer1/level1" to="lvlGroup/lvlContainer1/level1" method="_on_button_pressed"]
+[connection signal="button_down" from="lvlGroup/lvlContainer2/level2" to="lvlGroup/lvlContainer2/level2" method="_on_button_down"]
+[connection signal="button_up" from="lvlGroup/lvlContainer2/level2" to="lvlGroup/lvlContainer2/level2" method="_on_button_up"]
+[connection signal="pressed" from="lvlGroup/lvlContainer2/level2" to="lvlGroup/lvlContainer2/level2" method="_on_button_pressed"]
+[connection signal="button_down" from="lvlGroup/lvlContainer3/level3" to="lvlGroup/lvlContainer3/level3" method="_on_button_down"]
+[connection signal="button_up" from="lvlGroup/lvlContainer3/level3" to="lvlGroup/lvlContainer3/level3" method="_on_button_up"]
+[connection signal="pressed" from="lvlGroup/lvlContainer3/level3" to="lvlGroup/lvlContainer3/level3" method="_on_button_pressed"]
+[connection signal="button_down" from="lvlGroup/lvlContainer4/level4" to="lvlGroup/lvlContainer4/level4" method="_on_button_down"]
+[connection signal="button_up" from="lvlGroup/lvlContainer4/level4" to="lvlGroup/lvlContainer4/level4" method="_on_button_up"]
+[connection signal="pressed" from="lvlGroup/lvlContainer4/level4" to="lvlGroup/lvlContainer4/level4" method="_on_button_pressed"]
+[connection signal="button_down" from="lvlGroup/lvlContainer5/level5" to="lvlGroup/lvlContainer5/level5" method="_on_button_down"]
+[connection signal="button_up" from="lvlGroup/lvlContainer5/level5" to="lvlGroup/lvlContainer5/level5" method="_on_button_up"]
+[connection signal="pressed" from="lvlGroup/lvlContainer5/level5" to="lvlGroup/lvlContainer5/level5" method="_on_button_pressed"]
+[connection signal="button_down" from="lvlGroup/lvlContainer6/level6" to="lvlGroup/lvlContainer6/level6" method="_on_button_down"]
+[connection signal="button_up" from="lvlGroup/lvlContainer6/level6" to="lvlGroup/lvlContainer6/level6" method="_on_button_up"]
+[connection signal="pressed" from="lvlGroup/lvlContainer6/level6" to="lvlGroup/lvlContainer6/level6" method="_on_button_pressed"]
+[connection signal="button_down" from="lvlGroup/lvlContainer7/level7" to="lvlGroup/lvlContainer7/level7" method="_on_button_down"]
+[connection signal="button_up" from="lvlGroup/lvlContainer7/level7" to="lvlGroup/lvlContainer7/level7" method="_on_button_up"]
+[connection signal="pressed" from="lvlGroup/lvlContainer7/level7" to="lvlGroup/lvlContainer7/level7" method="_on_button_pressed"]
+[connection signal="button_down" from="lvlGroup/lvlContainer8/level8" to="lvlGroup/lvlContainer8/level8" method="_on_button_down"]
+[connection signal="button_up" from="lvlGroup/lvlContainer8/level8" to="lvlGroup/lvlContainer8/level8" method="_on_button_up"]
+[connection signal="pressed" from="lvlGroup/lvlContainer8/level8" to="lvlGroup/lvlContainer8/level8" method="_on_button_pressed"]
+[connection signal="button_down" from="lvlGroup/lvlContainer9/level9" to="lvlGroup/lvlContainer9/level9" method="_on_button_down"]
+[connection signal="button_up" from="lvlGroup/lvlContainer9/level9" to="lvlGroup/lvlContainer9/level9" method="_on_button_up"]
+[connection signal="pressed" from="lvlGroup/lvlContainer9/level9" to="lvlGroup/lvlContainer9/level9" method="_on_button_pressed"]
+[connection signal="button_down" from="lvlGroup/lvlContainer10/level10" to="lvlGroup/lvlContainer10/level10" method="_on_button_down"]
+[connection signal="button_up" from="lvlGroup/lvlContainer10/level10" to="lvlGroup/lvlContainer10/level10" method="_on_button_up"]
+[connection signal="pressed" from="lvlGroup/lvlContainer10/level10" to="lvlGroup/lvlContainer10/level10" method="_on_button_pressed"]
+[connection signal="button_down" from="Button" to="Button" method="_on_button_down"]
+[connection signal="button_up" from="Button" to="Button" method="_on_button_up"]
+[connection signal="pressed" from="Button" to="Button" method="_on_button_pressed"]

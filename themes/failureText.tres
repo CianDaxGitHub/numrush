@@ -1,0 +1,10 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://cxi31x3tmmcy5"]
+
+[ext_resource type="FontFile" uid="uid://b3y7klyjp8l0n" path="res://fonts/Pangolin-Regular.ttf" id="1_38lit"]
+
+[resource]
+font = ExtResource("1_38lit")
+font_size = 90
+font_color = Color(0.746557, 0.209668, 0.20827, 1)
+outline_size = 24
+outline_color = Color(0.946619, 0.771413, 0.735636, 1)

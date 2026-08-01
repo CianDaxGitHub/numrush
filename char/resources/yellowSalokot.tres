@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ClothingInfo" load_steps=4 format=3 uid="uid://b0d06y7u47ok3"]
+
+[ext_resource type="Texture2D" uid="uid://d4fe2j80eiqip" path="res://char/hats/hat2.png" id="1_anbcu"]
+[ext_resource type="Script" uid="uid://dlfl5k543sbco" path="res://scripts/clothingInfo.gd" id="1_w1v3j"]
+[ext_resource type="Texture2D" uid="uid://cwq6cpe34wqni" path="res://char/hats/prev/Untitled440_20250916124955.png" id="2_rd55t"]
+
+[resource]
+script = ExtResource("1_w1v3j")
+itemName = "yellowSalokot"
+displayName = "Yellow Anahaw Hat"
+category = 3
+bought = false
+price = 80
+prevTex = ExtResource("2_rd55t")
+atlasTex = ExtResource("1_anbcu")
+metadata/_custom_type_script = "uid://dlfl5k543sbco"

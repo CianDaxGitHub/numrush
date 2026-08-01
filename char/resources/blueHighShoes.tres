@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ClothingInfo" load_steps=4 format=3 uid="uid://dnafwj2j2ytgn"]
+
+[ext_resource type="Texture2D" uid="uid://crqyy87ma88oe" path="res://char/shoes/shs11.png" id="1_mr6m8"]
+[ext_resource type="Texture2D" uid="uid://p0my4a6vo64p" path="res://char/shoes/prev/Untitled440_20250915232731.png" id="2_klpbe"]
+[ext_resource type="Script" uid="uid://dlfl5k543sbco" path="res://scripts/clothingInfo.gd" id="3_2330t"]
+
+[resource]
+script = ExtResource("3_2330t")
+itemName = "blueHighShoes"
+displayName = "Blue High Shoes"
+category = 7
+price = 80
+prevTex = ExtResource("2_klpbe")
+atlasTex = ExtResource("1_mr6m8")
+metadata/_custom_type_script = "uid://dlfl5k543sbco"

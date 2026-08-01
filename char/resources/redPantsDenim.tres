@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ClothingInfo" load_steps=4 format=3 uid="uid://cq1hxmfbv6yb6"]
+
+[ext_resource type="Texture2D" uid="uid://ci61pj1eosmsr" path="res://char/bottoms/pnt10.png" id="1_tx06t"]
+[ext_resource type="Texture2D" uid="uid://c3oq6vme866lw" path="res://char/bottoms/prev/Untitled440_20250913225309.png" id="2_w0tno"]
+[ext_resource type="Script" uid="uid://dlfl5k543sbco" path="res://scripts/clothingInfo.gd" id="3_hvimi"]
+
+[resource]
+script = ExtResource("3_hvimi")
+itemName = "redPantsDenim"
+displayName = "Denim Red Pants"
+category = 6
+bought = false
+price = 165
+prevTex = ExtResource("2_w0tno")
+atlasTex = ExtResource("1_tx06t")
+metadata/_custom_type_script = "uid://dlfl5k543sbco"

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ClothingInfo" load_steps=4 format=3 uid="uid://br5f2ehe8k5nj"]
+
+[ext_resource type="Texture2D" uid="uid://dxuxp4kwfx6wu" path="res://char/bottoms/sk11.png" id="1_yqifu"]
+[ext_resource type="Texture2D" uid="uid://c580uhy32q52u" path="res://char/bottoms/prev/Untitled440_20250915232024.png" id="2_ssnom"]
+[ext_resource type="Script" uid="uid://dlfl5k543sbco" path="res://scripts/clothingInfo.gd" id="3_xucja"]
+
+[resource]
+script = ExtResource("3_xucja")
+itemName = "pinkSkirtPleated"
+displayName = "Pink Pleated Skirt"
+category = 5
+price = 50
+prevTex = ExtResource("2_ssnom")
+atlasTex = ExtResource("1_yqifu")
+metadata/_custom_type_script = "uid://dlfl5k543sbco"

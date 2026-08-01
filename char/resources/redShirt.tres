@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ClothingInfo" load_steps=4 format=3 uid="uid://ce2cg6w7ggt3"]
+
+[ext_resource type="Script" uid="uid://dlfl5k543sbco" path="res://scripts/clothingInfo.gd" id="1_akowy"]
+[ext_resource type="Texture2D" uid="uid://o2ctvh26uhb1" path="res://char/tops/sht5.png" id="1_jrl2x"]
+[ext_resource type="Texture2D" uid="uid://30o1fduakcrx" path="res://char/tops/prev/Untitled440_20250913204109.png" id="2_qx3y6"]
+
+[resource]
+script = ExtResource("1_akowy")
+itemName = "redShirt"
+displayName = "Red T-Shirt"
+category = 0
+bought = false
+price = 60
+prevTex = ExtResource("2_qx3y6")
+atlasTex = ExtResource("1_jrl2x")
+metadata/_custom_type_script = "uid://dlfl5k543sbco"

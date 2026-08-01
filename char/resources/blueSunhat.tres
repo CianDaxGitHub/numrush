@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ClothingInfo" load_steps=4 format=3 uid="uid://o8fmq20k8fvv"]
+
+[ext_resource type="Texture2D" uid="uid://h73g0cmm332e" path="res://char/hats/hat15.png" id="1_5bkw4"]
+[ext_resource type="Texture2D" uid="uid://cw1ivuxiirvax" path="res://char/hats/prev/Untitled440_20250916123328.png" id="2_2y76c"]
+[ext_resource type="Script" uid="uid://dlfl5k543sbco" path="res://scripts/clothingInfo.gd" id="3_8kvf8"]
+
+[resource]
+script = ExtResource("3_8kvf8")
+itemName = "blueSunhat"
+displayName = "Blue Sunhat"
+category = 3
+bought = false
+price = 160
+prevTex = ExtResource("2_2y76c")
+atlasTex = ExtResource("1_5bkw4")
+metadata/_custom_type_script = "uid://dlfl5k543sbco"

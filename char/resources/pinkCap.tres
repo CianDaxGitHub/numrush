@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ClothingInfo" load_steps=4 format=3 uid="uid://d3r1l2kje6ru2"]
+
+[ext_resource type="Texture2D" uid="uid://8b5ettxbyjrf" path="res://char/hats/hat33.png" id="1_s6fjv"]
+[ext_resource type="Texture2D" uid="uid://bn2iwfmpctqws" path="res://char/hats/prev/Untitled440_20250915234934.png" id="2_f1l51"]
+[ext_resource type="Script" uid="uid://dlfl5k543sbco" path="res://scripts/clothingInfo.gd" id="3_dpdm2"]
+
+[resource]
+script = ExtResource("3_dpdm2")
+itemName = "pinkCap"
+displayName = "Pink Cap"
+category = 3
+price = 50
+prevTex = ExtResource("2_f1l51")
+atlasTex = ExtResource("1_s6fjv")
+metadata/_custom_type_script = "uid://dlfl5k543sbco"

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ClothingInfo" load_steps=4 format=3 uid="uid://ccl05a3g0ogmc"]
+
+[ext_resource type="Texture2D" uid="uid://b07a0qa0ocgj" path="res://char/hats/hat4.png" id="1_ql63q"]
+[ext_resource type="Texture2D" uid="uid://byts5ekv5vpk2" path="res://char/hats/prev/Untitled440_20250916124926.png" id="2_np0tc"]
+[ext_resource type="Script" uid="uid://dlfl5k543sbco" path="res://scripts/clothingInfo.gd" id="3_1qq7w"]
+
+[resource]
+script = ExtResource("3_1qq7w")
+itemName = "graySalokot"
+displayName = "Gray Anahaw Hat"
+category = 3
+bought = false
+price = 80
+prevTex = ExtResource("2_np0tc")
+atlasTex = ExtResource("1_ql63q")
+metadata/_custom_type_script = "uid://dlfl5k543sbco"

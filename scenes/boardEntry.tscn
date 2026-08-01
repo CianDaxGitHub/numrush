@@ -1,0 +1,426 @@
+[gd_scene load_steps=14 format=3 uid="uid://b42orsartxvto"]
+
+[ext_resource type="Script" uid="uid://bgprx6s4uba42" path="res://scenes/boardEntry.gd" id="1_el0v5"]
+[ext_resource type="StyleBox" uid="uid://cdfnewk1y4iyu" path="res://themes/reg.tres" id="1_x633g"]
+[ext_resource type="Texture2D" uid="uid://cqff67ilxkevw" path="res://images/syrill/boy symbol.png" id="2_6863h"]
+[ext_resource type="FontFile" uid="uid://c1xv8vejetl6c" path="res://fonts/PoetsenOne-Regular.ttf" id="2_el0v5"]
+[ext_resource type="FontFile" uid="uid://b3y7klyjp8l0n" path="res://fonts/Pangolin-Regular.ttf" id="4_l3u70"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_el0v5"]
+bg_color = Color(1, 1, 1, 1)
+shadow_color = Color(0, 0, 0, 0.176471)
+shadow_size = 3
+shadow_offset = Vector2(0, 3)
+
+[sub_resource type="LabelSettings" id="LabelSettings_x633g"]
+font = ExtResource("2_el0v5")
+font_size = 32
+outline_size = 12
+outline_color = Color(0.144063, 0.144063, 0.144062, 1)
+
+[sub_resource type="Animation" id="Animation_rd17k"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("entry:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(590, 76)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("entry:size")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(590, 76)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("dateText:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("dateText:self_modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".:custom_minimum_size")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(-2),
+"update": 0,
+"values": [Vector2(590, 76)]
+}
+
+[sub_resource type="Animation" id="Animation_l3u70"]
+resource_name = "enter_scene"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("entry:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(0.30778614, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_dobwj"]
+resource_name = "exit_scene"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("entry:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(-2, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0, 0)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_s2eq7"]
+resource_name = "extend"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.3),
+"transitions": PackedFloat32Array(-2, -2, 1),
+"update": 0,
+"values": [Vector2(590, 76), Vector2(590, 134), Vector2(590, 128)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("entry:size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.3),
+"transitions": PackedFloat32Array(-2, -2, 1),
+"update": 0,
+"values": [Vector2(590, 76), Vector2(590, 134), Vector2(590, 128)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("dateText:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("dateText:self_modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.13333334, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".:custom_minimum_size")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.16666667),
+"transitions": PackedFloat32Array(-2, 1),
+"update": 0,
+"values": [Vector2(590, 76), Vector2(590, 128)]
+}
+
+[sub_resource type="Animation" id="Animation_yfsht"]
+resource_name = "retract"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(-2, 1),
+"update": 0,
+"values": [Vector2(590, 128), Vector2(590, 76)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("entry:size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(-2, 1),
+"update": 0,
+"values": [Vector2(590, 128), Vector2(590, 76)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("dateText:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("dateText:self_modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.13333334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".:custom_minimum_size")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(-2, 1),
+"update": 0,
+"values": [Vector2(590, 128), Vector2(590, 76)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_s2eq7"]
+_data = {
+&"RESET": SubResource("Animation_rd17k"),
+&"enter_scene": SubResource("Animation_l3u70"),
+&"exit_scene": SubResource("Animation_dobwj"),
+&"extend": SubResource("Animation_s2eq7"),
+&"retract": SubResource("Animation_yfsht")
+}
+
+[node name="boardEntry" type="Control"]
+custom_minimum_size = Vector2(590, 76)
+layout_mode = 3
+anchor_right = 0.81900007
+anchor_bottom = 0.059000004
+offset_top = -0.29250336
+offset_right = 0.3199463
+offset_bottom = 0.18749237
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("1_el0v5")
+
+[node name="entry" type="Panel" parent="."]
+custom_minimum_size = Vector2(590, 76)
+layout_mode = 1
+offset_right = 590.0
+offset_bottom = 76.0
+pivot_offset = Vector2(295, 38)
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_el0v5")
+
+[node name="panelRank" type="Panel" parent="entry"]
+unique_name_in_owner = true
+layout_mode = 1
+offset_left = 12.0
+offset_top = 15.0
+offset_right = 74.0
+offset_bottom = 61.0
+mouse_filter = 1
+theme_override_styles/panel = ExtResource("1_x633g")
+
+[node name="Rank" type="Label" parent="entry/panelRank"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -22.0
+offset_top = -19.5
+offset_right = 22.0
+offset_bottom = 19.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+text = "1"
+label_settings = SubResource("LabelSettings_x633g")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="user" type="Label" parent="entry"]
+unique_name_in_owner = true
+layout_mode = 1
+offset_left = 145.0
+offset_top = 24.0
+offset_right = 295.0
+offset_bottom = 55.0
+size_flags_horizontal = 3
+mouse_filter = 1
+theme_override_colors/font_color = Color(0.4370996, 0.17860422, 0.009433531, 1)
+theme_override_fonts/font = ExtResource("4_l3u70")
+theme_override_font_sizes/font_size = 24
+text = "Juan Dela Cruz"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="gender" type="TextureRect" parent="entry/user"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(44, 44)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -44.5
+offset_top = -22.5
+offset_right = -0.5
+offset_bottom = 21.5
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+texture = ExtResource("2_6863h")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="highScore" type="Label" parent="entry"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 1
+offset_left = 339.0
+offset_top = 24.0
+offset_right = 419.0
+offset_bottom = 55.0
+size_flags_horizontal = 3
+mouse_filter = 1
+theme_override_colors/font_color = Color(0.4370996, 0.17860422, 0.009433531, 1)
+theme_override_fonts/font = ExtResource("4_l3u70")
+theme_override_font_sizes/font_size = 24
+text = "30/30"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="estTime" type="Label" parent="entry"]
+unique_name_in_owner = true
+layout_mode = 1
+offset_left = 450.0
+offset_top = 24.0
+offset_right = 566.0
+offset_bottom = 55.0
+size_flags_horizontal = 3
+mouse_filter = 1
+theme_override_colors/font_color = Color(0.4370996, 0.17860422, 0.009433531, 1)
+theme_override_fonts/font = ExtResource("4_l3u70")
+theme_override_font_sizes/font_size = 24
+text = "02:05.14"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+&"": SubResource("AnimationLibrary_s2eq7")
+}
+autoplay = "enter_scene"
+
+[node name="dateText" type="Label" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = -45.0
+offset_right = 388.75
+offset_bottom = -14.0
+grow_vertical = 0
+size_flags_horizontal = 3
+mouse_filter = 1
+theme_override_colors/font_color = Color(0.4370996, 0.17860422, 0.009433531, 1)
+theme_override_fonts/font = ExtResource("4_l3u70")
+theme_override_font_sizes/font_size = 24
+text = "Created on: 11/11/2025 08:45PM"
+vertical_alignment = 1
+
+[connection signal="gui_input" from="entry" to="." method="_on_entry_gui_input"]
